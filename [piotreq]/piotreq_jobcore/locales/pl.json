@@ -1,0 +1,8 @@
+{
+    "not_payout_for_you": "Nie mam dla ciebie wypłaty",
+    "wait": "Odczekaj chwile",
+    "not_enough_hours": "Nie masz żadnych wyrobionych godzin",
+    "society_dont_have_money": "Konto firmowe nie posiada wystarczająco środków",
+    "cant_fetch_society": "Nie udało się pobrać pieniędzy z konta firmowego",
+    "taken_payout": "Odebrano wypłatę w wysokości $ %s za %s godzin"
+}

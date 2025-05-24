@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v6.1.1/css/pro.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>GPT</title>
+</head>
+<body>
+    <div class="dispatch-notify-wrapper">
+    </div>
+    <div class="dispatch" style="display: none;">
+        <div class="reports-wrapper">
+            <span>Aktualne zgłoszenia</span>
+            <div class="reports-wrapper-list" id="actual-reports">
+            </div>
+        </div>
+    </div>
+    <div class="gpt-popups-wrapper" style="display: none;">
+    </div>
+    <div class="gpt-wrapper">
+        <div class="side-bar">
+            <div class="gpt-logo" style="background: center / cover no-repeat url(img/lspd.png);"></div>
+            <div class="side-buttons">
+                <div class="side-btn" id="home-btn" onclick="SwitchTab('home')">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Panel Główny</span>
+                </div>
+                <div class="side-btn" id="patrols-btn" onclick="SwitchTab('patrols')">
+                    <i class="fa-solid fa-user-police-tie"></i>
+                    <span>Patrole i Akcje</span>
+                </div>
+                <div class="side-btn" id="citizens-btn" onclick="SwitchTab('citizens')">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Obywatele</span>
+                </div>
+                <div class="side-btn" id="vehicles-btn" onclick="SwitchTab('vehicles')">
+                    <i class="fa-solid fa-cars"></i>
+                    <span>Pojazdy</span>
+                </div>
+                <div class="side-btn" id="weapons-btn" onclick="SwitchTab('weapons')">
+                    <i class="fa-sharp fa-solid fa-gun"></i>
+                    <span>Ewidencja broni</span>
+                </div>
+                <div class="side-btn" id="evidence-btn" onclick="SwitchTab('evidence')">
+                    <i class="fa-solid fa-eye-dropper"></i>
+                    <span>Ewidencja dowodów</span>
+                </div>
+                <div class="side-btn" id="cases-btn" onclick="SwitchTab('cases')">
+                    <i class="fa-solid fa-suitcase"></i>
+                    <span>Sprawy</span>
+                </div>
+                <div class="side-btn" id="judgements-btn" onclick="SwitchTab('judgements')">
+                    <i class="fa-solid fa-gavel"></i>
+                    <span>Wyroki</span>
+                </div>
+                <div class="side-btn" id="announcements-btn" onclick="SwitchTab('announcements')">
+                    <i class="fa-solid fa-megaphone"></i>
+                    <span>Ogłoszenia</span>
+                </div>
+                <div class="side-btn" id="employees-btn" onclick="SwitchTab('employees')">
+                    <i class="fa-solid fa-users-gear"></i>
+                    <span>Pracownicy</span>
+                </div>
+                <div class="side-btn" id="garage-btn" onclick="SwitchTab('garage')">
+                    <i class="fa-solid fa-garage-open"></i>
+                    <span>Garaż</span>
+                </div>
+                <div class="side-btn" id="off-btn" onclick="CloseGPT(true)">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <span>Wyłącz</span>
+                </div>
+            </div>
+        </div>
+        <div class="main-box">
+            <section id="home">
+                <div class="top-bar">
+                    <span>Welcome, Zjeb Pierdolony - Chief of Police - 00:00:00</span>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div class="custom-select">
+                            <div class="custom-select-info" id="codes-menu-value" onclick="ToggleSelect('codes-menu')">
+                                <span>Zielony</span>
+                                <i id="codes-menu-arrow" class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <div class="custom-select-menu" id="codes-menu">
+                                <div class="custom-select-option">Zielony</div>
+                                <div class="custom-select-option">Pomarańczowy</div>
+                                <div class="custom-select-option">Czerwony</div>
+                                <div class="custom-select-option">Czarny</div>
+                            </div>
+                        </div>
+                        <div class="custom-select">
+                            <div class="custom-select-info" id="duty-menu-value" onclick="ToggleSelect('duty-menu')">
+                                <span>Na służbie</span>
+                                <i id="duty-menu-arrow" class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <div class="custom-select-menu" id="duty-menu">
+                                <div class="custom-select-option">Na służbie</div>
+                                <div class="custom-select-option">Przerwa</div>
+                                <div class="custom-select-option">Poza służbą</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-main">
+                    <div class="active-employees-wrapper">
+                        <div class="active-employees-info">
+                            <span>Pracownicy na służbie</span>
+                            <span>1/7</span>
+                        </div>
+                        <div class="active-employees-list">
+                            <table>
+                                <tr>
+                                    <th>Imię i Nazwisko</th>
+                                    <th>Ranga</th>
+                                    <th>Status</th>
+                                    <th>Radio</th>
+                                    <th>Czas na służbie</th>
+                                    <th>Ostatnio aktywny</th>
+                                </tr>
+                                <tr>
+                                    <td>George Gouda</td>
+                                    <td>Szef Policji</td>
+                                    <td><div class="player-status">Na służbie</div></td>
+                                    <td>#1 - LSPD</td>
+                                    <td>01:00:10</td>
+                                    <td>15:15 22/06/24</td>
+                                    <td><div class="player-btn" onclick="OpenDetails('employee-details')"><i class="fa-solid fa-chevron-right"></i></div></td>
+                                </tr>
+                                <tr>
+                                    <td>George Gouda</td>
+                                    <td>Szef Policji</td>
+                                    <td><div class="player-status">Na służbie</div></td>
+                                    <td>#1 - LSPD</td>
+                                    <td>01:00:10</td>
+                                    <td>15:15 22/06/24</td>
+                                    <td><div class="player-btn" onclick="OpenDetails('employee-details')"><i class="fa-solid fa-chevron-right"></i></div></td>
+                                </tr>
+                                <tr>
+                                    <td>George Gouda</td>
+                                    <td>Szef Policji</td>
+                                    <td><div class="player-status">Na służbie</div></td>
+                                    <td>#1 - LSPD</td>
+                                    <td>01:00:10</td>
+                                    <td>15:15 22/06/24</td>
+                                    <td><div class="player-btn"><i class="fa-solid fa-chevron-right"></i></div></td>
+                                </tr>
+                                <tr>
+                                    <td>George Gouda</td>
+                                    <td>Szef Policji</td>
+                                    <td><div class="player-status">Na służbie</div></td>
+                                    <td>#1 - LSPD</td>
+                                    <td>01:00:10</td>
+                                    <td>15:15 22/06/24</td>
+                                    <td><div class="player-btn"><i class="fa-solid fa-chevron-right"></i></div></td>
+                                </tr>
+                                <tr>
+                                    <td>George Gouda</td>
+                                    <td>Szef Policji</td>
+                                    <td><div class="player-status">Na służbie</div></td>
+                                    <td>#1 - LSPD</td>
+                                    <td>01:00:10</td>
+                                    <td>15:15 22/06/24</td>
+                                    <td><div class="player-btn"><i class="fa-solid fa-chevron-right"></i></div></td>
+                                </tr>
+                                <tr>
+                                    <td>George Gouda</td>
+                                    <td>Szef Policji</td>
+                                    <td><div class="player-status">Na służbie</div></td>
+                                    <td>#1 - LSPD</td>
+                                    <td>01:00:10</td>
+                                    <td>15:15 22/06/24</td>
+                                    <td><div class="player-btn"><i class="fa-solid fa-chevron-right"></i></div></td>
+                                </tr>
+                                <tr>
+                                    <td>George Gouda</td>
+                                    <td>Szef Policji</td>
+                                    <td><div class="player-status">Na służbie</div></td>
+                                    <td>#1 - LSPD</td>
+                                    <td>01:00:10</td>
+                                    <td>15:15 22/06/24</td>
+                                    <td><div class="player-btn"><i class="fa-solid fa-chevron-right"></i></div></td>
+                                </tr>
+                                <tr>
+                                    <td>George Gouda</td>
+                                    <td>Szef Policji</td>
+                                    <td><div class="player-status">Na służbie</div></td>
+                                    <td>#1 - LSPD</td>
+                                    <td>01:00:10</td>
+                                    <td>15:15 22/06/24</td>
+                                    <td><div class="player-btn"><i class="fa-solid fa-chevron-right"></i></div></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="last-items-wrapper">
+                        <div class="last-items">
+                            <span>Poszukiwania obywateli</span>
+                            <div class="last-items-list">
+                                <div>
+                                    <span>George Gouda</span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                                <div>
+                                    <span>George Gouda</span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                                <div>
+                                    <span>George Gouda</span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="last-items">
+                            <span>Poszukiwania pojazdów</span>
+                            <div class="last-items-list">
+                                <div>
+                                    <span>George Gouda</span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                                <div>
+                                    <span>George Gouda</span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                                <div>
+                                    <span>George Gouda</span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="last-items">
+                            <span>Najbardziej aktywni na służbie</span>
+                            <div class="last-items-list">
+                                <div>
+                                    <span>George Gouda</span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                                <div>
+                                    <span>George Gouda</span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                                <div>
+                                    <span>George Gouda</span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="patrols" style="display: none;">
+                <div class="top-bar">
+                    <span>Patrole</span>
+                </div>
+                <div class="section-main">
+                    <div class="patrols-wrapper">
+                        <div class="patrols-top">
+                            <div class="gpt-input">
+                                <input type="text" placeholder="Wyszukaj patrol...">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <div class="patrol-btn" onclick="OpenPopup('create-patrol-popup')">Stwórz</div>
+                        </div>
+                        <div class="patrols-list">
+                        </div>
+                    </div>
+                    <div class="actions-wrapper">
+                        <div class="employees-top">
+                            <div class="employees-btn" onclick="SwitchAction(1)">Akcja 1</div>
+                            <div class="employees-btn" onclick="SwitchAction(2)">Akcja 2</div>
+                            <div class="employees-btn" onclick="SwitchAction(3)">Akcja 3</div>
+                            <div class="employees-btn" onclick="SwitchAction(4)">Akcja 4</div>
+                        </div>
+                        <div class="action-info">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="citizens" style="display: none;">
+                <div class="top-bar">
+                    <span class="citizens-title">Obywatele</span>
+                </div>
+                <div class="citizens-wrapper">
+                    <div class="employees-top">
+                        <div class="gpt-input">
+                            <input class="citizen-search-input" type="text" id="citizens-search" placeholder="Wyszukaj obywatela... (min. 3 znaki)">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <div class="employees-btn" style="width: 20%;" onclick="SearchCitizens()">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <span class="citizen-search-btn">Wyszukaj</span>
+                        </div>
+                    </div>
+                    <div class="citizens-list" id="citizens-list-wrapper">
+                    </div>
+                </div>
+            </section>
+            <section id="vehicles" style="display: none;">
+                <div class="top-bar">
+                    <span class="vehicles-title">Pojazdy</span>
+                </div>
+                <div class="citizens-wrapper">
+                    <div class="employees-top">
+                        <div class="gpt-input">
+                            <input class="vehicle-search-input" type="text" id="vehicles-search" placeholder="Wyszukaj pojazd... (min. 3 znaki)">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <div class="employees-btn" style="width: 20%;" onclick="SearchVehicles()">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <span class="vehicle-search-btn">Wyszukaj</span>
+                        </div>
+                    </div>
+                    <div class="citizens-list" id="vehicles-list-wrapper">
+                    </div>
+                </div>
+            </section>
+            <section id="weapons" style="display: none;">
+                <div class="top-bar">
+                    <span class="weapons-title">Bronie</span>
+                </div>
+                <div class="citizens-wrapper">
+                    <div class="employees-top">
+                        <div class="gpt-input">
+                            <input class="weapon-search-input" type="text" id="weapons-search" placeholder="Wyszukaj broń po numerach seryjnych... (min. 3 znaki)">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <div class="employees-btn" style="width: 20%;" onclick="SearchWeapons()">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <span class="weapon-search-btn">Wyszukaj</span>
+                        </div>
+                    </div>
+                    <div class="citizens-list" id="weapons-list-wrapper">
+                    </div>
+                </div>
+            </section>
+            <section id="evidence" style="display: none;">
+                <div class="top-bar">
+                    <span class="evidences-title">Dowody</span>
+                </div>
+                <div class="citizens-wrapper">
+                    <div class="employees-top">
+                        <div class="gpt-input" style="width: 100%;">
+                            <input class="evidences-search-input" type="text" id="search-evidence" oninput="searchEvidence()" placeholder="Wyszukaj dowód...">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <div class="employees-btn" style="width: 20%;">
+                            <i class="fa-regular fa-arrows-rotate"></i>
+                            <span class="evidences-search-btn">Odśwież</span>
+                        </div>
+                    </div>
+                    <div class="citizens-list" id="evidence-list-wrapper">
+
+                    </div>
+                </div>
+            </section>
+            <section id="cases" style="display: none;">
+                <div class="top-bar">
+                    <span class="cases-title">Sprawy</span>
+                </div>
+                <div class="citizens-wrapper">
+                    <div class="employees-top">
+                        <div class="gpt-input">
+                            <input class="cases-search-input" type="text" oninput="SearchCases()" id="search-case" placeholder="Wyszukaj sprawe...">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <div class="employees-btn" style="width: 20%;" onclick="CaseCreator()">
+                            <i class="fa-regular fa-circle-plus"></i>
+                            <span class="cases-search-btn">Dodaj sprawe</span>
+                        </div>
+                    </div>
+                    <div class="citizens-list" id="cases-list-wrapper">
+                        <table id="cases-list">
+                            <tr>
+                                <th>Tytuł sprawy</th>
+                                <th>Numer sprawy</th>
+                                <th>Autor</th>
+                                <th>Status</th>
+                                <th>Data utworzenia</th>
+                                <th>Data edycji</th>
+                                <th style="width: 6%;"></th>
+                            </tr>
+                            <tr>
+                                <td>Sigmatron atakuje miasto</td>
+                                <td>#1</td>
+                                <td>George Goudiszon</td>
+                                <td>Rozwiązana</td>
+                                <td>18:37 22/06/2024</td>
+                                <td>18:37 22/06/2024</td>
+                                <td><div onclick="OpenDetails('case-details')" class="player-btn"><i class="fa-solid fa-chevron-right"></i></div></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section id="judgements" style="display: none;">
+                <div class="top-bar">
+                    <span class="judgments-title">Wyroki</span>
+                </div>
+                <div class="judgment-wrapper">
+                    <span class="judgments-description" style="font-weight: 600;">Osoby otrzymujące wyrok</span>
+                    <div class="judgment-list" id="judgment-players-selected">
+                    </div>
+                    <div class="gpt-input judgment-input">
+                        <input class="judgment-search-input" oninput="SearchJudgmentCitizen()" id="search-judgment-citizen" type="text" placeholder="Imię / Nazwisko / SSN osoby otrzymującej wyrok...">
+                        <i class="fa-solid fa-gavel"></i>
+                        <div class="judgment-players" id="judgment-players-list">
+                        </div>
+                    </div>
+                    <span class="judgment-info" style="margin-top: 1rem; font-weight: 600;">Wyrok</span>
+                    <div class="judgment-list" id="offenses-list">
+                        <div class="judgment-list-item">
+                            <span class="judgment-no-offenses">Brak...</span>
+                        </div>
+                    </div>
+                    <div class="judgment-btn edit-judgment-btn" onclick="OpenDetails('judgment-details')">Edytuj wyrok</div>
+                    <div class="judgment-bot">
+                        <div>
+                            <span class="judgment-months">Ilość miesięcy</span>
+                            <div class="gpt-input">
+                                <input id="judgment-jail" type="number" value="0">
+                                <i class="fa-solid fa-timer"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="judgment-fine">Kara finansowa</span>
+                            <div class="gpt-input">
+                                <input id="judgment-fine" type="number" value="0">
+                                <i class="fa-solid fa-dollar-sign"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display: flex;align-items: center; gap: 1rem;">
+                        <div class="judgment-btn confirm-judgment-btn" onclick="ConfirmJudge()">Wystaw wyrok</div>
+                        <div class="judgment-btn copy-judgment-btn" onclick="CopyJudge()">Skopiuj wyrok</div>
+                    </div>
+                </div>
+            </section>
+            <section id="announcements" style="display: none;">
+                <div class="top-bar">
+                    <span class="announcements-title">Ogłoszenia</span>
+                </div>
+                <div class="announcements-wrapper">
+                    <div class="employees-top">
+                        <div class="gpt-input">
+                            <input class="announcements-search-input" oninput="SearchAnnouncement()" id="search-announcement" type="text" placeholder="Wyszukaj ogłoszenie...">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <div class="employees-btn" onclick="OpenPopup('announcement-popup')" style="width: 25%;">
+                            <i class="fa-regular fa-circle-plus"></i>
+                            <span class="announcements-add-new">Dodaj ogłoszenie</span>
+                        </div>
+                    </div>
+                    <div class="announcements-list">
+                    </div>
+                </div>
+            </section>
+            <section id="employees" style="display: none;">
+                <div class="top-bar">
+                    <span>Pracownicy</span>
+                    <span>1/17</span>
+                </div>
+                <div class="citizens-wrapper">
+                    <div class="employees-top">
+                        <div class="gpt-input">
+                            <input type="text" placeholder="Wyszukaj pracownika...">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <div class="employees-btn" onclick="OpenPopup('add-employee-popup')">
+                            <i class="fa-regular fa-circle-plus"></i>
+                            <span>Dodaj pracownika</span>
+                        </div>
+                        <div class="employees-btn" onclick="OpenPopup('reset-time-popup')">
+                            <i class="fa-regular fa-clock"></i>
+                            <span>Zresetuj czas na służbie</span>
+                        </div>
+                    </div>
+                    <div class="citizens-list">
+                        <table id="employees-list">
+                            <tr>
+                                <th>Imię i Nazwisko</th>
+                                <th>Ranga</th>
+                                <th>Status</th>
+                                <th>Jednostka</th>
+                                <th>Odznaka</th>
+                                <th>Czas na służbie</th>
+                                <th>Ostatnio aktywny</th>
+                                <th style="width: 6%;"></th>
+                            </tr>
+                            <tr>
+                                <td>George Gouda</td>
+                                <td>Assistant Chief of Police</td>
+                                <td><div class="player-status">Na służbie</div></td>
+                                <td>LSPD</td>
+                                <td>101</td>
+                                <td>10:10:10</td>
+                                <td>19:35 24/06/24</td>
+                                <td><div onclick="OpenDetails('employee-details')" class="player-btn"><i class="fa-solid fa-chevron-right"></i></div></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section id="garage" style="display: none;">
+                <!-- <div class="top-bar">
+                    <span>Garaż</span>
+                </div>
+                <div class="citizens-wrapper">
+                    <div class="employees-top">
+                        <div class="gpt-input" style="width: 55%;">
+                            <input type="text" placeholder="Wyszukaj pojazd...">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <div class="employees-btn" style="width: 15%;">
+                            <i class="fa-regular fa-arrows-rotate"></i>
+                            <span>Odśwież</span>
+                        </div>
+                        <div class="employees-btn" style="width: 15%;">
+                            <i class="fa-regular fa-truck-tow"></i>
+                            <span>Odholuj</span>
+                        </div>
+                        <div class="employees-btn" style="width: 15%;" onclick="OpenPopup('buy-vehicle-popup')">
+                            <i class="fa-regular fa-dollar-sign"></i>
+                            <span>Zakup pojazd</span>
+                        </div>
+                    </div>
+                    <div class="citizens-list">
+                        <table id="vehicles-list">
+                            <tr>
+                                <th>Model</th>
+                                <th>Kierowca</th>
+                                <th>Status</th>
+                                <th>Rejestracja</th>
+                                <th>VIN</th>
+                                <th style="width: 6%;"></th>
+                            </tr>
+                            <tr>
+                                <td>Crown Victoria</td>
+                                <td>George Goudziszon Sigmiszon</td>
+                                <td><div class="player-status">Poza garażem</div></td>
+                                <td>X23A5D73</td>
+                                <td>GF9023MAD1I0DA0123</td>
+                                <td><div onclick="OpenPopup('manage-vehicle-popup')" class="player-btn"><i class="fa-solid fa-gear"></i></div></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div> -->
+            </section>
+            <section id="citizen-details" style="display: none;">
+                <div class="top-bar">
+                    <div class="square-btn" onclick="CloseDetails()"><i class="fa-solid fa-chevron-left"></i></div>
+                    <span>Obywatel - George Gouda</span>
+                </div>
+                <div class="citizen-details-wrapper">
+                    <div class="citizen-details-main">
+                        <div class="citizen-photo"></div>
+                        <div class="citizen-info">
+                            <div class="citizen-info-row">
+                                <span>Imię i Nazwisko</span>
+                                <span>George Gouda</span>
+                            </div>
+                            <div class="citizen-info-row">
+                                <span>Praca</span>
+                                <span>Złomiarz</span>
+                            </div>
+                            <div class="citizen-info-row">
+                                <span>SSN</span>
+                                <span>10</span>
+                            </div>
+                            <div class="citizen-info-row">
+                                <span>Poszukiwany</span>
+                                <span>Tak</span>
+                            </div>
+                            <div class="citizen-info-row">
+                                <span>Data urodzenia</span>
+                                <span>22/06/2024</span>
+                            </div>
+                            <div class="citizen-info-row">
+                                <span>Ostatni wyrok</span>
+                                <span>Brak</span>
+                            </div>
+                            <div class="citizen-info-row">
+                                <span>Obywatelstwo</span>
+                                <span>Stany Zjednoczone</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="citizen-details-more">
+                        <div class="citizen-details-bar">
+                            <div class="citizen-details-bar-btn" onclick="SwitchCitizenTab('vehicles')">
+                                <span>Pojazdy</span>
+                            </div>
+                            <div class="citizen-details-bar-btn" onclick="SwitchCitizenTab('judgements')">
+                                <span>Wyroki</span>
+                            </div>
+                            <div class="citizen-details-bar-btn" onclick="SwitchCitizenTab('licenses')">
+                                <span>Licencje</span>
+                            </div>
+                            <div class="citizen-details-bar-btn" onclick="SwitchCitizenTab('notes')">
+                                <span>Notatki</span>
+                            </div>
+                            <div class="citizen-details-bar-btn" onclick="SwitchCitizenTab('wanted')">
+                                <span>Poszukiwania</span>
+                            </div>
+                            <div class="citizen-details-bar-btn" onclick="SwitchCitizenTab('cases')">
+                                <span>Sprawy</span>
+                            </div>
+                        </div>
+                        <div class="citizen-details-more-main">
+                            <div class="citizen-details-list" id="citizen-vehicles" style="display: none;">
+                                <div class="citizen-vehicle">
+                                    <div class="citizen-vehicle-top">
+                                        <span>ELEGY RETRO</span>
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                    </div>
+                                    <span>Współwłaściciel: <font>Brak</font></span>
+                                    <span>Rejestracja: <font>XD12XD341</font></span>
+                                    <span>VIN: <font>D0ASJ21FD13EDA</font></span>
+                                    <span>Status: <font>Poszukiwany</font></span>
+                                </div>
+                                <div class="citizen-vehicle">
+                                    <div class="citizen-vehicle-top">
+                                        <span>ELEGY RETRO</span>
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                    </div>
+                                    <span>Współwłaściciel: <font>Brak</font></span>
+                                    <span>Rejestracja: <font>XD12XD341</font></span>
+                                    <span>VIN: <font>D0ASJ21FD13EDA</font></span>
+                                    <span>Status: <font>Poszukiwany</font></span>
+                                </div>
+                                <div class="citizen-vehicle">
+                                    <div class="citizen-vehicle-top">
+                                        <span>ELEGY RETRO</span>
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                    </div>
+                                    <span>Współwłaściciel: <font>Brak</font></span>
+                                    <span>Rejestracja: <font>XD12XD341</font></span>
+                                    <span>VIN: <font>D0ASJ21FD13EDA</font></span>
+                                    <span>Status: <font>Poszukiwany</font></span>
+                                </div>
+                            </div>
+                            <div class="citizen-details-list" id="citizen-judgements" style="display: none;">
+                                <div class="citizen-vehicle" id="citizen-judgement">
+                                    <div class="citizen-vehicle-top">
+                                        <span>#1</span>
+                                    </div>
+                                    <span>Oficer: <font>George Sigmon</font></span>
+                                    <span>Ilość miesięcy: <font>10</font></span>
+                                    <span>Kara finansowa: <font>$ 1,000</font></span>
+                                    <span>Zarzuty: <font>x1 Osranie trawnika, 2x Zasranie policjanta</font></span>
+                                </div>
+                            </div>
+                            <div class="citizen-notes-wrapper" id="citizen-licenses" style="display: none;">
+                                <div class="vehicle-btn" style="width: fit-content;" onclick="OpenPopup('add-citizen-license-popup')">Dodaj licencje</div>
+                                <div class="citizen-details-list">
+                                    <div class="citizen-vehicle" id="citizen-license">
+                                        <div class="citizen-vehicle-top">
+                                            <span>Prawo jazdy kat. A</span>
+                                            <i class="fa-solid fa-trash-can"></i>
+                                        </div>
+                                    </div>
+                                    <div class="citizen-vehicle" id="citizen-license">
+                                        <div class="citizen-vehicle-top">
+                                            <span>Prawo jazdy kat. B</span>
+                                            <i class="fa-solid fa-trash-can"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="citizen-notes-wrapper" id="citizen-notes" style="display: none;">
+                                <div class="vehicle-btn" style="width: fit-content;" onclick="OpenPopup('add-citizen-note-popup')">Dodaj notatke</div>
+                                <div class="citizen-details-list">
+                                    <div class="citizen-vehicle" id="citizen-license">
+                                        <div class="citizen-vehicle-top">
+                                            <span>Wiele poszukiwań</span>
+                                            <i class="fa-solid fa-trash-can"></i>
+                                        </div>
+                                        <span>Ten idiota był poszukiwany z 10 razy, uważajcie na niego. Jest psychopatą.</span>
+                                    </div>
+                                    <div class="citizen-vehicle" id="citizen-license">
+                                        <div class="citizen-vehicle-top">
+                                            <span>Wiele poszukiwań</span>
+                                            <i class="fa-solid fa-trash-can"></i>
+                                        </div>
+                                        <span>Ten idiota był poszukiwany z 10 razy, uważajcie na niego. Jest psychopatą.</span>
+                                    </div>
+                                    <div class="citizen-vehicle" id="citizen-license">
+                                        <div class="citizen-vehicle-top">
+                                            <span>Wiele poszukiwań</span>
+                                            <i class="fa-solid fa-trash-can"></i>
+                                        </div>
+                                        <span>Ten idiota był poszukiwany z 10 razy, uważajcie na niego. Jest psychopatą.</span>
+                                    </div>
+                                    <div class="citizen-vehicle" id="citizen-license">
+                                        <div class="citizen-vehicle-top">
+                                            <span>Wiele poszukiwań</span>
+                                            <i class="fa-solid fa-trash-can"></i>
+                                        </div>
+                                        <span>Ten idiota był poszukiwany z 10 razy, uważajcie na niego. Jest psychopatą.</span>
+                                    </div>
+                                    <div class="citizen-vehicle" id="citizen-license">
+                                        <div class="citizen-vehicle-top">
+                                            <span>Wiele poszukiwań</span>
+                                            <i class="fa-solid fa-trash-can"></i>
+                                        </div>
+                                        <span>Ten idiota był poszukiwany z 10 razy, uważajcie na niego. Jest psychopatą.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="citizen-notes-wrapper" id="citizen-wanted" style="display: none;">
+                                <div class="vehicle-btn" style="width: fit-content;" onclick="OpenPopup('add-citizen-wanted-popup')">Dodaj poszukiwanie</div>
+                                <div class="citizen-details-list">
+                                    <div class="citizen-vehicle" id="citizen-wanted">
+                                        <div class="citizen-vehicle-top">
+                                            <span>Aktywne</span>
+                                            <i class="fa-solid fa-trash-can"></i>
+                                        </div>
+                                        <span>Skradł radiowóz z numerem 101</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="citizen-details-list" id="citizen-cases" style="display: none;">
+                                <div class="citizen-vehicle" id="citizen-case">
+                                    <div class="citizen-vehicle-top">
+                                        <span><i class="fa-solid fa-folder-open"></i> Sprawa #1</span>
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                    </div>
+                                </div>
+                                <div class="citizen-vehicle" id="citizen-license">
+                                    <div class="citizen-vehicle-top">
+                                        <span><i class="fa-solid fa-folder-open"></i> Sprawa #1</span>
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="vehicle-details" style="display: none;">
+                <div class="top-bar">
+                    <div class="square-btn" onclick="CloseDetails()"><i class="fa-solid fa-chevron-left"></i></div>
+                    <span>Pojazd - Elegy Retro XD123456</span>
+                </div>
+                <div class="vehicle-details-wrapper">
+                    <div class="vehicle-details-box" id="vehicle-details-info">
+                        <span>Elegy Retro</span>
+                        <div class="vehicle-details-row">
+                            <span>Rejestracja</span>
+                            <span>DASIG204R10S</span>
+                        </div>
+                        <div class="vehicle-details-row">
+                            <span>VIN</span>
+                            <span>DASIG204R10S</span>
+                        </div>
+                        <div class="vehicle-details-row" onclick="OpenDetails('citizen-details')">
+                            <span>Właściciel</span>
+                            <span>George Gouda</span>
+                        </div>
+                        <div class="vehicle-details-row">
+                            <span>Współwłaściciel</span>
+                            <span>Brak</span>
+                        </div>
+                        <div class="vehicle-details-row">
+                            <span>Status</span>
+                            <span>Skonfiskowany</span>
+                        </div>
+                        <div class="vehicle-buttons">
+                            <div class="vehicle-btn" onclick="OpenPopup('add-vehicle-note-popup')">Dodaj notatke</div>
+                            <div class="vehicle-btn" onclick="OpenPopup('add-vehicle-wanted-popup')">Dodaj poszukiwanie</div>
+                            <div class="vehicle-btn" onclick="OpenPopup('confiscate-vehicle-popup')">Skonfiskuj</div>
+                        </div>
+                    </div>
+                    <div class="vehicle-details-box" id="vehicle-wanted">
+                        <span>Poszukiwania</span>
+                        <div class="vehicle-details-wanted">
+                            <div>
+                                <span>George Gouda</span>
+                                <i class="fa-solid fa-trash-can"></i>
+                            </div>
+                            <span>Właściciel pojazdu rozjebał 5 przechodniów na pasach, aresztować natychmiastowo.</span>
+                            <span>Aktywne do: 16:50 24/06/24</span>
+                        </div>
+                    </div>
+                    <div class="vehicle-details-box" id="vehicle-note">
+                        <span>Notatki</span>
+                        <div class="vehicle-details-note">
+                            <div>
+                                <span>George Gouda</span>
+                                <i class="fa-solid fa-trash-can"></i>
+                            </div>
+                            <span>Właściciel pojazdu rozjebał 5 przechodniów na pasach, aresztować natychmiastowo.</span>
+                            <span>Dodane: 16:50 24/06/24</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="case-details" style="display: none;">
+                <div class="top-bar">
+                    <div class="square-btn" onclick="CloseDetails()"><i class="fa-solid fa-chevron-left"></i></div>
+                    <span>Sprawa - #1</span>
+                </div>
+                <div class="vehicle-details-wrapper">
+                    <div class="vehicle-details-box" id="case-details-info">
+                        <div class="vehicle-details-row">
+                            <span>Tytuł</span>
+                            <span>Zjeb</span>
+                        </div>
+                        <div class="vehicle-details-row">
+                            <span>Autor</span>
+                            <span>George Gouda</span>
+                        </div>
+                        <div class="vehicle-details-row">
+                            <span>Data utworzenia</span>
+                            <span>10:02 23/06/24</span>
+                        </div>
+                        <div class="vehicle-details-row">
+                            <span>Data edycji</span>
+                            <span>10:10 23/06/24</span>
+                        </div>
+                        <div class="vehicle-details-row">
+                            <span>Status</span>
+                            <span class="case-status">Rozwiązana</span>
+                        </div>
+                        <div class="vehicle-btn" style="width: fit-content; margin-top: .5rem;">Edytuj</div>
+                    </div>
+                    <div class="vehicle-details-box" id="case-desc-info">
+                        <span>Opis sprawy</span>
+                        <span>Dwóch delikwentów zjadło srake na moich oczach, Dwóch delikwentów zjadło srake na moich oczach, Dwóch delikwentów zjadło srake na moich oczach, Dwóch delikwentów zjadło srake na moich oczach, Dwóch delikwentów zjadło srake na moich oczach</span>
+                    </div>
+                    <div class="vehicle-details-box" id="vehicle-wanted">
+                        <span>Powiązani obywatele</span>
+                        <div class="judgment-list">
+                            <div class="judgment-list-item">
+                                <span>(1) George Gouda</span>
+                                <i class="fa-solid fa-chevron-right" style="font-size: .75rem;"></i>
+                            </div>
+                            <div class="judgment-list-item">
+                                <span>(1) George Gouda</span>
+                                <i class="fa-solid fa-chevron-right" style="font-size: .75rem;"></i>
+                            </div>
+                            <div class="judgment-list-item">
+                                <span>(1) George Gouda</span>
+                                <i class="fa-solid fa-chevron-right" style="font-size: .75rem;"></i>
+                            </div>
+                            <div class="judgment-list-item">
+                                <span>(1) George Gouda</span>
+                                <i class="fa-solid fa-chevron-right" style="font-size: .75rem;"></i>
+                            </div>
+                            <div class="judgment-list-item">
+                                <span>(1) George Gouda</span>
+                                <i class="fa-solid fa-chevron-right" style="font-size: .75rem;"></i>
+                            </div>
+                            <div class="judgment-list-item">
+                                <span>(1) George Gouda</span>
+                                <i class="fa-solid fa-chevron-right" style="font-size: .75rem;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vehicle-details-box" id="vehicle-wanted">
+                        <span>Powiązani funkcjonariusze</span>
+                        <div class="judgment-list">
+                            <div class="judgment-list-item">
+                                <span>(1) George Gouda [LSPD]</span>
+                                <i class="fa-solid fa-chevron-right" style="font-size: .75rem;"></i>
+                            </div>
+                            <div class="judgment-list-item">
+                                <span>(1) George Gouda [LSPD]</span>
+                                <i class="fa-solid fa-chevron-right" style="font-size: .75rem;"></i>
+                            </div>
+                            <div class="judgment-list-item">
+                                <span>(1) George Gouda [LSPD]</span>
+                                <i class="fa-solid fa-chevron-right" style="font-size: .75rem;"></i>
+                            </div>
+                            <div class="judgment-list-item">
+                                <span>(1) George Gouda [LSPD]</span>
+                                <i class="fa-solid fa-chevron-right" style="font-size: .75rem;"></i>
+                            </div>
+                            <div class="judgment-list-item">
+                                <span>(1) George Gouda [LSPD]</span>
+                                <i class="fa-solid fa-chevron-right" style="font-size: .75rem;"></i>
+                            </div>
+                            <div class="judgment-list-item">
+                                <span>(1) George Gouda [LSPD]</span>
+                                <i class="fa-solid fa-chevron-right" style="font-size: .75rem;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vehicle-details-box" id="vehicle-wanted">
+                        <span>Powiązane pojazdy</span>
+                        <div class="judgment-list">
+                            <div class="judgment-list-item">
+                                <span>(AB3G5FR5) ELEGY RETRO</span>
+                                <i class="fa-solid fa-chevron-right" style="font-size: .75rem;"></i>
+                            </div>
+                            <div class="judgment-list-item">
+                                <span>(AB3G5FR5) ELEGY RETRO</span>
+                                <i class="fa-solid fa-chevron-right" style="font-size: .75rem;"></i>
+                            </div>
+                            <div class="judgment-list-item">
+                                <span>(AB3G5FR5) ELEGY RETRO</span>
+                                <i class="fa-solid fa-chevron-right" style="font-size: .75rem;"></i>
+                            </div>
+                            <div class="judgment-list-item">
+                                <span>(AB3G5FR5) ELEGY RETRO</span>
+                                <i class="fa-solid fa-chevron-right" style="font-size: .75rem;"></i>
+                            </div>
+                            <div class="judgment-list-item">
+                                <span>(AB3G5FR5) ELEGY RETRO</span>
+                                <i class="fa-solid fa-chevron-right" style="font-size: .75rem;"></i>
+                            </div>
+                            <div class="judgment-list-item">
+                                <span>(AB3G5FR5) ELEGY RETRO</span>
+                                <i class="fa-solid fa-chevron-right" style="font-size: .75rem;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vehicle-details-box" id="vehicle-wanted">
+                        <span>Zdjęcia</span>
+                        <div class="judgment-list">
+                            <div class="judgment-list-item case-photo">
+                                <img src="bg.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="judgment-details" style="display: none;">
+                <div class="section-main">
+                    <div class="categories-wrapper">
+                        <span class="judgment-categories">Kategorie</span>
+                        <div class="categories" id="offense-categories">
+                        </div>
+                    </div>
+                    <div class="offenses-wrapper">
+                        <div class="gpt-input">
+                            <input class="judgment-offense-search" type="text" id="search-offense" placeholder="Wyszukaj wykroczenie...">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <div class="offenses-list">
+                        </div>
+                    </div>
+                </div>
+                <div class="offense-bot">
+                    <div class="gpt-input">
+                        <input type="text" id="offense-months-value" value="0" disabled>
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <div class="gpt-input">
+                        <input type="text" id="offense-fine-value" value="0" disabled>
+                        <i class="fa-solid fa-dollar-sign"></i>
+                    </div>
+                    <div class="vehicle-btn save-offenses-btn" onclick="SaveOffenses()">Zapisz</div>
+                </div>
+            </section>
+            <section id="employee-details" style="display: none;">
+                <div class="top-bar">
+                    <div class="square-btn" onclick="CloseDetails()"><i class="fa-solid fa-chevron-left"></i></div>
+                    <span>Obywatel - George Gouda</span>
+                </div>
+                <div class="citizen-details-wrapper">
+                    <div class="citizen-details-main">
+                        <div class="citizen-photo"></div>
+                        <div class="employee-info">
+                            <div class="citizen-info-row">
+                                <span>Imię i Nazwisko</span>
+                                <span>George Gouda</span>
+                            </div>
+                            <div class="citizen-info-row">
+                                <span>Jednostka</span>
+                                <span>LSPD</span>
+                            </div>
+                            <div class="citizen-info-row">
+                                <span>SSN</span>
+                                <span>10</span>
+                            </div>
+                            <div class="citizen-info-row">
+                                <span>Kanał radiowy</span>
+                                <span>#1 - LSPD</span>
+                            </div>
+                            <div class="citizen-info-row">
+                                <span>Stopień</span>
+                                <span>Szef Policji</span>
+                            </div>
+                            <div class="citizen-info-row">
+                                <span>Ostatnio aktywny</span>
+                                <span>10:51 23/06/24</span>
+                            </div>
+                            <div class="citizen-info-row">
+                                <span>Status</span>
+                                <span>Na służbie</span>
+                            </div>
+                            <div class="citizen-info-row">
+                                <span>Ostatni wystawiony wyrok / mandat</span>
+                                <span>10:51 23/06/24</span>
+                            </div>
+                            <div class="citizen-info-row">
+                                <span>Data dołączenia</span>
+                                <span>10:51 23/06/24</span>
+                            </div>
+                            <div class="citizen-info-row">
+                                <span>Czas na służbie</span>
+                                <span>01:10:00</span>
+                            </div>
+                            <div class="citizen-info-row">
+                                <span>Odznaka</span>
+                                <span>101</span>
+                            </div>
+                            <div class="citizen-info-row">
+                                <span>Przydzielony pojazd</span>
+                                <span>Crown Victoria (ASDJ0923)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="employee-buttons">
+                        <div class="vehicle-btn" onclick="OpenPopup('change-license-popup')">Zmień licencje</div>
+                        <div class="vehicle-btn" onclick="OpenPopup('change-badge-popup')">Zmień odznake</div>
+                        <div class="vehicle-btn" onclick="OpenPopup('update-employee-popup')">Zmień stopień</div>
+                        <div class="vehicle-btn" onclick="OpenPopup('fire-employee-popup')">Zwolnij</div>
+                        <div class="vehicle-btn" onclick="OpenPopup('add-employee-note-popup')">Dodaj notatke</div>
+                        <div class="vehicle-btn" onclick="OpenPopup('add-employee-note-popup')">Zresetuj czas</div>
+                        <div class="vehicle-btn" onclick="OpenPopup('add-employee-note-popup')">Wyślij na przerwe</div>
+                    </div>
+                    <div class="employee-notes-wrapper">
+                        <span>Notatki</span>
+                        <div class="employee-note-list">
+                            <div class="employee-note">
+                                <div class="employee-note-info">
+                                    <span>Plusik</span>
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </div>
+                                <span>Dostaje plusika</span>
+                                <span>Dodane przez: George Gouda 21:38 23/06/24</span>
+                            </div>
+                            <div class="employee-note">
+                                <div class="employee-note-info">
+                                    <span>Plusik</span>
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </div>
+                                <span>Dostaje plusika</span>
+                                <span>Dodane przez: George Gouda 21:38 23/06/24</span>
+                            </div>
+                            <div class="employee-note">
+                                <div class="employee-note-info">
+                                    <span>Plusik</span>
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </div>
+                                <span>Dostaje plusika</span>
+                                <span>Dodane przez: George Gouda 21:38 23/06/24</span>
+                            </div>
+                            <div class="employee-note">
+                                <div class="employee-note-info">
+                                    <span>Plusik</span>
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </div>
+                                <span>Dostaje plusika</span>
+                                <span>Dodane przez: George Gouda 21:38 23/06/24</span>
+                            </div>
+                            <div class="employee-note">
+                                <div class="employee-note-info">
+                                    <span>Plusik</span>
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </div>
+                                <span>Dostaje plusika</span>
+                                <span>Dodane przez: George Gouda 21:38 23/06/24</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+<script src="script/judgment.js"></script>
+<script src="script/sheet.js"></script>
+<script src="script/app.js"></script>
+</html>

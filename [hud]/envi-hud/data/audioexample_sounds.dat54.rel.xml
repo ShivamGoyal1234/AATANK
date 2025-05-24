@@ -1,0 +1,46 @@
+<Dat54>
+  <Version value="7314721" />
+  <ContainerPaths>
+    <Item>audiodirectory\envi</Item>
+  </ContainerPaths>
+  <Items>
+    <Item type="SimpleSound">
+      <Name>seatbeltoff_sp</Name>
+      <Header>
+        <Flags value="0x00008004" />
+        <Volume value="300" />
+        <Category>scripted</Category>
+      </Header>
+      <ContainerName>audiodirectory/envi</ContainerName>
+      <FileName>seatbeltoff</FileName>
+      <WaveSlotNum value="0" />
+    </Item>
+    <Item type="SimpleSound">
+      <Name>seatbelton_sp</Name>
+      <Header>
+        <Flags value="0x00008004" />
+        <Volume value="300" />
+        <Category>scripted</Category>
+      </Header>
+      <ContainerName>audiodirectory/envi</ContainerName>
+      <FileName>seatbelton</FileName>
+      <WaveSlotNum value="0" />
+    </Item>
+    <Item type="SoundSet">
+      <Name>envi_hud</Name>
+      <Header>
+        <Flags value="0xAAAAAAAA" />
+      </Header>
+      <SoundSets>
+        <Item>
+          <ScriptName>seatbeltoff</ScriptName>
+          <ChildSound>seatbeltoff_sp</ChildSound>
+        </Item>
+        <Item>
+          <ScriptName>seatbelton</ScriptName>
+          <ChildSound>seatbelton_sp</ChildSound>
+        </Item>
+      </SoundSets>
+    </Item>
+  </Items>
+</Dat54>

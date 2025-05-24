@@ -1,0 +1,8 @@
+{
+    "not_payout_for_you": "I don't have a payout for you",
+    "wait": "Wait a moment",
+    "not_enough_hours": "You don't have any hours worked",
+    "society_dont_have_money": "The company account doesn't have enough funds",
+    "cant_fetch_society": "Failed to retrieve money from the company account",
+    "taken_payout": "You received a payout of $ %s for %s hours"
+}

@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    user-select: none;
+    font-family: 'Bai Jamjuree', sans-serif;
+    color: #fff;
+}
+
+:root {
+    font-size: min(.83333333vw, 1.8009478673vh);
+    transition: font-size .15s linear;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    overflow: hidden;
+}
+
+.radiolist-wrapper {
+    position: absolute;
+    left: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #0c1213e6;
+    padding: 1.25rem;
+    border-radius: .25rem;
+    display: flex; flex-direction: column; gap: .5rem;
+    height: 25.25rem;
+    transition: 1s ease-in-out;
+    left: -20rem;
+    opacity: 0.0;
+    overflow: hidden;
+}
+
+.radiolist-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    width: 5.5rem; height: 5.5rem;
+    background-color: #C2F4F9;
+    z-index: 0; border-radius: 50%;
+    filter: blur(7rem);
+}
+
+.radiolist-header {
+    display: flex; align-items: center; gap: .75rem;
+    position: relative;
+}
+
+.radio-users {
+    position: relative; margin-top: .25rem;
+}
+
+.radiolist-header > div {
+    background-color: #c2f4f91e; border: .0625rem solid #c2f4f96c;
+    padding: .5rem 1rem; font-size: .9rem;
+}
+
+.radiolist-header > div:last-child > i {
+    font-size: .9rem;
+}
+
+.radiolist-header > div:last-child > span {
+    margin-left: .2rem;
+}
+
+.radio-users {
+    display: flex; flex-direction: column;
+    height: 100%; gap: .5rem;
+}
+
+.radio-footer {
+    display: flex; align-items: center; width: 100%; justify-content: space-between;
+    margin-top: .25rem;
+}
+
+.radio-footer .radio-btn {
+    background-color: #c2f4f91e; border: .0625rem solid #c2f4f96c;
+    border-radius: .25rem; font-size: .75rem; width: 1.5rem; height: 1.5rem;
+    display: flex; align-items: center; justify-content: center;
+}
+
+.radio-user {
+    display: flex; align-items: center; justify-content: space-between;
+    height: 1.5rem;
+}
+
+.radio-user span {
+    font-size: .85rem;
+}
+
+.radio-user i {
+    color: #e3fdff;
+    width: 1.75rem; height: 1.75rem; background-color: #c2f4f91e; border: .0625rem solid #c2f4f96c;
+    border-radius: .15rem;
+    display: flex; align-items: center; justify-content: center;
+    font-size: .9rem;
+}
+
+.radio-user .fa-skull-crossbones {
+    color: #ffdede;
+    background-color: #f571711e; border: .0625rem solid #fc7c7c6c;
+}
+
+.radio-footer > span {
+    font-size: .75rem;
+}
+
+.photo-wrapper {
+    display: none;
+    position: absolute;
+    top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 95rem; height: 60rem; border-radius: 1rem;
+}
+
+.photo-wrapper img {
+    width: 100%; height: 100%; object-fit: cover;
+    border-radius: 1rem;
+}
+
+.headbag-wrapper {
+    display: none;
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: url('images/headbag.jpg'); opacity: 0.99;
+}
+
+.radar-wrapper {
+    position: absolute;
+    background-color: #0A0C0F;
+    border-radius: .5rem;
+    right: 1rem;
+    bottom: 1rem;
+    padding: 1.5rem; overflow: hidden;
+    display: none; gap: 1.25rem; opacity: .0;
+    border: .0625rem solid #d6d6d688;
+}
+
+.radar-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 50%; left: 50%; transform: translate(-50%, -50%);
+    background-color: #697a9367; width: 15rem; height: 15rem;
+    border-radius: 50%; filter: blur(10rem);
+}
+
+.radar-side {
+    display: flex; flex-direction: column; gap: .25rem;
+}
+
+.radar-side > span {text-align: center; font-size: 1.1rem; color: #96999f; font-weight: 500;}
+
+.radar-wrapper hr {width: 100%; border-radius: 1rem; border-color: #656b7386;}
+
+.radar-status {
+    width: 100%;
+    padding: .55rem; border-radius: .45rem; text-align: center;
+}
+
+.unlocked {
+    background-color: #69ff8a7e; color: #B1FFC2; font-weight: 450; font-size: .9rem;
+}
+
+.locked {
+    background-color: #ff69697e; color: #ffb1b1; font-weight: 450; font-size: .9rem;
+}
+
+.radar-speed {
+    display: flex; flex-direction: column;
+    border: .0625rem solid #656b7386; border-radius: .5rem;
+    text-align: center; overflow: hidden; margin-block: .5rem;
+}
+
+.radar-speed-header {
+    background-color: #1a1f28;
+    width: 100%; padding: .35rem;
+    color: #9ea1a8; font-size: .9rem;
+}
+
+.radar-speed > span {
+    padding: .5rem; font-size: 2rem; color: #FFA113; font-weight: 700;
+}
+
+.radar-plate {
+    position: relative;
+}
+
+.radar-plate > span {
+    position: absolute; top: 55%; left: 50%; transform: translate(-50%, -50%);
+    color: #0A0C0F; font-weight: 700; font-size: 1.5rem;
+}
+
+.radar-plate img {width: 12rem; height: 5.5rem;}
+
+.bodycam-wrapper {
+    position: absolute;
+    top: 2rem; right: 2rem;
+    display: flex; align-items: center; gap: .75rem;
+    font-size: 1.2rem; opacity: 0.0;
+}
+
+.bodycam-wrapper::after {
+    content: "";
+    position: absolute;
+    width: 1rem; height: 1rem; background-color: rgb(202, 39, 39);
+    border-radius: 50%;
+    left: -2rem;
+    animation: blinking infinite 2s ease;
+}
+
+@keyframes blinking {
+    0% {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0.0;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+
+.bodycam-info {
+    display: flex; flex-direction: column; gap: .1rem; align-items: flex-end;
+    color: #fff;
+}
+
+.bodycam-info span {
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.bodycam-wrapper img {width: 3.25rem;}

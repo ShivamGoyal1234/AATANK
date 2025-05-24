@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Inventory</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/context-menu.css" />
+    <link rel="stylesheet" type="text/css" href="css/pausemenu.css" />
+    <link rel="stylesheet" type="text/css" href="css/quest.css" />
+    <link rel="stylesheet" type="text/css" href="css/skill.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css">
+    <script src="https://use.fortawesome.com/1ce05b4b.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- jQuery UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js" integrity="sha256-xH4q8N0pEzrZMaRmd7gQVcTZiFei+HfRTBPJ1OGXC0k=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.contextMenu.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.contextMenu.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.ui.position.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@4.0.0/lib/anime.iife.min.js"></script>
+
+    <audio id="click2" src="sounds/click2.mp4"></audio>
+    <audio id="click3" src="sounds/click3.mp4"></audio>
+    <audio id="celebration" src="sounds/celebration.wav"></audio>
+    <script src="https://cdn.ckeditor.com/ckeditor5/11.0.1/classic/ckeditor.js"></script>
+    <audio id="clickaudio" src="https://pic.pikbest.com/00/56/79/04e888piCYRV.mp3"></audio>
+
+</head>
+
+<body>
+    <section id="intro" class="intro hidden">
+        <article id="intro-server-container">
+            <p id="intro-server-name">QUASAR ROLEPLAY</p>
+        </article>
+    </section>
+
+    <div id="notif"></div>
+
+    <section id="intro-logo" class="intro hidden">
+        <figure id="intro-top"></figure>
+        <figure id="intro-bottom"></figure>
+        <article id="intro-logo-container" class="hidden">
+            <img src="./icons/logo.png" alt="logo">
+        </article>
+    </section>
+
+    <div class="container">
+
+        <section class="label-changer-container">
+            <article class="label-changed">
+                <button id="label-changer-close">&times;</button>
+                <div class="label-changer-title">Label changer:</div>
+                <div class="label-changer-input-container">
+                    <input type="text" class="label-changer-input" placeholder="Label" id="label-changer-input">
+                </div>
+                <div class="label-changer-button-container">
+                    <div class="label-changer-button" id="label-changer-button">Change</div>
+                </div>
+            </article>
+        </section>
+        <div id="inventory-container">
+            <div class="inv-background"></div>
+
+            <div id="ped">
+                <div id="glass-square" data-hlsl data-blur-strength="20"></div>
+            </div>
+
+
+            <!-- <div class="inventory-animation"> -->
+            <header id="inventory-container-header">
+                <div class="inventory-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57 57" fill="none" class="svgColor">
+                        <g filter="url(#filter0_d_28_699)">
+                            <path d="M18.3438 23.5129C18.3438 23.5129 17.5625 26.3297 17.5625 30.8436C17.5625 35.3575 18.1701 39.3072 18.7778 39.8715C19.3854 40.4357 23.6389 40.9999 28.5 40.9999C33.3611 40.9999 37.6145 40.4357 38.2222 39.8715C38.8298 39.3072 39.4375 35.3575 39.4375 30.8436C39.4375 26.3297 38.6562 23.5129 38.6562 23.5129" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M28.5 16C22.9444 16 18.0833 16.217 17.3889 16.434C16.6944 16.651 16 18.1701 16 19.9062C16 21.6424 16.6944 23.1615 17.3889 23.3785C17.5345 23.424 17.8635 23.4695 18.3438 23.513C20.1531 23.677 24.1097 23.8125 28.5 23.8125C32.8903 23.8125 36.8469 23.677 38.6562 23.513C39.1366 23.4695 39.4655 23.424 39.6111 23.3785C40.3056 23.1615 41 21.6424 41 19.9062C41 18.1701 40.3056 16.651 39.6111 16.434C38.9167 16.217 34.0556 16 28.5 16Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M25.375 30.0625C25.375 30.0625 26.1562 29.2812 28.5 29.2812C30.8438 29.2812 31.625 30.0625 31.625 30.0625" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+                        <defs>
+                            <filter id="filter0_d_28_699" x="0.25" y="0.25" width="56.5" height="56.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                <feOffset />
+                                <feGaussianBlur stdDeviation="7.5" />
+                                <feComposite in2="hardAlpha" operator="out" />
+                                <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" />
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_28_699" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_28_699" result="shape" />
+                            </filter>
+                        </defs>
+                    </svg>
+                    <span class="inventory-title-span">Inventory</span>
+                </div>
+                <div id="inventory-routes">
+                    <div id="inventory-routes-btn">
+                        <input type="radio" data-route="pause_menu" name="inventory-route" id="inventory-route-pause_menu" class="inventory-route-pause_menu">
+                        <label class="inventory-route inventory-route-pause_menu" id="inventory-route-pause_menu" for="inventory-route-pause_menu">
+                            <div class="inv-icon">
+                                <svg stroke="#ccc" fill="#ccc" stroke-width="0" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 117.66v346.32c0 11.32 11.43 19.06 21.94 14.86L160 416V32L20.12 87.95A32.006 32.006 0 0 0 0 117.66zM192 416l192 64V96L192 32v384zM554.06 33.16L416 96v384l139.88-55.95A31.996 31.996 0 0 0 576 394.34V48.02c0-11.32-11.43-19.06-21.94-14.86z"></path>
+                                </svg>
+                            </div>
+                            <div class="inventory-route-label header-information">
+                                <span>Information</span>
+                                <small>Server and player info</small>
+                            </div>
+                        </label>
+                        <input type="radio" data-route="dashboard" name="inventory-route" id="inventory-route-player">
+                        <label class="inventory-route" id="inventory-route-player" for="inventory-route-player">
+                            <div class="inv-icon">
+                                <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 17.0937C2 13.9474 4.62857 11.3968 10 11.3968C15.3714 11.3968 18 13.9474 18 17.0937C18 17.5942 17.6348 18 17.1843 18H2.81569C2.3652 18 2 17.5942 2 17.0937Z" stroke="white" stroke-width="2" />
+                                    <path d="M13 5C13 6.65685 11.6569 8 10 8C8.34314 8 7 6.65685 7 5C7 3.34315 8.34314 2 10 2C11.6569 2 13 3.34315 13 5Z" stroke="white" stroke-width="2" />
+                                </svg>
+                            </div>
+
+                            <div class="inventory-route-label header-inventory">
+                                <span>Inventory</span>
+                                <small>Administration and object use</small>
+                            </div>
+                        </label>
+                        <input type="radio" data-route="clothing" name="inventory-route" id="inventory-route-clothing" class="inventory-route-clothing">
+                        <label class="inventory-route inventory-route-clothing" id="inventory-route-clothing" for="inventory-route-clothing">
+                            <div class="inv-icon">
+                                <svg viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 4L4 1H7C7 1.39397 7.0776 1.78407 7.22836 2.14805C7.37913 2.51203 7.6001 2.84274 7.87868 3.12132C8.1573 3.3999 8.488 3.62087 8.8519 3.77164C9.2159 3.9224 9.606 4 10 4C10.394 4 10.7841 3.9224 11.1481 3.77164C11.512 3.62087 11.8427 3.3999 12.1213 3.12132C12.3999 2.84274 12.6209 2.51203 12.7716 2.14805C12.9224 1.78407 13 1.39397 13 1H16L19 4L18.5 9L16 7.5V17H4V7.5L1.5 9L1 4Z" stroke="#8B9093" stroke-width="1.5" />
+                                </svg>
+                            </div>
+                            <div class="inventory-route-label header-clothes">
+                                <span>Clothes</span>
+                                <small>Appearance customization</small>
+                            </div>
+                        </label>
+                        <input type="radio" data-route="skill" name="inventory-route" id="inventory-route-skill" class="inventory-route-skill">
+                        <label class="inventory-route inventory-route-skill" id="inventory-route-skill" for="inventory-route-skill">
+                            <div class="inv-icon">
+                                <svg stroke="currentColor" fill="#ccc" stroke-width="0" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M119.1 25v.1c-25 3.2-47.1 32-47.1 68.8 0 20.4 7.1 38.4 17.5 50.9L99.7 157 84 159.9c-13.7 2.6-23.8 9.9-32.2 21.5-8.5 11.5-14.9 27.5-19.4 45.8-8.2 33.6-9.9 74.7-10.1 110.5h44l11.9 158.4h96.3L185 337.7h41.9c0-36.2-.3-77.8-7.8-111.7-4-18.5-10.2-34.4-18.7-45.9-8.6-11.4-19.2-18.7-34.5-21l-16-2.5L160 144c10-12.5 16.7-30.2 16.7-50.1 0-39.2-24.8-68.8-52.4-68.8-2.9 0-4.7-.1-5.2-.1zM440 33c-17.2 0-31 13.77-31 31s13.8 31 31 31 31-13.77 31-31-13.8-31-31-31zM311 55v48H208v18h103v158h-55v18h55v110H208v18h103v32h80.8c-.5-2.9-.8-5.9-.8-9 0-3.1.3-6.1.8-9H329V297h62.8c-.5-2.9-.8-5.9-.8-9 0-3.1.3-6.1.8-9H329V73h62.8c-.5-2.92-.8-5.93-.8-9 0-3.07.3-6.08.8-9H311zm129 202c-17.2 0-31 13.8-31 31s13.8 31 31 31 31-13.8 31-31-13.8-31-31-31zm0 160c-17.2 0-31 13.8-31 31s13.8 31 31 31 31-13.8 31-31-13.8-31-31-31z"></path>
+                                </svg>
+                            </div>
+                            <div class="inventory-route-label header-skills">
+                                <span>Skills</span>
+                                <small>Enhanced gameplay</small>
+                            </div>
+                        </label>
+                        <input type="radio" data-route="quests" name="inventory-route" id="inventory-route-quests" class="inventory-route-quests">
+                        <label class="inventory-route inventory-route-quests" id="inventory-route-quests" for="inventory-route-quests">
+                            <div class="inv-icon">
+                                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                                    <path d="M6 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                                    <path d="M18 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                                    <path d="M6 8l0 8"></path>
+                                    <path d="M11 6h5a2 2 0 0 1 2 2v8"></path>
+                                    <path d="M14 9l-3 -3l3 -3"></path>
+                                </svg>
+                            </div>
+                            <div class="inventory-route-label header-missions">
+                                <span>Missions</span>
+                                <small>Personal objectives</small>
+                            </div>
+                        </label>
+                        <input type="radio" data-route="settings" name="inventory-route" id="inventory-route-settings">
+                        <label class="inventory-route inventory-route-settings" id="inventory-route-settings" for="inventory-route-settings">
+                            <div class="inv-icon">
+                                <svg stroke="#ccc" fill="#ccc" stroke-width="0" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160z"></path>
+                                </svg>
+                            </div>
+                            <div class="inventory-route-label header-settings">
+                                <span>Settings</span>
+                                <small>Customize inventory</small>
+                            </div>
+                        </label>
+
+                        <input type="radio" data-route="weapon_attachments" name="inventory-route" id="inventory-route-weapon_attachments">
+                    </div>
+
+                    <div id="inventory-close">
+                        <span class="close-text">EXIT</span>
+                        <span class="close-key">ESC</span>
+                    </div>
+                </div>
+            </header>
+            <main id="inventory-container-articles">
+                <div class="inventory-container-article" data-page="dashboard">
+                    <div class="quick-slots">
+                        <figure class="quick-slots-border"></figure>
+                        <div class="title-container">
+                            <span class="title quick-slots-text">QUICK SLOTS</span>
+                        </div>
+                        <ul id="quick-slot-list" class="player-inventory" data-inventory="player"></ul>
+                    </div>
+                    <div class="inventory-info">
+                    </div>
+                    <div class="inv-container">
+                        <div class="ply-inv-container">
+                            <div class="player-inv-info">
+                                <span id="player-inv-label"></span>
+                                <div class="progressbar">
+
+                                    <div class="weight_flex">
+                                        <span id="player-inv-weight"></span>
+                                    </div>
+
+                                    <div class="player-weight-progressbar flexik">
+                                        <div class="weight_bar_bordered"></div>
+                                        <div class="weight_bar_bordered"></div>
+                                        <div class="weight_bar_bordered"></div>
+                                        <div class="weight_bar_bordered"></div>
+                                        <div class="weight_bar_bordered"></div>
+                                        <div class="weight_bar_bordered"></div>
+                                        <div class="weight_bar_bordered"></div>
+                                        <div class="weight_bar_bordered"></div>
+                                        <div class="weight_bar_bordered"></div>
+                                        <div class="weight_bar_bordered"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div id="player-inventory" class="player-inventory" data-inventory="player"></div>
+                            <div class="ival insert-value">
+                                <div class="icont insert-value-inv">
+                                    <h1>Insert Value</h1>
+                                    <input type="number" id="item-amount" class="inv-option-item" value="0" min="0" max="10000" placeholder="Amount" oninput="validateInput(event)" />
+                                </div>
+                                <div class="ival" id="rob-items">
+                                    <div class="rob-item-container">
+                                        <h1>Action</h1>
+                                        <button class="icont bgSecColor" id="rob-items-button">Rob Items</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <section id="right-section">
+                            <div class="oth-inv-container">
+                                <div class="other-inv-info">
+                                    <span id="other-inv-label"></span><br>
+                                    <div class="progressbar">
+
+                                        <div class="weight_flex">
+                                            <span id="other-inv-weight"></span>
+                                        </div>
+
+                                        <div class="other-weight-progressbar flexik">
+                                            <div class="weight_bar_bordered"></div>
+                                            <div class="weight_bar_bordered"></div>
+                                            <div class="weight_bar_bordered"></div>
+                                            <div class="weight_bar_bordered"></div>
+                                            <div class="weight_bar_bordered"></div>
+                                            <div class="weight_bar_bordered"></div>
+                                            <div class="weight_bar_bordered"></div>
+                                            <div class="weight_bar_bordered"></div>
+                                            <div class="weight_bar_bordered"></div>
+                                            <div class="weight_bar_bordered"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="other-inventory" data-inventory="other"></div>
+                                <section class="clothes-inventory">
+                                    <header>
+                                        <h1 class="clothe-title clothe-head">Head</h1>
+                                        <ul id="head-clothes" class="clothes-items" data-inventory="clothing"></ul>
+                                    </header>
+                                    <main>
+                                        <h1 class="clothe-title clothe-body">Body</h1>
+                                        <ul id="body-clothes" class="clothes-items" data-inventory="clothing"></ul>
+                                    </main>
+                                    <footer>
+                                        <h1 class="clothe-title clothe-addons">Addons</h1>
+                                        <ul id="addon-clothes" class="clothes-items" data-inventory="clothing"></ul>
+                                    </footer>
+                                </section>
+                            </div>
+
+                            <section class="wallet-container">
+                                <div class="wallet-inv-info">
+                                    <span id="wallet-inv-label">
+                                        Wallet
+                                    </span>
+                                    <br>
+                                    <div class="progressbar">
+
+                                        <div class="weight_flex">
+                                            <span id="wallet-inv-weight"></span>
+                                        </div>
+
+                                        <div class="wallet-weight-progressbar flexik">
+                                            <div class="weight_bar_bordered"></div>
+                                            <div class="weight_bar_bordered"></div>
+                                            <div class="weight_bar_bordered"></div>
+                                            <div class="weight_bar_bordered"></div>
+                                            <div class="weight_bar_bordered"></div>
+                                            <div class="weight_bar_bordered"></div>
+                                            <div class="weight_bar_bordered"></div>
+                                            <div class="weight_bar_bordered"></div>
+                                            <div class="weight_bar_bordered"></div>
+                                            <div class="weight_bar_bordered"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="wallet-inventory" class="player-inventory" data-inventory="player"></div>
+                            </section>
+                        </section>
+                    </div>
+                </div>
+                <div class="inventory-container-article" data-page="settings">
+                    <div id="settingsMenu">
+                        <div class="custom-primary-color blockcolor">
+                            <div class="bcname">
+                                <label class="primary-color-picker configure-text" for="primary-color-picker">Main
+                                    Color</label>
+                            </div>
+                            <div class="bcselect">
+                                <input type="color" id="primary-color-picker">
+                            </div>
+                            <div class="bcop">
+                                <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.00019 6.58287C2.37735 7.09258 1.2002 8.60869 1.2002 10.3998C1.2002 12.6089 2.99106 14.3998 5.20019 14.3998C6.31915 14.3998 7.3308 13.9403 8.05677 13.1998C8.76407 12.4783 9.20019 11.4899 9.20019 10.3998M12.0002 6.58287C13.6232 7.09248 14.8005 8.60868 14.8005 10.3999C14.8005 12.609 13.0097 14.3999 10.8005 14.3999C9.89989 14.3999 9.06878 14.1022 8.40019 13.5999M12.0002 5.59967C12.0002 7.80881 10.2093 9.59967 8.00019 9.59967C5.79106 9.59967 4.00019 7.80881 4.00019 5.59967C4.00019 3.39053 5.79106 1.59967 8.00019 1.59967C10.2093 1.59967 12.0002 3.39053 12.0002 5.59967Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <label class="opacity-slider configure-text" for="primary-opacity-slider">Opacity</label>
+                            </div>
+                            <div class="bcper">
+                                <input class="slider-cont" type="range" id="primary-opacity-slider" min="0" max="1" step="0.1" value="0.4">
+                            </div>
+                        </div>
+
+                        <div class="custom-secondary-color blockcolor">
+                            <div class="bcname">
+                                <label class="secondary-color-picker configure-text" for="secondary-color-picker">Secondary background color</label>
+                            </div>
+
+                            <div class="bcselect">
+                                <input type="color" id="secondary-color-picker" value="#ff0000">
+                            </div>
+
+                            <div class="bcop">
+
+                                <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.00019 6.58287C2.37735 7.09258 1.2002 8.60869 1.2002 10.3998C1.2002 12.6089 2.99106 14.3998 5.20019 14.3998C6.31915 14.3998 7.3308 13.9403 8.05677 13.1998C8.76407 12.4783 9.20019 11.4899 9.20019 10.3998M12.0002 6.58287C13.6232 7.09248 14.8005 8.60868 14.8005 10.3999C14.8005 12.609 13.0097 14.3999 10.8005 14.3999C9.89989 14.3999 9.06878 14.1022 8.40019 13.5999M12.0002 5.59967C12.0002 7.80881 10.2093 9.59967 8.00019 9.59967C5.79106 9.59967 4.00019 7.80881 4.00019 5.59967C4.00019 3.39053 5.79106 1.59967 8.00019 1.59967C10.2093 1.59967 12.0002 3.39053 12.0002 5.59967Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <label class="opacity-slider configure-text" for="secondary-opacity-slider">Opacity</label>
+                            </div>
+
+                            <div class="bcper">
+                                <input type="range" id="secondary-opacity-slider" min="0" max="1" step="0.1" value="0.4">
+                            </div>
+                        </div>
+                        <div class="custom-border-container custom-border blockcolor">
+                            <div class="bcname">
+                                <label class="border-color-picker configure-text" for="border-color-picker">Border
+                                    color</label>
+                            </div>
+                            <div class="bcselect">
+                                <input type="color" id="border-color-picker">
+                            </div>
+                            <div class="bcop">
+                                <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.00019 6.58287C2.37735 7.09258 1.2002 8.60869 1.2002 10.3998C1.2002 12.6089 2.99106 14.3998 5.20019 14.3998C6.31915 14.3998 7.3308 13.9403 8.05677 13.1998C8.76407 12.4783 9.20019 11.4899 9.20019 10.3998M12.0002 6.58287C13.6232 7.09248 14.8005 8.60868 14.8005 10.3999C14.8005 12.609 13.0097 14.3999 10.8005 14.3999C9.89989 14.3999 9.06878 14.1022 8.40019 13.5999M12.0002 5.59967C12.0002 7.80881 10.2093 9.59967 8.00019 9.59967C5.79106 9.59967 4.00019 7.80881 4.00019 5.59967C4.00019 3.39053 5.79106 1.59967 8.00019 1.59967C10.2093 1.59967 12.0002 3.39053 12.0002 5.59967Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <label class="opacity-slider" for="border-opacity-slider">Opacity</label>
+                            </div>
+                            <div class="bcper">
+                                <input type="range" id="border-opacity-slider" min="0" max="1" step="0.1" value="0.5">
+                            </div>
+                        </div>
+                        <div class="custom-details">
+                            <div class="custom-border-container custom-border-radius blockcolor">
+                                <div class="bcname">
+                                    <label class="border-radius-slider configure-text" for="border-radius-slider">Border
+                                        radius</label>
+                                </div>
+                                <div class="bcselect">
+                                </div>
+                                <div class="bcop">
+                                    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.00019 6.58287C2.37735 7.09258 1.2002 8.60869 1.2002 10.3998C1.2002 12.6089 2.99106 14.3998 5.20019 14.3998C6.31915 14.3998 7.3308 13.9403 8.05677 13.1998C8.76407 12.4783 9.20019 11.4899 9.20019 10.3998M12.0002 6.58287C13.6232 7.09248 14.8005 8.60868 14.8005 10.3999C14.8005 12.609 13.0097 14.3999 10.8005 14.3999C9.89989 14.3999 9.06878 14.1022 8.40019 13.5999M12.0002 5.59967C12.0002 7.80881 10.2093 9.59967 8.00019 9.59967C5.79106 9.59967 4.00019 7.80881 4.00019 5.59967C4.00019 3.39053 5.79106 1.59967 8.00019 1.59967C10.2093 1.59967 12.0002 3.39053 12.0002 5.59967Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <label class="radius-slider" for="border-radius-slider">Radius</label>
+                                </div>
+                                <div class="bcper">
+                                    <input type="range" id="border-radius-slider" min="0" max="10" step="1" value="5">
+                                </div>
+                            </div>
+
+                            <div class="custom-border-container custom-text-color blockcolor">
+                                <div class="bcname">
+                                    <label class="text-color-picker configure-text" for="text-color-picker">Text
+                                        Color</label>
+                                </div>
+                                <div class="bcselect">
+                                    <input type="color" id="text-color-picker" value="#ffffff">
+                                </div>
+                                <div class="bcop">
+
+                                </div>
+                                <div class="bcper">
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div id="custom-background-container">
+                            <h1>Background Colors</h1>
+                            <ul id="custom-background-items"></ul>
+                        </div>
+
+
+                        <div class="inv-option-item" id="reset-localstorage">
+                            <p>RESET</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="inventory-container-article" data-page="weapon_attachments">
+                    <div class="weapon-attachments-container">
+                        <div class="weapon-attachments-info">
+                            <div class="weapon-attachments-container-title">Pistol | <span style="font-size: 2vh;">9mm</span></div>
+                            <div class="weapon-attachments-container-description">This is a water gun yaay ...</div>
+                            <div class="weapon-attachments-container-details"><span style="font-weight: bold; letter-spacing: .1vh;">Serial Number</span><br> 12345678<br><br><span style="font-weight: bold; letter-spacing: .1vh;">Durability</span>
+                                <div class="weapon-attachments-container-detail-durability">
+                                    <div class="weapon-attachments-container-detail-durability-total"></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <canvas id="attachment-canvas" width="300" height="300"></canvas>
+                        <div class="weapon-attachments-lines">
+                            <div class="weapon-attachments-line">
+                                <div class="attachmentItem-container">
+                                    <div class="weapon-attachment-label">
+                                        <p>Demper</p>
+                                    </div>
+                                    <div class="weapon-attachment-img"><img src="images/acetone.png"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="weapon-attachments-weaponContainer" onmousedown="openWeaponRotate(event)" onmousemove="weaponMouseMove(event)"></div>
+                        <div class="weapon-attachments-title"><span style="font-weight: bold; letter-spacing: .1vh;">Attachments</span>
+                        </div>
+                        <div class="weapon-attachments">
+                        </div>
+
+                        <div class="weapon-attachments-remove"><i class="fas fa-trash"></i></div>
+                    </div>
+                </div>
+                <div class="inventory-container-article" data-page="pause_menu">
+                    <main id="pause-menu-container">
+                        <div class="pause-menu-container">
+                            <div class="pauseMenuLeft">
+                                <div class="serverInfoDataCont textShadow bgSecColor">
+                                    <div>
+                                        <span class='pause-time' data-locale="currentTime">TIME</span>
+                                        <span id="timeBox">11:39:14 AM</span>
+                                    </div>
+                                    <div>
+                                        <span class='pause-date' data-locale="currentDate">DATE</span>
+                                        <span id="dateBox">04/10/2025</span>
+                                    </div>
+                                </div>
+                                <div class="serverInfoDataCont textShadow bgSecColor">
+                                    <span class='pause-players' data-locale="activePlayers">ACTIVE PLAYERS</span>
+                                    <div>
+                                        <span id="totalPlayers">1</span>
+                                        <span id="maximumPlayers">/32</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pauseMenuLeft" id="mapButton">
+                                <div class="gameBtn bgSecColor">
+                                    <span class="gameBtnText" data-locale="gameButtonText">GAME</span>
+                                    <span class="gameBtnTitle pause-map textShadow" data-locale="mapButtonText">MAP</span>
+                                </div>
+                                <img src="assets/map-bg.png" class="bg">
+                            </div>
+                            <div class="pauseMenuLeft" id="settingsButton">
+                                <div class="gameBtn bgSecColor">
+                                    <span class="gameBtnText" data-locale="gameButtonText">GAME</span>
+                                    <span class="gameBtnTitle pause-settings textShadow" data-locale="settingsButtonText">SETTINGS</span>
+                                </div>
+                                <img src="assets/settings-bg.png" class="bg">
+                            </div>
+                        </div>
+                        <div class="pause-menu-container">
+                            <div class="pauseMenuCenter textShadow" id="serverTitleCont">
+                                <span id="serverTitle">QUASAR</span>
+                                <span class="pause-subtitle" data-locale="logoSub">PAUSE MENU</span>
+                            </div>
+                            <div class="pauseMenuCenter bgSecColor">
+                                <span id="titlePlayerInfo" class="textShadow pause-playerInfo">PLAYER INFO</span>
+                                <div class="playerInfoCont">
+                                    <div class="playerProfile"><img src="https://cdn.discordapp.com/attachments/903007497122639925/1360542439605141574/RANPO_PHOTO_DUMP_Picture_one_two_is_MY_art....jpg?ex=67fc2823&is=67fad6a3&hm=7d3f98c36c51c590025f60c7b44bacca4140887686ddcd48c5b5ffb013572867&" id="userProfile"></div>
+                                    <div class="playerInfo">
+                                        <div id="playerName" class="textShadow">Player Name</div>
+                                        <div id="player-level">LVL 1 (100 / 1000)</div>
+                                    </div>
+                                </div>
+                                <div class="jobDataCont">
+                                    <div class="jobData">
+                                        <div class="jobDataIcon"><img src="assets/job-icon.png"></div>
+                                        <div class="jobDataInfo textShadow">
+                                            <span class='pause-jobTitle' data-locale="jobTitle">Proffession</span>
+                                            <div><span id="jobName">Loading</span> - <span id="jobGrade">Loading</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="jobData">
+                                        <div class="jobDataIcon"><img src="assets/play-time-icon.png"></div>
+                                        <div class="jobDataInfo textShadow">
+                                            <span class='pause-playTime' data-locale="totalPlayTimeTitle">Total Play Time</span>
+                                            <div id="totalPlayed">Loading</div>
+                                        </div>
+                                    </div>
+                                    <div class="jobData">
+                                        <div class="jobDataIcon"><img src="assets/bank-icon.png"></div>
+                                        <div class="jobDataInfo textShadow">
+                                            <span class='pause-playerBank' data-locale="bankAccountTitle">Bank Account</span>
+                                            <div>$<span id="playerMoney">Loading</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="jobData">
+                                        <div class="jobDataIcon"><img src="assets/cash-icon.png"></div>
+                                        <div class="jobDataInfo">
+                                            <span class='pause-playerCash' data-locale="cashAccountTitle">Cash Amount</span>
+                                            <div>$<span id="playerBank">Loading</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pauseMenuCenter" id="btnPauseMenuSocial">
+                                <div class="btnPauseMenuSocial bgSecColor" id="discordButton">
+                                    <span id="discord-text">DISCORD</span>
+                                    <div class="bgBtn"><img src="assets/bgGame.png" /></div>
+                                </div>
+                                <div class="btnPauseMenuSocial bgSecColor" id="youtubeButton">
+                                    <span id="youtube-text">Youtube</span>
+                                    <div class="bgBtn"><img src="assets/bgGame.png" /></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pause-menu-container bgSecColor">
+                            <div id="annoucementHeader">
+                                <span class="pause-server">SERVER</span>
+                                <span class="textShadow pause-announce">ANNOUNCE</span>
+                            </div>
+                            <div id="annoucementsBox"></div>
+                        </div>
+                    </main>
+                </div>
+                <div class="inventory-container-article" data-page="quests">
+                    <section id="quest-container">
+                        <ul id="quest-list"></ul>
+                    </section>
+                </div>
+                <div class="inventory-container-article" data-page="skill">
+                    <div class="skill-screen">
+                        <figure class="skill-bg"></figure>
+                        <div id="skill-container"></div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <div class="ply-iteminfo-container ply-item-inf-own">
+            <div class="ply-iteminfo">
+                <div class="iteminfo-content">
+                    <div class="item-info-title"></div>
+                    <div class="item-info-description"></div>
+                </div>
+                <div class="item-info-types">
+                </div>
+                <div class="item-information-container">
+                    <div class="item-info-img"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="itemboxes-container"></div>
+        <div class="itembox-container template"></div>
+        <div class="requiredItem-container">
+        </div>
+
+
+        <div id="dialog">
+            <h2>Nearby players:</h2>
+            <button id="close-inventory-give">&times;</button>
+            <div id="nearPlayers">
+            </div>
+        </div>
+
+        <div class="weapon-tint-skill-screen">
+            <div class="weapon-tint-container">
+                <button id="weapon-tint-close">&times;</button>
+                <div class="weapon-tint-title">Custom Tint:</div>
+
+                <div class="weapon-tint-box-container">
+                    <div class="weapon-tint-input-container">
+                        <input class="weapon-tint-input" id="weapon-tint-input" placeholder="Put a URL for your tint..." type="text">
+                    </div>
+                    <div class="weapon-tint-button-container">
+                        <div class="weapon-tint-set-tint">Save custom tint</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ply-hotbar-inventory noscale" data-inventory="hotbar">
+        <!-- auto generated -->
+    </div>
+
+    <div class="z-hotbar-inventory noscale">
+        <!-- auto generated -->
+    </div>
+
+    <script src="./js/modules/virtualscroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="js/modules/gamerender.js" type="text/javascript"></script>
+    <script src="js/modules/pausemenu.js" type="text/javascript"></script>
+    <script src="js/modules/quest.js" type="text/javascript"></script>
+    <script src="js/modules/skill.js" type="text/javascript"></script>
+    <script src="js/app.js" type="text/javascript"></script>
+    <script src="../config/defaultColors.js" type="text/javascript"></script>
+    <script src="js/modules/custom.js" type="text/javascript"></script>
+    <script src="../config/metadata.js" type="text/javascript"></script>
+    <script src="js/modules/debounce.min.js" type="text/javascript"></script>
+</body>
+
+
+
+</html>

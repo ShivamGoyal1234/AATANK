@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Shop</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://use.fontawesome.com/e5864653ea.js"></script>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.1/css/all.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="//code.jquery.com/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="index.js" defer></script>
+</head>
+<body>
+  <div id="container">
+    <div id="shopCont">
+      <div id="shopleft">
+        <div id="watermark">
+          <i class="fa-solid fa-shop"></i>
+          <div id="actShop">Ammunation - SHOP</div>
+        </div>
+
+        <div id="categoryBtn">
+          <div class="categoryBtn active">
+            <div class="catIcon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                <path d="M19.7999 15.18V16.18C20.3522 16.18 20.7999 15.7323 20.7999 15.18H19.7999ZM19.7999 10.34H20.7999C20.7999 9.78776 20.3522 9.34005 19.7999 9.34005V10.34ZM6.49919 5.53887C6.03462 5.83752 5.90012 6.45623 6.19877 6.9208C6.49742 7.38537 7.11614 7.51988 7.58071 7.22122L6.49919 5.53887ZM13.2 2.42004L13.9893 1.8061C13.6715 1.39756 13.0946 1.29899 12.6592 1.57887L13.2 2.42004ZM15.4906 6.99399C15.8297 7.42993 16.4579 7.50847 16.8939 7.1694C17.3298 6.83033 17.4084 6.20205 17.0693 5.7661L15.4906 6.99399ZM19.7999 14.18H16.94V16.18H19.7999V14.18ZM16.94 11.34H19.7999V9.34005H16.94V11.34ZM18.7999 10.34V15.18H20.7999V10.34H18.7999ZM15.5199 12.76C15.5199 11.9758 16.1557 11.34 16.94 11.34V9.34005C15.0511 9.34005 13.5199 10.8712 13.5199 12.76H15.5199ZM16.94 14.18C16.1557 14.18 15.5199 13.5443 15.5199 12.76H13.5199C13.5199 14.6489 15.0511 16.18 16.94 16.18V14.18ZM7.58071 7.22122L13.7407 3.26122L12.6592 1.57887L6.49919 5.53887L7.58071 7.22122ZM12.4106 3.03398L15.4906 6.99399L17.0693 5.7661L13.9893 1.8061L12.4106 3.03398ZM3.07995 7.38004H18.04V5.38004H3.07995V7.38004ZM18.04 18.58H3.07995V20.58H18.04V18.58ZM3.19995 18.7V7.26004H1.19995V18.7H3.19995ZM3.07995 18.58C3.14623 18.58 3.19995 18.6338 3.19995 18.7H1.19995C1.19995 19.7383 2.04165 20.58 3.07995 20.58V18.58ZM17.9199 18.7C17.9199 18.6338 17.9737 18.58 18.04 18.58V20.58C19.0782 20.58 19.9199 19.7383 19.9199 18.7H17.9199ZM18.04 7.38004C17.9737 7.38004 17.9199 7.32632 17.9199 7.26004H19.9199C19.9199 6.22175 19.0782 5.38004 18.04 5.38004V7.38004ZM3.07995 5.38004C2.04166 5.38004 1.19995 6.22175 1.19995 7.26004H3.19995C3.19995 7.32632 3.14623 7.38004 3.07995 7.38004V5.38004ZM17.9199 15.84V18.7H19.9199V15.84H17.9199ZM17.9199 7.26004V9.57004H19.9199V7.26004H17.9199Z" fill="#767676"/>
+              </svg>
+            </div>
+            <div class="catData">
+              <div class="catName">Weapons</div>
+              <div class="catDesc">Needs</div>
+            </div>
+          </div>
+          <div class="categoryBtn">
+            <div class="catIcon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                <path d="M19.7999 15.18V16.18C20.3522 16.18 20.7999 15.7323 20.7999 15.18H19.7999ZM19.7999 10.34H20.7999C20.7999 9.78776 20.3522 9.34005 19.7999 9.34005V10.34ZM6.49919 5.53887C6.03462 5.83752 5.90012 6.45623 6.19877 6.9208C6.49742 7.38537 7.11614 7.51988 7.58071 7.22122L6.49919 5.53887ZM13.2 2.42004L13.9893 1.8061C13.6715 1.39756 13.0946 1.29899 12.6592 1.57887L13.2 2.42004ZM15.4906 6.99399C15.8297 7.42993 16.4579 7.50847 16.8939 7.1694C17.3298 6.83033 17.4084 6.20205 17.0693 5.7661L15.4906 6.99399ZM19.7999 14.18H16.94V16.18H19.7999V14.18ZM16.94 11.34H19.7999V9.34005H16.94V11.34ZM18.7999 10.34V15.18H20.7999V10.34H18.7999ZM15.5199 12.76C15.5199 11.9758 16.1557 11.34 16.94 11.34V9.34005C15.0511 9.34005 13.5199 10.8712 13.5199 12.76H15.5199ZM16.94 14.18C16.1557 14.18 15.5199 13.5443 15.5199 12.76H13.5199C13.5199 14.6489 15.0511 16.18 16.94 16.18V14.18ZM7.58071 7.22122L13.7407 3.26122L12.6592 1.57887L6.49919 5.53887L7.58071 7.22122ZM12.4106 3.03398L15.4906 6.99399L17.0693 5.7661L13.9893 1.8061L12.4106 3.03398ZM3.07995 7.38004H18.04V5.38004H3.07995V7.38004ZM18.04 18.58H3.07995V20.58H18.04V18.58ZM3.19995 18.7V7.26004H1.19995V18.7H3.19995ZM3.07995 18.58C3.14623 18.58 3.19995 18.6338 3.19995 18.7H1.19995C1.19995 19.7383 2.04165 20.58 3.07995 20.58V18.58ZM17.9199 18.7C17.9199 18.6338 17.9737 18.58 18.04 18.58V20.58C19.0782 20.58 19.9199 19.7383 19.9199 18.7H17.9199ZM18.04 7.38004C17.9737 7.38004 17.9199 7.32632 17.9199 7.26004H19.9199C19.9199 6.22175 19.0782 5.38004 18.04 5.38004V7.38004ZM3.07995 5.38004C2.04166 5.38004 1.19995 6.22175 1.19995 7.26004H3.19995C3.19995 7.32632 3.14623 7.38004 3.07995 7.38004V5.38004ZM17.9199 15.84V18.7H19.9199V15.84H17.9199ZM17.9199 7.26004V9.57004H19.9199V7.26004H17.9199Z" fill="#767676"/>
+              </svg>
+            </div>
+            <div class="catData">
+              <div class="catName">Misc</div>
+              <div class="catDesc">Needs</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div id="item-box">
+
+        <div class="item">
+          <div class="costItem">
+            <div class="costIcon"><i class="fa-solid fa-dollar-sign dollaricon"></i></div>
+            <div class="cost">5555</div>
+          </div>
+          <img class="img" src="../images/weapon_knife.png" alt="">
+          <div class="actionItem">
+            <div class="nameItem">
+              <div>Knife</div>
+              <div class="item-altcategory">Weapons</div>  
+            </div>
+            <div class="addBasket"><i class="fas fa-plus"></i></div>
+          </div>
+        </div><div class="item">
+          <div class="costItem">
+            <div class="costIcon"><i class="fa-solid fa-dollar-sign dollaricon"></i></div>
+            <div class="cost">5555</div>
+          </div>
+          <img class="img" src="../images/weapon_knife.png" alt="">
+          <div class="actionItem">
+            <div class="nameItem">
+              <div>Knife</div>
+              <div class="item-altcategory">Weapons</div>  
+            </div>
+            <div class="addBasket"><i class="fas fa-plus"></i></div>
+          </div>
+        </div><div class="item">
+          <div class="costItem">
+            <div class="costIcon"><i class="fa-solid fa-dollar-sign dollaricon"></i></div>
+            <div class="cost">5555</div>
+          </div>
+          <img class="img" src="../images/weapon_knife.png" alt="">
+          <div class="actionItem">
+            <div class="nameItem">
+              <div>Knife</div>
+              <div class="item-altcategory">Weapons</div>  
+            </div>
+            <div class="addBasket"><i class="fas fa-plus"></i></div>
+          </div>
+        </div><div class="item">
+          <div class="costItem">
+            <div class="costIcon"><i class="fa-solid fa-dollar-sign dollaricon"></i></div>
+            <div class="cost">5555</div>
+          </div>
+          <img class="img" src="../images/weapon_knife.png" alt="">
+          <div class="actionItem">
+            <div class="nameItem">
+              <div>Knife</div>
+              <div class="item-altcategory">Weapons</div>  
+            </div>
+            <div class="addBasket"><i class="fas fa-plus"></i></div>
+          </div>
+        </div><div class="item">
+          <div class="costItem">
+            <div class="costIcon"><i class="fa-solid fa-dollar-sign dollaricon"></i></div>
+            <div class="cost">5555</div>
+          </div>
+          <img class="img" src="../images/weapon_knife.png" alt="">
+          <div class="actionItem">
+            <div class="nameItem">
+              <div>Knife</div>
+              <div class="item-altcategory">Weapons</div>  
+            </div>
+            <div class="addBasket"><i class="fas fa-plus"></i></div>
+          </div>
+        </div>
+
+      </div>
+      <div id="basketCont">
+        <span id="basketText">Basket</span>
+        <div id="cart-box">
+
+          <div class="cart-item">
+            <div class="cart-img">
+              <img src="../images/weapon_carbinerifle.png" alt="">
+            </div>
+            <div class="cart-data">
+              <span class="cart-label">Water dddddddddddddd</span>
+              <span class="cart-cost">$1234</span>
+            </div>
+            <div class="card-btn-cont">
+              <div class="leftCard-btn">
+                <div class="cardBtnCss">-</div>
+                <div class="cardBtnCss cardCount">111</div>
+                <div class="cardBtnCss">+</div>
+              </div>
+              <div class="cardBtnCss"><i class="fas fa-trash-alt"></i></div>
+            </div>
+          </div>
+
+        </div>
+        <div id="totalPriceCont">
+          <span>Total Price</span>
+          <div id="totalPrice">$15215212145</div>
+        </div>
+        <div id="payBtns">
+          <div class="payBtns cashButton" onclick="clFunc('makePayment', 'cash')">
+            <span>PAY BY CASH</span>
+          </div>
+          <div class="payBtns cardButton" onclick="clFunc('makePayment', 'bank')">
+            <span>PAY BY CARD</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
