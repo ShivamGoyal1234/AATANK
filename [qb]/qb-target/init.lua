@@ -62,6 +62,11 @@ Config.MenuControlKey = 238
 -- Whether to disable ALL controls or only specificed ones
 Config.DisableControls = true
 
+-- cdn-fuel
+
+local Allowrefuel = false
+local AllowElectricRefuel = false
+
 -------------------------------------------------------------------------------
 -- Target Configs
 -------------------------------------------------------------------------------
@@ -81,7 +86,22 @@ Config.PolyZones = {
 }
 
 Config.TargetBones = {
-
+            {
+				type = "client",
+				event = "cdn-fuel:client:SendMenuToServer",
+				icon = "fas fa-gas-pump",
+				label = "Insert Nozzle",
+				canInteract = function() return Allowrefuel end
+            },
+	    	{
+				type = "client",
+				action = function()
+					TriggerEvent('cdn-fuel:client:electric:RefuelMenu')
+				end,
+				icon = "fas fa-bolt",
+				label = "Insert Electric Nozzle",
+				canInteract = function() return AllowElectricRefuel end
+            },
 }
 
 Config.TargetModels = {

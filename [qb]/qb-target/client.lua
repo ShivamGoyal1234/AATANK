@@ -1179,6 +1179,23 @@ local function AllowTargeting(bool)
 end
 exports('AllowTargeting', AllowTargeting)
 
+
+local function AllowRefuel(state, electric) 
+    if state then
+		if electric then
+			AllowElectricRefuel = true
+		else
+        	Allowrefuel = true
+		end
+    else
+		if electric then
+			AllowElectricRefuel = false
+		else
+			Allowrefuel = false
+		end
+    end
+end exports('AllowRefuel', AllowRefuel)
+
 -- NUI Callbacks
 
 RegisterNUICallback('selectTarget', function(option, cb)
