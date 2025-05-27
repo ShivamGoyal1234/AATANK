@@ -53,6 +53,34 @@ Config.PawnItems = {
     [8] = {
         item = 'laptop',
         price = math.random(50,100)
+    },
+    [9] = {
+        item = "gold_tooth",
+        price = math.random(50,100)
+    },
+    [10] = {
+        item = "dirty_photo",
+        price = math.random(50,100)
+    },
+    [11] = {
+        item = "chain",
+        price = math.random(50,100)
+    },
+    [12] = {
+        item = "medal",   
+        price = math.random(50,100)   
+    },
+    [13] = {
+        item = "Rusted tin",   
+        price = math.random(50,100)  
+    },
+    [14] = {
+        item = "Nail",
+        price = math.random(50,100)
+    },
+    [15] = {
+        item = "Ring",
+        price = math.random(50,100)
     }
 }
 

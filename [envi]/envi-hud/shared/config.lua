@@ -35,7 +35,7 @@ Config.AdminHudSettingsCommand = 'adminhud' -- NEW - This is the command for the
 
 Config.ServerInfo = {
   name = 'AATANK ROLEPLAY',
-  discord = 'discord.gg/envi-scripts'
+  discord = 'https://discord.gg/w8p9ezRnZV'
 }
 
 Config.CashItemOrAccount = {

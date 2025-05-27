@@ -4,10 +4,10 @@ Config.Framework = 'QB' -- ESX / QB / QBOX / ND (Bridge)
 Config.Language = 'en' -- en / pl
 
 Config.Jobs = { -- jobs with duty timers
-    ['police'] = false,
-    ['ambulance'] = false,
-    ['mechanic'] = false,
-    ['sheriff'] = false,
+    ['police'] = true,
+    ['ambulance'] = true,
+    ['mechanic'] = true,
+    ['sheriff'] = true,
     ['burgershot'] = true
 }
 
