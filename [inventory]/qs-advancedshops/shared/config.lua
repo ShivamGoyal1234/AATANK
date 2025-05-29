@@ -481,7 +481,8 @@ Config.Shops = {
                         description = 'Coke Product'
                     },
                     { name = 'oxy',  label = 'Oxy',  perPrice = 5000, description = 'Oxy Product' },
-                    { name = 'meth', label = 'Meth', perPrice = 5000, description = 'Meth Product' }
+                    { name = 'meth', label = 'Meth', perPrice = 5000, description = 'Meth Product' },
+                    
                 }
             }
         },
