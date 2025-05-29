@@ -16,7 +16,6 @@ files {
 }
 
 shared_scripts {
-    '@es_extended/imports.lua', -- you can remove this if you use qb / qbox 
     '@ox_lib/init.lua',
     'config.lua'
 }

@@ -343,7 +343,7 @@ end
 GPT.Editable.ConfiscateVehicle = function(vin)
     local affectedRows = MySQL.update.await('UPDATE player_vehicles SET state = 3 WHERE vin = ? AND state != 3', {vin})
     if affectedRows > 0 then
-        local row = MySQL.single.await('SELECT * FROM player_vehicles WHERE vin = ? LIMIT 1', {vin})
+        local row = MySQL.single.await('SELECT vehicleid FROM player_vehicles WHERE vin = ? LIMIT 1', {vin})
         if row and row.vehicleid then
             local entity = NetworkGetEntityFromNetworkId(row.vehicleid)
             if entity ~= 0 and DoesEntityExist(entity) then

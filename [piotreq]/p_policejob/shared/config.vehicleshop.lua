@@ -9,7 +9,7 @@ Config.VehicleShop.Shops = {
             vehicleCoords = vector4(445.32, -994.29, 25.70, 264.56),
         },
         ped = {
-            coords = vector4(4459.26, -998.73, 25.7, 1.93),
+            coords = vector4(460.92, -998.37, 25.70, 345.06),
             model = 's_f_y_cop_01',
             anim = {dict = 'amb@world_human_cop_idles@male@idle_b', clip = 'idle_e'}
         },

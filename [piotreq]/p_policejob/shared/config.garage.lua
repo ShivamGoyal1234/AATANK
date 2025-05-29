@@ -60,7 +60,7 @@ Config.Garage.Garages = {
             model = 's_m_y_cop_01',
             anim = {dict = 'amb@world_human_cop_idles@male@idle_b', clip = 'idle_e'}
         },
-        coords = vector4(434.6770, -1029.1232, 28.9886, 0.0),
+        coords = vector4(442.43, -986.84, 25.70, 275.39),
         allowedJobs = {
             ['police'] = 0,
             ['sheriff'] = 0

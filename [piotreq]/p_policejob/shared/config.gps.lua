@@ -3,7 +3,7 @@ Config.GPS = {}
 Config.GPS.NeedDuty = true -- true | false (need to be on duty to turn on/off gps?)
 Config.GPS.ShortRange = true -- only visible closests blips on minimap
 Config.GPS.RefreshRate = 2500 -- 2.5s
-Config.GPS.UseCallSign = false -- true (use job call sign setted by /callsign ?) | false
+Config.GPS.UseCallSign = true -- true (use job call sign setted by /callsign ?) | false
 
 Config.GPS.Jobs = {
     ['police'] = { -- YOU CAN USE GPS FOR DIFFERENT JOBS ALSO (MECHANIC, EMS, ETC)

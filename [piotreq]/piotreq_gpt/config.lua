@@ -35,10 +35,7 @@ Config.Units = {
 }
 
 Config.Vehicles = {
-    ['police'] = {
-        ['police'] = { label = 'Crown Victoria', price = 5000, type = 'car' },
-        -- ['police2'] = { label = 'Example Vehicle', price = 5000, type = 'car' },
-    }
+    
 }
 
 Config.DangerCodes = {
@@ -74,16 +71,9 @@ Config.CitizenLicenses = { -- licenses for citizens
 }
 
 Config.PoliceLicenses = { -- licenses for officers
-    ['police'] = {
-        ['seu'] = {label = 'License SEU', access = {['police'] = 0}}, -- license name, label and access [which job and from which grade can add license]
-        ['eagle'] = {label = 'License EAGLE', access = {['police'] = 0}}, -- license name, label and access [which job and from which grade can add license]
-        ['dtu'] = {label = 'License DTU', access = {['police'] = 0}}, -- license name, label and access [which job and from which grade can add license]
-    },
-    ['sheriff'] = {
-        ['seu'] = {label = 'License SEU', access = {['police'] = 0}}, -- license name, label and access [which job and from which grade can add license]
-        ['eagle'] = {label = 'License EAGLE', access = {['police'] = 0}}, -- license name, label and access [which job and from which grade can add license]
-        ['dtu'] = {label = 'License DTU', access = {['police'] = 0}}, -- license name, label and access [which job and from which grade can add license]
-    }
+    ['seu'] = {label = 'License SEU', access = {['police'] = 0}}, -- license name, label and access [which job and from which grade can add license]
+    ['eagle'] = {label = 'License EAGLE', access = {['police'] = 0}}, -- license name, label and access [which job and from which grade can add license]
+    ['dtu'] = {label = 'License DTU', access = {['police'] = 0}}, -- license name, label and access [which job and from which grade can add license]
 }
 
 Config.AddKeys = function(plate) -- add carkeys
@@ -96,7 +86,7 @@ end
 
 Config.Spawners = {
     ['MissionRow'] = {
-        coords = vector4(461.5007, -1024.0045, 41.3191, 91.2373), -- if ped it will be coords of ped and his heading
+        coords = vector4(459.04, -1024.88, 28.32, 96.55), -- if ped it will be coords of ped and his heading
         radius = 0.75,
         drawSprite = true,
         debug = false,
@@ -145,7 +135,8 @@ Config.LicenseSections = { -- required police license to access sections
 Config.ConfiscatePoints = { -- where you can check confiscated vehicles
     ['MissionRow'] = {
         coords = vector3(444.2492, -979.2607, 30.9276),
-        label = 'Skonfiskowane pojazdy',
+        -- label = 'Skonfiskowane pojazdy',
+        label = 'Confascinated Vehicle',
         icon = 'fa-solid fa-car',
         drawSprite = true,
         debug = false
@@ -488,228 +479,6 @@ Config.Access = {
             }
         },
         ['9'] = {
-            ['home'] = {
-                ['last_wanted_citizens'] = true, ['last_wanted_vehicles'] = true, ['most_active_employees'] = true,
-                ['change_code'] = true, ['duty_time'] = true, ['last_active'] = true
-            },
-            ['patrols'] = {
-                ['create'] = true, ['join'] = true
-            },
-            ['citizens'] = {
-                ['add_note'] = true, ['add_wanted'] = true, ['delete_wanted'] = true, 
-                ['add_license'] = true, ['delete_note'] = true, ['delete_license'] = true,
-                ['set_photo'] = true
-            },
-            ['vehicles'] = {
-                ['add_note'] = true, ['add_wanted'] = true, 
-                ['confiscate'] = true, ['delete_wanted'] = true, ['delete_note'] = true, ['confiscate'] = true
-            },
-            ['weapons'] = true, -- you can set this to false to disable button for this grade a player
-            ['evidence'] = true,
-            ['cases'] = {
-                ['create'] = true, ['edit'] = true
-            },
-            ['judgements'] = {
-                ['fine'] = true, ['jail'] = true, ['custom_jail'] = true, ['custom_fine'] = true
-            },
-            ['announcements'] = {
-                ['create'] = true, ['delete'] = true
-            },
-            ['employees'] = {
-                ['add'] = true, ['reset_time_all'] = true, ['update'] = true, ['fire'] = true, ['add_note'] = true, ['delete_note'] = true,
-                ['break'] = true, ['add_license'] = true, ['delete_license'] = true, ['change_badge'] = true, ['reset_time_employee'] = true,
-                ['set_photo'] = true
-            },
-            ['garage'] = {
-                ['buy'] = true, ['impound'] = true, ['manage'] = true
-            }
-        },
-        ['10'] = {
-            ['home'] = {
-                ['last_wanted_citizens'] = true, ['last_wanted_vehicles'] = true, ['most_active_employees'] = true,
-                ['change_code'] = true, ['duty_time'] = true, ['last_active'] = true
-            },
-            ['patrols'] = {
-                ['create'] = true, ['join'] = true
-            },
-            ['citizens'] = {
-                ['add_note'] = true, ['add_wanted'] = true, ['delete_wanted'] = true, 
-                ['add_license'] = true, ['delete_note'] = true, ['delete_license'] = true,
-                ['set_photo'] = true
-            },
-            ['vehicles'] = {
-                ['add_note'] = true, ['add_wanted'] = true, 
-                ['confiscate'] = true, ['delete_wanted'] = true, ['delete_note'] = true, ['confiscate'] = true
-            },
-            ['weapons'] = true, -- you can set this to false to disable button for this grade a player
-            ['evidence'] = true,
-            ['cases'] = {
-                ['create'] = true, ['edit'] = true
-            },
-            ['judgements'] = {
-                ['fine'] = true, ['jail'] = true, ['custom_jail'] = true, ['custom_fine'] = true
-            },
-            ['announcements'] = {
-                ['create'] = true, ['delete'] = true
-            },
-            ['employees'] = {
-                ['add'] = true, ['reset_time_all'] = true, ['update'] = true, ['fire'] = true, ['add_note'] = true, ['delete_note'] = true,
-                ['break'] = true, ['add_license'] = true, ['delete_license'] = true, ['change_badge'] = true, ['reset_time_employee'] = true,
-                ['set_photo'] = true
-            },
-            ['garage'] = {
-                ['buy'] = true, ['impound'] = true, ['manage'] = true
-            }
-        },
-        ['11'] = {
-            ['home'] = {
-                ['last_wanted_citizens'] = true, ['last_wanted_vehicles'] = true, ['most_active_employees'] = true,
-                ['change_code'] = true, ['duty_time'] = true, ['last_active'] = true
-            },
-            ['patrols'] = {
-                ['create'] = true, ['join'] = true
-            },
-            ['citizens'] = {
-                ['add_note'] = true, ['add_wanted'] = true, ['delete_wanted'] = true, 
-                ['add_license'] = true, ['delete_note'] = true, ['delete_license'] = true,
-                ['set_photo'] = true
-            },
-            ['vehicles'] = {
-                ['add_note'] = true, ['add_wanted'] = true, 
-                ['confiscate'] = true, ['delete_wanted'] = true, ['delete_note'] = true, ['confiscate'] = true
-            },
-            ['weapons'] = true, -- you can set this to false to disable button for this grade a player
-            ['evidence'] = true,
-            ['cases'] = {
-                ['create'] = true, ['edit'] = true
-            },
-            ['judgements'] = {
-                ['fine'] = true, ['jail'] = true, ['custom_jail'] = true, ['custom_fine'] = true
-            },
-            ['announcements'] = {
-                ['create'] = true, ['delete'] = true
-            },
-            ['employees'] = {
-                ['add'] = true, ['reset_time_all'] = true, ['update'] = true, ['fire'] = true, ['add_note'] = true, ['delete_note'] = true,
-                ['break'] = true, ['add_license'] = true, ['delete_license'] = true, ['change_badge'] = true, ['reset_time_employee'] = true,
-                ['set_photo'] = true
-            },
-            ['garage'] = {
-                ['buy'] = true, ['impound'] = true, ['manage'] = true
-            }
-        },
-        ['12'] = {
-            ['home'] = {
-                ['last_wanted_citizens'] = true, ['last_wanted_vehicles'] = true, ['most_active_employees'] = true,
-                ['change_code'] = true, ['duty_time'] = true, ['last_active'] = true
-            },
-            ['patrols'] = {
-                ['create'] = true, ['join'] = true
-            },
-            ['citizens'] = {
-                ['add_note'] = true, ['add_wanted'] = true, ['delete_wanted'] = true, 
-                ['add_license'] = true, ['delete_note'] = true, ['delete_license'] = true,
-                ['set_photo'] = true
-            },
-            ['vehicles'] = {
-                ['add_note'] = true, ['add_wanted'] = true, 
-                ['confiscate'] = true, ['delete_wanted'] = true, ['delete_note'] = true, ['confiscate'] = true
-            },
-            ['weapons'] = true, -- you can set this to false to disable button for this grade a player
-            ['evidence'] = true,
-            ['cases'] = {
-                ['create'] = true, ['edit'] = true
-            },
-            ['judgements'] = {
-                ['fine'] = true, ['jail'] = true, ['custom_jail'] = true, ['custom_fine'] = true
-            },
-            ['announcements'] = {
-                ['create'] = true, ['delete'] = true
-            },
-            ['employees'] = {
-                ['add'] = true, ['reset_time_all'] = true, ['update'] = true, ['fire'] = true, ['add_note'] = true, ['delete_note'] = true,
-                ['break'] = true, ['add_license'] = true, ['delete_license'] = true, ['change_badge'] = true, ['reset_time_employee'] = true,
-                ['set_photo'] = true
-            },
-            ['garage'] = {
-                ['buy'] = true, ['impound'] = true, ['manage'] = true
-            }
-        },
-        ['13'] = {
-            ['home'] = {
-                ['last_wanted_citizens'] = true, ['last_wanted_vehicles'] = true, ['most_active_employees'] = true,
-                ['change_code'] = true, ['duty_time'] = true, ['last_active'] = true
-            },
-            ['patrols'] = {
-                ['create'] = true, ['join'] = true
-            },
-            ['citizens'] = {
-                ['add_note'] = true, ['add_wanted'] = true, ['delete_wanted'] = true, 
-                ['add_license'] = true, ['delete_note'] = true, ['delete_license'] = true,
-                ['set_photo'] = true
-            },
-            ['vehicles'] = {
-                ['add_note'] = true, ['add_wanted'] = true, 
-                ['confiscate'] = true, ['delete_wanted'] = true, ['delete_note'] = true, ['confiscate'] = true
-            },
-            ['weapons'] = true, -- you can set this to false to disable button for this grade a player
-            ['evidence'] = true,
-            ['cases'] = {
-                ['create'] = true, ['edit'] = true
-            },
-            ['judgements'] = {
-                ['fine'] = true, ['jail'] = true, ['custom_jail'] = true, ['custom_fine'] = true
-            },
-            ['announcements'] = {
-                ['create'] = true, ['delete'] = true
-            },
-            ['employees'] = {
-                ['add'] = true, ['reset_time_all'] = true, ['update'] = true, ['fire'] = true, ['add_note'] = true, ['delete_note'] = true,
-                ['break'] = true, ['add_license'] = true, ['delete_license'] = true, ['change_badge'] = true, ['reset_time_employee'] = true,
-                ['set_photo'] = true
-            },
-            ['garage'] = {
-                ['buy'] = true, ['impound'] = true, ['manage'] = true
-            }
-        },
-        ['14'] = {
-            ['home'] = {
-                ['last_wanted_citizens'] = true, ['last_wanted_vehicles'] = true, ['most_active_employees'] = true,
-                ['change_code'] = true, ['duty_time'] = true, ['last_active'] = true
-            },
-            ['patrols'] = {
-                ['create'] = true, ['join'] = true
-            },
-            ['citizens'] = {
-                ['add_note'] = true, ['add_wanted'] = true, ['delete_wanted'] = true, 
-                ['add_license'] = true, ['delete_note'] = true, ['delete_license'] = true,
-                ['set_photo'] = true
-            },
-            ['vehicles'] = {
-                ['add_note'] = true, ['add_wanted'] = true, 
-                ['confiscate'] = true, ['delete_wanted'] = true, ['delete_note'] = true, ['confiscate'] = true
-            },
-            ['weapons'] = true, -- you can set this to false to disable button for this grade a player
-            ['evidence'] = true,
-            ['cases'] = {
-                ['create'] = true, ['edit'] = true
-            },
-            ['judgements'] = {
-                ['fine'] = true, ['jail'] = true, ['custom_jail'] = true, ['custom_fine'] = true
-            },
-            ['announcements'] = {
-                ['create'] = true, ['delete'] = true
-            },
-            ['employees'] = {
-                ['add'] = true, ['reset_time_all'] = true, ['update'] = true, ['fire'] = true, ['add_note'] = true, ['delete_note'] = true,
-                ['break'] = true, ['add_license'] = true, ['delete_license'] = true, ['change_badge'] = true, ['reset_time_employee'] = true,
-                ['set_photo'] = true
-            },
-            ['garage'] = {
-                ['buy'] = true, ['impound'] = true, ['manage'] = true
-            }
-        },
-        ['15'] = {
             ['home'] = {
                 ['last_wanted_citizens'] = true, ['last_wanted_vehicles'] = true, ['most_active_employees'] = true,
                 ['change_code'] = true, ['duty_time'] = true, ['last_active'] = true

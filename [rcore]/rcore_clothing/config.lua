@@ -22,7 +22,7 @@ Config = {
     -- When opening character creator, this will make it wait for collisions to be loaded before opening it
     CharCreatorWaitForCollisions = false,
 
-    IdModeHasEverything = false, -- if true, all items will be available in ID mode
+    IdModeHasEverything = true, -- if true, all items will be available in ID mode
 
     -- When this is TRUE, the player will be able to select
     -- clothes that they have purchased, in job changing rooms (after going off duty)
