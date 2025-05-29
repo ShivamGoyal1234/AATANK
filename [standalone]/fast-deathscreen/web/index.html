@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Deathscreen</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css' crossorigin='anonymous'/>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="vue/vue.global.js"></script>
+</head>
+
+<body>
+    <v-app data-app >
+        <div id="app" class="w-[100vw] h-[100vh] items-center justify-center overflow-hidden flex">
+            <Transition>
+                <div class="container" v-if="isFlex">
+                    <div class="deatBlurBox">
+                    <div class="deatBox">
+                        <div :style="{ opacity: pressedg ? '0.65' : '1' }" class="deatLeftBox">
+                        <div class="deatLeftImg">
+                            <div class="deatTitle"><img v-if="pressedg" src="images/hand.svg"></img>{{ pressedg ? "" : "G" }}</div>
+                        </div>
+                        <div class="deatLeftLoremBox">
+                            <p>{{ pressedg ? "Wait till the ambulance come for you !" : "To send district signal message to ambulance !" }}</p>
+                        </div>
+                        </div>
+                        <div class="deatCenterBox">
+                        <div class="deatCenterTopBox">
+                            <div class="deatCenterImg">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="1.0417vw"
+                                height="1.0417vw"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                            >
+                                <path
+                                d="M10 0C15.523 0 20 4.477 20 10C20 15.523 15.523 20 10 20C4.477 20 0 15.523 0 10C0 4.477 4.477 0 10 0ZM10 4C9.73478 4 9.48043 4.10536 9.29289 4.29289C9.10536 4.48043 9 4.73478 9 5V10C9.00006 10.2652 9.10545 10.5195 9.293 10.707L12.293 13.707C12.4816 13.8892 12.7342 13.99 12.9964 13.9877C13.2586 13.9854 13.5094 13.8802 13.6948 13.6948C13.8802 13.5094 13.9854 13.2586 13.9877 12.9964C13.99 12.7342 13.8892 12.4816 13.707 12.293L11 9.586V5C11 4.73478 10.8946 4.48043 10.7071 4.29289C10.5196 4.10536 10.2652 4 10 4Z"
+                                fill="#121212"
+                                />
+                            </svg>
+                            </div>
+                            <div :style="{ opacity: isRunning ? '1' : '0.65' }" class="deatCenterNumberMenu">
+                                <div class="deatNumberMenu"><p>{{ minutesFirstDigit }}</p></div>
+                                <div class="deatNumberMenu"><p>{{ minutesSecondDigit }}</p></div>
+                                <div class="deatNumberMenu circle"><p>:</p></div>
+                                <div class="deatNumberMenu"><p>{{ secondsFirstDigit }}</p></div>
+                                <div class="deatNumberMenu"><p>{{ secondsSecondDigit }}</p></div>
+                            </div>
+                        </div>
+                        <div class="acceptBox" v-if="!isRunning">
+                            <div class="acceptMenu" :style="{ backgroundColor: menuColor }">
+                              <div class="acceptTitle"><p :style="{ color: titleColor2 }">[E]</p></div>
+                            </div>
+                            <div class="acceptTitleOne" :style="{ color: titleColor }">
+                              <p>REVIVE</p>
+                            </div>
+                            <div
+                              class="acceptWidht"
+                              :style="{ width: `${widthPercentage}%` }"
+                            ></div>
+                        </div>
+                        <div class="deatCenterLoremBox">
+                            <p>{{ isRunning ? "You can Revive after the cooldown is Finished ! You are not going to loose any items!" : "Hold [E] to revive !" }}</p>
+                        </div>
+                        </div>
+                        <div :style="{ opacity: pressedh ? '0.65' : '1' }" class="deatRightBox">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="1.4063vw"
+                            height="1.25vw"
+                            viewBox="0 0 27 24"
+                            fill="none"
+                        >
+                            <path
+                            d="M11.7108 18.6667C11.559 18.6667 11.4289 18.6222 11.3205 18.5333C11.212 18.4444 11.1361 18.3333 11.0928 18.2C10.7892 17.2667 10.4205 16.4889 9.98675 15.8667C9.55301 15.2444 9.11928 14.6444 8.68554 14.0667C8.25181 13.4889 7.88834 12.8889 7.59513 12.2667C7.30193 11.6444 7.15576 10.8889 7.15663 10C7.15663 8.71111 7.6012 7.61111 8.49036 6.7C9.37952 5.78889 10.453 5.33333 11.7108 5.33333C12.9687 5.33333 14.0422 5.78889 14.9313 6.7C15.8205 7.61111 16.2651 8.71111 16.2651 10C16.2651 10.8889 16.1185 11.6444 15.8253 12.2667C15.532 12.8889 15.169 13.4889 14.7361 14.0667C14.3033 14.6444 13.8695 15.2444 13.4349 15.8667C13.0003 16.4889 12.6317 17.2667 12.3289 18.2C12.2855 18.3333 12.2096 18.4444 12.1012 18.5333C11.9928 18.6222 11.8627 18.6667 11.7108 18.6667ZM11.7108 11.6667C12.1663 11.6667 12.5514 11.5053 12.8663 11.1827C13.1812 10.86 13.3382 10.4658 13.3373 10C13.3365 9.53422 13.179 9.13956 12.865 8.816C12.551 8.49245 12.1663 8.33156 11.7108 8.33333C11.2554 8.33511 10.8703 8.49644 10.5554 8.81733C10.2405 9.13822 10.0835 9.53244 10.0843 10C10.0852 10.4676 10.2427 10.8622 10.5567 11.184C10.8707 11.5058 11.2554 11.6667 11.7108 11.6667ZM11.7108 24C8.45783 24 5.69277 22.8333 3.41566 20.5C1.13855 18.1667 0 15.3333 0 12C0 10.3333 0.309253 8.77245 0.927759 7.31733C1.54627 5.86222 2.38077 4.59556 3.43128 3.51733C4.48178 2.43911 5.71793 1.58356 7.13971 0.950668C8.56149 0.31778 10.0852 0.000890754 11.7108 1.8648e-06C13.3365 -0.000887024 14.8602 0.316002 16.282 0.950668C17.7038 1.58534 18.9399 2.44045 19.9904 3.516C21.0409 4.59156 21.8759 5.85822 22.4952 7.316C23.1146 8.77378 23.4234 10.3351 23.4217 12V12.2667L25.1458 10.4667L27 12.3333L22.1205 17.3333L17.241 12.3333L19.0952 10.4667L20.8193 12.2333V12C20.8193 9.42222 19.9301 7.22222 18.1518 5.4C16.3735 3.57778 14.2265 2.66667 11.7108 2.66667C9.19518 2.66667 7.04819 3.57778 5.26988 5.4C3.49157 7.22222 2.60241 9.42222 2.60241 12C2.6241 14.5778 3.51846 16.7778 5.28549 18.6C7.05253 20.4222 9.19431 21.3333 11.7108 21.3333C12.947 21.3333 14.1072 21.0947 15.1916 20.6173C16.2759 20.14 17.2301 19.4898 18.0542 18.6667L19.9084 20.5667C18.8458 21.6333 17.6148 22.4724 16.2156 23.084C14.8164 23.6956 13.3148 24.0009 11.7108 24Z"
+                            fill="#121212"
+                            />
+                        </svg>
+                        <div class="deatRightLorem">
+                            <p>Press [H] to Refresh your position !</p>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </Transition>
+        </div>
+    </v-app>
+    <script src="main.js" type="module"></script>
+</body>
+
+</html>

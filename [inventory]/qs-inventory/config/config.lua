@@ -102,7 +102,7 @@ Config.QBX = qbxHas
 
 Config.FetchOldInventory = false -- Set to `true` only once to start the migration process, then return to `false` immediately after.
 
-Config.UseTarget = false         -- Set to true to enable targeting with either 'qb-target' or 'ox_target', or false to disable entirely.
+Config.UseTarget = true         -- Set to true to enable targeting with either 'qb-target' or 'ox_target', or false to disable entirely.
 
 --[[
     General Configuration Guide for the Inventory System
@@ -624,9 +624,9 @@ Config.Defaults = {
 }
 
 -- Pause Menu
-Config.UseInventoryPauseMenuByDefault = true                -- when  you press esc it will open the inventory pause menu by default
-Config.DiscordLink = 'https://discord.gg/quasarstore'       -- Discord Link
-Config.YoutubeLink = 'https://www.youtube.com/@quasarstore' -- Youtube Link
+Config.UseInventoryPauseMenuByDefault = false                -- when  you press esc it will open the inventory pause menu by default
+Config.DiscordLink = 'https://discord.gg/w8p9ezRnZV'       -- Discord Link
+-- Config.YoutubeLink = 'https://www.youtube.com/@quasarstore' -- Youtube Link
 Config.Announcements = {
     {
         title = 'Server Launch',

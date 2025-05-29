@@ -41,25 +41,25 @@ Config.Stations = {
         },
         bells = {
             {
-                coords = vector3(445.73, -990.36, 30.75), radius = 0.75,
+                coords = vector3(441.22, -981.76, 30.69), radius = 0.75,
                 jobs = {['police'] = true, ['sheriff'] = true}, -- which jobs will get alert
             }
         },
         trashes = {
             {
-                coords = vector3(445.83, -1004.18, 30.5), radius = 0.75,
+                coords = vector3(450.52, -977.59, 30.69), radius = 0.75,
                 allowedJobs = {['police'] = 0, ['sheriff'] = 0}, -- which jobs can access trashes
             }
         },
         bodycams = {
             {
-                coords = vector3(460.18, -1005.04, 34.0), radius = 0.75,
+                coords = vector3(461.11, -977.85, 30.69), radius = 0.75,
                 allowedJobs = {['police'] = 0, ['sheriff'] = 0}, -- which jobs can access bodycams
             }
         },
         toggleDuty = { -- coords for duty toggle [ONLY QB AND QBOX!!!!!!]
             {
-                coords = vector3(446.19, -991.22, 30.5), radius = 0.75,
+                coords = vector3(442.78, -981.96, 30.69), radius = 0.75,
                 allowedJobs = {['police'] = 0, ['sheriff'] = 0},
             }
         }
@@ -70,7 +70,7 @@ Config.Shops = {
     ['Armory'] = {
         label = 'Police Armory',
         locations = {
-            vector3(449.45, -1006.15, 31.0)
+            vector3(482.65, -995.27, 30.69)
         },
         requiredDuty = false,
         radius = 0.75,
@@ -99,12 +99,29 @@ Config.Shops = {
             {name = 'WEAPON_PUMPSHOTGUN', price = 10000, license = 'weapon', grade = 5, metadata = {registered = true, serial = 'POL'}},
             {name = 'WEAPON_CARBINERIFLE', price = 15000, license = 'weapon', grade = 10, metadata = {registered = true, serial = 'POL'}},
         },
+        -- { name = 'weapon_pistol',       price = 0, amount = 50, info = { attachments = { { component = 'COMPONENT_AT_PI_FLSH', label = 'Flashlight' } } } },
+        -- { name = 'weapon_stungun',      price = 0, amount = 50, info = { attachments = { { component = 'COMPONENT_AT_AR_FLSH', label = 'Flashlight' } } } },
+        -- { name = 'weapon_pumpshotgun',  price = 0, amount = 50, info = { attachments = { { component = 'COMPONENT_AT_AR_FLSH', label = 'Flashlight' } } } },
+        -- { name = 'weapon_smg',          price = 0, amount = 50, info = { attachments = { { component = 'COMPONENT_AT_SCOPE_MACRO_02', label = '1x Scope' }, { component = 'COMPONENT_AT_AR_FLSH', label = 'Flashlight' } } } },
+        -- { name = 'weapon_carbinerifle', price = 0, amount = 50, info = { attachments = { { component = 'COMPONENT_AT_AR_FLSH', label = 'Flashlight' }, { component = 'COMPONENT_AT_SCOPE_MEDIUM', label = '3x Scope' } } } },
+        -- { name = 'weapon_nightstick',   price = 0, amount = 50 },
+        -- { name = 'weapon_flashlight',   price = 0, amount = 50 },
+        -- { name = 'pistol_ammo',         price = 0, amount = 50 },
+        -- { name = 'smg_ammo',            price = 0, amount = 50 },
+        -- { name = 'shotgun_ammo',        price = 0, amount = 50 },
+        -- { name = 'rifle_ammo',          price = 0, amount = 50 },
+        -- { name = 'handcuffs',           price = 0, amount = 50 },
+        -- { name = 'empty_evidence_bag',  price = 0, amount = 50 },
+        -- { name = 'police_stormram',     price = 0, amount = 50 },
+        -- { name = 'armor',               price = 0, amount = 50 },
+        -- { name = 'radio',               price = 0, amount = 50 },
+        -- { name = 'heavyarmor',          price = 0, amount = 50 },
     }
 }
 
 Config.Wardrobes = {
     ['MissionRow'] = {
-        coords = vector3(464.6, -1008.23, 31.0),
+        coords = vector3(460.97, -999.57, 30.69),
         radius = 0.75,
         drawSprite = false,
     }
@@ -112,7 +129,7 @@ Config.Wardrobes = {
 
 Config.Lockers = {
     ['MissionRow'] = {
-        coords = vector3(468.25, -1009.97, 31.0),
+        coords = vector3(460.26, -995.87, 30.69),
         radius = 0.75,
         drawSprite = false,
         options = {

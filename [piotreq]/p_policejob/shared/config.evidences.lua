@@ -47,8 +47,8 @@ end
 Config.Laboratories = {
     ['MissionRow'] = {
         job = {['police'] = 0},
-        coords = vector3(466.94, -1001.67, 34.2),
-        stashCoords = vector3(466.94, -1001.67, 34.2),
+        coords = vector3(483.77, -987.96, 30.69),
+        stashCoords = vector3(480.87, -990.89, 30.69),
         radius = 1.0,
         drawSprite = false,
         canInteract = function()
@@ -62,7 +62,7 @@ Config.Laboratories = {
 Config.EvidenceStorages = {
     ['MissionRow'] = {
         job = {['police'] = 0},
-        coords = vector3(471.63, -997.26, 34.25),
+        coords = vector3(473.07, -1007.45, 26.27),
         radius = 1.0,
         drawSprite = false,
         canInteract = function()

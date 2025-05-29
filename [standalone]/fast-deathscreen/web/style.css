@@ -1,0 +1,248 @@
+@font-face {
+    font-family: jakrino;
+    src: url(fonts/jakrino.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+}
+
+.deatBlurBox {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(132, 126, 255, 0.137) 100%
+  );
+}
+
+.deatBox {
+  position: absolute;
+  left: 18.9063vw;
+  bottom: 3.4896vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 62.1354vw;
+}
+
+.deatLeftBox {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5208vw;
+  width: 17.1875vw;
+}
+
+.deatLeftImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.3958vw;
+  height: 2.5958vw;
+  background-image: url("images/left-img.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.deatTitle {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: #121212;
+  font-family: jakrino;
+  font-size: 1.0417vw;
+  font-weight: 700;
+}
+
+.deatTitle img {
+  position: absolute;
+  width: 1.0417vw;
+  height: 1.0417vw;
+}
+
+.deatLeftLoremBox {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 17.1875vw;
+  padding: 0.5208vw 0.5208vw;
+  border-radius: 0.4167vw;
+  background: linear-gradient(89deg, #857eff -4.01%, #f19fad 100.6%);
+}
+
+.deatLeftLoremBox p {
+  color: #121212;
+  font-family: jakrino;
+  font-size: 0.7292vw;
+  font-weight: 700;
+}
+
+.deatCenterBox {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.7292vw;
+  width: 17.1875vw;
+  height: 5.9896vw;
+}
+
+.deatCenterTopBox {
+  display: flex;
+  align-items: center;
+  gap: 0.2083vw;
+}
+
+.deatCenterImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.3958vw;
+  height: 2.5958vw;
+  background-image: url("images/left-img.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.deatCenterNumberMenu {
+  display: flex;
+  align-items: center;
+  gap: 0.1042vw;
+}
+
+.deatNumberMenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.4583vw;
+  height: 1.9792vw;
+  border-radius: 0.4167vw;
+  background: linear-gradient(179deg, #f19fad 17.37%, #857eff 95.34%);
+}
+
+.deatNumberMenu p {
+  color: #121212;
+  text-align: center;
+  font-family: jakrino;
+  font-size: 1.25vw;
+  font-weight: 700;
+}
+
+.circle p {
+  margin-top: -0.4vw;
+}
+
+.deatCenterLoremBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 17.1875vw;
+  padding: 0.5208vw 0.8854vw;
+  border-radius: 0.4167vw;
+  background: linear-gradient(89deg, #857eff -4.01%, #f19fad 100.6%);
+}
+
+.deatCenterLoremBox p {
+  color: #121212;
+  text-align: center;
+  font-family: jakrino;
+  font-size: 0.7292vw;
+  font-weight: 700;
+}
+
+.deatRightBox {
+  display: flex;
+  align-items: center;
+  gap: 1.0417vw;
+  width: 15.5729vw;
+  padding: 0.3646vw 0.5208vw;
+  border-radius: 0.4167vw;
+  background: linear-gradient(89deg, #857eff -4.01%, #f19fad 100.6%);
+  position: relative;
+  top: 1.3021vw;
+}
+
+.deatRightLorem p {
+  color: #121212;
+  font-family: jakrino;
+  font-size: 0.7292vw;
+  font-weight: 700;
+}
+
+.acceptBox {
+  display: flex;
+  align-items: center;
+  gap: 0.7813vw;
+  width: 7.4479vw;
+  height: 2.3438vw;
+  padding: 0.3125vw 0.3125vw;
+  position: relative;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.acceptMenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.1771vw;
+  height: 1.7188vw;
+  z-index: 1;
+  transition: background-color 1s ease;
+}
+
+.acceptTitle {
+  color: #000;
+  font-family: jakrino;
+  font-size: 0.7292vw;
+  font-weight: 700;
+  transition-duration: 1s;
+}
+
+.acceptTitle p {
+    transition-duration: 1s;
+}
+
+.acceptTitleOne {
+  font-family: jakrino;
+  font-size: .7292vw;
+  font-weight: 700;
+  transition: color 1s ease; /* Renk animasyonu */
+  z-index: 1;
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+
+.acceptWidht {
+    position: absolute;
+    left: 0vw;
+    height: 100%;
+    background: linear-gradient(88.53deg, #857EFF -4.01%, #F19FAD 100.6%);;
+    transition-duration: 1s;
+}

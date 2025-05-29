@@ -14,7 +14,7 @@ const ProgressbarStyles = {
   [ProgressBarThemes.ENVI]: {
     text: "#ffffff",
     background: "#00000060",
-    progress: "#3734B2"
+    progress: "#8B0000"
   },
   [ProgressBarThemes.MIDNIGHT]: {
     text: "#ffffff",

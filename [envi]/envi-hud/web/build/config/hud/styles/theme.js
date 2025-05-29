@@ -20,7 +20,7 @@ const AccountStyles = {
   [HudThemes.ENVI]: {
     icon: {
       background: "#1a1b2e33",
-      border: "#3e3caa"
+      border: "#8B0000"
     },
     text: "#FFFFFF",
     value: "#E5E7EB"
@@ -134,9 +134,9 @@ const PlayerStatusStyles = {
     progress: "#374151"
   },
   [HudThemes.ENVI]: {
-    background: "#1a1b2e33",
+    background: "#8B0000",
     icon: "#FFFFFF",
-    progress: "#3e3caa"
+    progress: "#8B0000"
   },
   [HudThemes.MIDNIGHT]: {
     background: "#1A141233",
@@ -201,7 +201,7 @@ const ServerInfoStyles = {
     subText: "#E5E7EB",
     icon: {
       background: "#1a1b2e33",
-      border: "#3e3caa"
+      border: "#8B0000"
     },
     divider: "#ffffff"
   },
@@ -268,7 +268,7 @@ const WeaponStyles = {
     text: "#E5E7EB",
     value: "#FFFFFF",
     subValue: "#E5E7EB",
-    divider: "#3e3caa"
+    divider: "#8B0000"
   },
   [HudThemes.MIDNIGHT]: {
     text: "#d3d3d3",
@@ -374,13 +374,13 @@ const VehicleStyles = {
     background: "#1a1b2e33",
     border: {
       style: "solid",
-      color: "#3e3caa"
+      color: "#8B0000"
     },
-    nosProgress: "#3e3caa",
+    nosProgress: "#8B0000",
     progressTrack: "#ffffff33",
     progressBar: "#FFFFFF",
     air: {
-      airProgressTrack: "#3e3caa33",
+      airProgressTrack: "#8B000033",
       airProgressBar: "#FFFFFF"
     },
     speedometerTrack: "#ffffff33",

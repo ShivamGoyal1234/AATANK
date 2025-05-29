@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ShopPedApparel>
+    <pedName>mp_m_freemode_01</pedName>
+    <dlcName>teb_invisible</dlcName>
+    <fullDlcName>mp_m_freemode_01_teb_invisible</fullDlcName>
+    <eCharacter>SCR_CHAR_MULTIPLAYER</eCharacter>
+    <creatureMetaData>mp_creaturemetadata_m_teb_invisible</creatureMetaData>
+    <pedOutfits>
+    </pedOutfits>
+    <pedComponents>
+        <Item>
+			<lockHash />
+			<cost value="0" />
+			<textLabel>CLO_RC_MI_11_0_0</textLabel>
+			<uniqueNameHash>CLO_RC_MI_11_0_0</uniqueNameHash>
+			<eShopEnum>CLO_SHOP_LOW</eShopEnum>
+			<locate value="153" />
+			<scriptSaveData value="0" />
+			<restrictionTags>
+			</restrictionTags>
+			<forcedComponents>
+			</forcedComponents>
+			<variantComponents>
+			</variantComponents>
+			<variantProps />
+			<drawableIndex value="0" />
+			<localDrawableIndex value="0" />
+			<eCompType>PV_COMP_JBIB</eCompType>
+			<textureIndex value="0" />
+			<isInOutfit value="false" />
+		</Item>
+        <Item>
+			<lockHash />
+			<cost value="0" />
+			<textLabel>CLO_RC_MI_10_0_0</textLabel>
+			<uniqueNameHash>CLO_RC_MI_10_0_0</uniqueNameHash>
+			<eShopEnum>CLO_SHOP_LOW</eShopEnum>
+			<locate value="153" />
+			<scriptSaveData value="0" />
+			<restrictionTags>
+			</restrictionTags>
+			<forcedComponents>
+			</forcedComponents>
+			<variantComponents>
+			</variantComponents>
+			<variantProps />
+			<drawableIndex value="0" />
+			<localDrawableIndex value="0" />
+			<eCompType>PV_COMP_DECL</eCompType>
+			<textureIndex value="0" />
+			<isInOutfit value="false" />
+		</Item>
+        <Item>
+			<lockHash />
+			<cost value="0" />
+			<textLabel>CLO_RC_MI_9_0_0</textLabel>
+			<uniqueNameHash>CLO_RC_MI_9_0_0</uniqueNameHash>
+			<eShopEnum>CLO_SHOP_LOW</eShopEnum>
+			<locate value="153" />
+			<scriptSaveData value="0" />
+			<restrictionTags>
+			</restrictionTags>
+			<forcedComponents>
+			</forcedComponents>
+			<variantComponents>
+			</variantComponents>
+			<variantProps />
+			<drawableIndex value="0" />
+			<localDrawableIndex value="0" />
+			<eCompType>PV_COMP_TASK</eCompType>
+			<textureIndex value="0" />
+			<isInOutfit value="false" />
+		</Item>
+        <Item>
+			<lockHash />
+			<cost value="0" />
+			<textLabel>CLO_RC_MI_8_0_0</textLabel>
+			<uniqueNameHash>CLO_RC_MI_8_0_0</uniqueNameHash>
+			<eShopEnum>CLO_SHOP_LOW</eShopEnum>
+			<locate value="153" />
+			<scriptSaveData value="0" />
+			<restrictionTags>
+			</restrictionTags>
+			<forcedComponents>
+			</forcedComponents>
+			<variantComponents>
+			</variantComponents>
+			<variantProps />
+			<drawableIndex value="0" />
+			<localDrawableIndex value="0" />
+			<eCompType>PV_COMP_ACCS</eCompType>
+			<textureIndex value="0" />
+			<isInOutfit value="false" />
+		</Item>
+        <Item>
+			<lockHash />
+			<cost value="0" />
+			<textLabel>CLO_RC_MI_7_0_0</textLabel>
+			<uniqueNameHash>CLO_RC_MI_7_0_0</uniqueNameHash>
+			<eShopEnum>CLO_SHOP_LOW</eShopEnum>
+			<locate value="153" />
+			<scriptSaveData value="0" />
+			<restrictionTags>
+			</restrictionTags>
+			<forcedComponents>
+			</forcedComponents>
+			<variantComponents>
+			</variantComponents>
+			<variantProps />
+			<drawableIndex value="0" />
+			<localDrawableIndex value="0" />
+			<eCompType>PV_COMP_TEEF</eCompType>
+			<textureIndex value="0" />
+			<isInOutfit value="false" />
+		</Item>
+        <Item>
+			<lockHash />
+			<cost value="0" />
+			<textLabel>CLO_RC_MI_6_0_0</textLabel>
+			<uniqueNameHash>CLO_RC_MI_6_0_0</uniqueNameHash>
+			<eShopEnum>CLO_SHOP_LOW</eShopEnum>
+			<locate value="153" />
+			<scriptSaveData value="0" />
+			<restrictionTags>
+			</restrictionTags>
+			<forcedComponents>
+			</forcedComponents>
+			<variantComponents>
+			</variantComponents>
+			<variantProps />
+			<drawableIndex value="0" />
+			<localDrawableIndex value="0" />
+			<eCompType>PV_COMP_FEET</eCompType>
+			<textureIndex value="0" />
+			<isInOutfit value="false" />
+		</Item>
+        <Item>
+			<lockHash />
+			<cost value="0" />
+			<textLabel>CLO_RC_MI_5_0_0</textLabel>
+			<uniqueNameHash>CLO_RC_MI_5_0_0</uniqueNameHash>
+			<eShopEnum>CLO_SHOP_LOW</eShopEnum>
+			<locate value="153" />
+			<scriptSaveData value="0" />
+			<restrictionTags>
+			</restrictionTags>
+			<forcedComponents>
+			</forcedComponents>
+			<variantComponents>
+			</variantComponents>
+			<variantProps />
+			<drawableIndex value="0" />
+			<localDrawableIndex value="0" />
+			<eCompType>PV_COMP_HAND</eCompType>
+			<textureIndex value="0" />
+			<isInOutfit value="false" />
+		</Item>
+        <Item>
+			<lockHash />
+			<cost value="0" />
+			<textLabel>CLO_RC_MI_4_0_0</textLabel>
+			<uniqueNameHash>CLO_RC_MI_4_0_0</uniqueNameHash>
+			<eShopEnum>CLO_SHOP_LOW</eShopEnum>
+			<locate value="153" />
+			<scriptSaveData value="0" />
+			<restrictionTags>
+			</restrictionTags>
+			<forcedComponents>
+			</forcedComponents>
+			<variantComponents>
+			</variantComponents>
+			<variantProps />
+			<drawableIndex value="0" />
+			<localDrawableIndex value="0" />
+			<eCompType>PV_COMP_LOWR</eCompType>
+			<textureIndex value="0" />
+			<isInOutfit value="false" />
+		</Item>
+        <Item>
+			<lockHash />
+			<cost value="0" />
+			<textLabel>CLO_RC_MI_3_0_0</textLabel>
+			<uniqueNameHash>CLO_RC_MI_3_0_0</uniqueNameHash>
+			<eShopEnum>CLO_SHOP_LOW</eShopEnum>
+			<locate value="153" />
+			<scriptSaveData value="0" />
+			<restrictionTags>
+			</restrictionTags>
+			<forcedComponents>
+			</forcedComponents>
+			<variantComponents>
+			</variantComponents>
+			<variantProps />
+			<drawableIndex value="0" />
+			<localDrawableIndex value="0" />
+			<eCompType>PV_COMP_UPPR</eCompType>
+			<textureIndex value="0" />
+			<isInOutfit value="false" />
+		</Item>
+        <Item>
+			<lockHash />
+			<cost value="0" />
+			<textLabel>CLO_RC_MI_2_0_0</textLabel>
+			<uniqueNameHash>CLO_RC_MI_2_0_0</uniqueNameHash>
+			<eShopEnum>CLO_SHOP_LOW</eShopEnum>
+			<locate value="153" />
+			<scriptSaveData value="0" />
+			<restrictionTags>
+			</restrictionTags>
+			<forcedComponents>
+			</forcedComponents>
+			<variantComponents>
+			</variantComponents>
+			<variantProps />
+			<drawableIndex value="0" />
+			<localDrawableIndex value="0" />
+			<eCompType>PV_COMP_HAIR</eCompType>
+			<textureIndex value="0" />
+			<isInOutfit value="false" />
+		</Item>
+        <Item>
+			<lockHash />
+			<cost value="0" />
+			<textLabel>CLO_RC_MI_1_0_0</textLabel>
+			<uniqueNameHash>CLO_RC_MI_1_0_0</uniqueNameHash>
+			<eShopEnum>CLO_SHOP_LOW</eShopEnum>
+			<locate value="153" />
+			<scriptSaveData value="0" />
+			<restrictionTags>
+			</restrictionTags>
+			<forcedComponents>
+			</forcedComponents>
+			<variantComponents>
+			</variantComponents>
+			<variantProps />
+			<drawableIndex value="0" />
+			<localDrawableIndex value="0" />
+			<eCompType>PV_COMP_BERD</eCompType>
+			<textureIndex value="0" />
+			<isInOutfit value="false" />
+		</Item>
+    </pedComponents>
+    <pedProps>
+    </pedProps>
+</ShopPedApparel>

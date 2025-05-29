@@ -19,7 +19,7 @@ Config.TextUI = "ox_lib" -- Options: none, ox_lib, jg-textui, qs-textui, okokTex
 
 Config.Misc = {
     Notify = "QBCORE", -- Supported: op_hud / okokNotify / vms_notify / brutal_notify / ox_lib / ESX / QBCORE / QBOX
-    Target = "qb-target",  -- none / ox-target / qb-target
+    Target = "none",  -- none / ox-target / qb-target
     zoneSize = 1.2, -- Marker radius.
     zoneColor = { -- Marker color.
         r = 52,

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CMapParentTxds>
+ <txdRelationships>
+  <Item>
+   <parent>nteam_legion2textures1</parent>
+   <child>nteam_legion2textures</child>
+  </Item>
+  <Item>
+   <parent>nteam_legion2textures2</parent>
+   <child>nteam_legion2textures1</child>
+  </Item>
+  <Item>
+   <parent>nteam_legion2textures3</parent>
+   <child>nteam_legion2textures2</child>
+  </Item>
+  <Item>
+   <parent>nteam_legion2textures4</parent>
+   <child>nteam_legion2textures3</child>
+  </Item>
+ </txdRelationships>
+</CMapParentTxds>

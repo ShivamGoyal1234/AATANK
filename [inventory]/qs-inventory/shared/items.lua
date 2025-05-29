@@ -3741,21 +3741,21 @@ ItemList = {
     },
 
     -- Communication
-    ['phone']                       = {
-        ['name'] = 'phone',
-        ['label'] = 'Classic Phone',
-        ['weight'] = 150,
-        ['type'] = 'item',
-        ['image'] = 'phone.png',
-        ['unique'] = true,
-        ['useable'] = true,
-        ['shouldClose'] = true,
-        ['combinable'] = nil,
-        ['object'] = 'prop_amb_phone',
-        ['useableIn'] = 'hotbar',
-        ['rare'] = 'common', -- epic, legendary, common
-        ['description'] = 'They say that Quasar Smartphone is the same as an iPhone, what do you think?'
-    },
+    -- ['phone']                       = {
+    --     ['name'] = 'phone',
+    --     ['label'] = 'Classic Phone',
+    --     ['weight'] = 150,
+    --     ['type'] = 'item',
+    --     ['image'] = 'phone.png',
+    --     ['unique'] = true,
+    --     ['useable'] = true,
+    --     ['shouldClose'] = true,
+    --     ['combinable'] = nil,
+    --     ['object'] = 'prop_amb_phone',
+    --     ['useableIn'] = 'hotbar',
+    --     ['rare'] = 'common', -- epic, legendary, common
+    --     ['description'] = 'They say that Quasar Smartphone is the same as an iPhone, what do you think?'
+    -- },
     ['black_phone']                 = {
         ['name'] = 'black_phone',
         ['label'] = 'Black Phone',
@@ -5327,4 +5327,397 @@ ItemList = {
 		type = 'item',
 		image = 'mouthtape.png',
 	},
+    ['phone']  = { 
+        name = 'phone', 
+        label = 'Phone', 
+        weight = 700, 
+        type = 'item', 
+        image = 'yflip_graphite.png', 
+        unique = true, 
+        useable = true, 
+    },
+
+    ['yphone']  = { 
+        name = 'yphone', 
+        label = 'Phone', 
+        weight = 700, 
+        type = 'item', 
+        image = 'yphone_black.png', 
+        unique = true, 
+        useable = true, },
+    ['yflipphone']                   = { name = 'yflipphone', label = 'Phone', weight = 700, type = 'item', image = 'yflip_graphite.png', unique = true, useable = true},
+    ['yphone_natural']               = { name = 'yphone_natural', label = 'YPhone Natural', weight = 700, type = 'item', image = 'yphone_natural.png', unique = true, useable = true,  },
+    ['yphone_black']                 = { name = 'yphone_black', label = 'YPhone Black', weight = 700, type = 'item', image = 'yphone_black.png', unique = true, useable = true,  },
+    ['yphone_white']                 = { name = 'yphone_white', label = 'YPhone White', weight = 700, type = 'item', image = 'yphone_white.png', unique = true, useable = true,  },
+    ['yphone_blue']                  = { name = 'yphone_blue', label = 'YPhone Blue', weight = 700, type = 'item', image = 'yphone_blue.png', unique = true, useable = true },
+    ['yflip_mint']                   = { name = 'yflip_mint', label = 'YFlip Mint', weight = 700, type = 'item', image = 'yflip_mint.png', unique = true, useable = true},
+    ['yflip_gold']                   = { name = 'yflip_gold', label = 'YFlip Gold', weight = 700, type = 'item', image = 'yflip_gold.png', unique = true, useable = true},
+    ['yflip_graphite']               = { name = 'yflip_graphite', label = 'YFlip Graphite', weight = 700, type = 'item', image = 'yflip_graphite.png', unique = true, useable = true },
+    ['yflip_lavender']               = { name = 'yflip_lavender', label = 'YFlip Lavender', weight = 700, type = 'item', image = 'yflip_lavender.png', unique = true, useable = true },
+    ['ys_sim_card']                  = { name = 'ys_sim_card', label = 'Sim Card', weight = 10, type = 'item', image = 'ys_sim_card.png', unique = true, useable = false },
+
+
+    -- police
+    	['spike_strip'] = {
+		name = 'spike_strip',
+		label = 'Spike strip',
+		weight = 50,
+		unique = true,
+		useable = true,
+		type = 'item',
+		image = 'spike_strip.png',
+		client = {
+			export = 'p_policejob.spike_strip'
+		}
+	},
+
+	['headbag'] = {
+		name = 'headbag',
+		label = 'Head bag',
+		weight = 50,
+		unique = false,
+		useable = false,
+		type = 'item',
+		image = 'headbag.png',
+		close = false
+	},
+
+	['police_diving_suit'] = {
+		name = 'police_diving_suit',
+		label = 'Police Diving Suit',
+		weight = 2000,
+		unique = false,
+		useable = true,
+		type = 'item',
+		image = 'police_diving_suit.png',
+	},
+
+	['player_clothes'] = {
+		name = 'player_clothes',
+		label = 'Your clothes',
+		weight = 250,
+		unique = false,
+		useable = true,
+		type = 'item',
+		image = 'player_clothes.png',
+	},
+
+	['bullet'] = {
+		name = 'bullet',
+		label = 'Bullet',
+		weight = 50,
+		unique = false,
+		useable = false,
+		type = 'item',
+		image = 'bullet.png'
+	},
+
+	['stick'] = {
+		name = 'stick',
+		label = 'Clear stick',
+		weight = 20,
+		unique = true,
+		useable = false,
+		type = 'item',
+		image = 'stick.png'
+	},
+
+	['stick_bag'] = {
+		name = 'stick_bag',
+		label = 'Bag for stick',
+		weight = 30,
+		unique = true,
+		useable = false,
+		type = 'item',
+		image = 'stick_bag.png'
+	},
+
+	['stick_bag_blood'] = {
+		name = 'stick_bag_blood',
+		label = 'Bag with stick',
+		weight = 60,
+		unique = false,
+		useable = false,
+		type = 'item',
+		image = 'stick_bag_blood.png'
+	},
+
+	['fingerprint'] = {
+		name = 'fingerprint',
+		label = 'Fingerprint',
+		weight = 100,
+		unique = false,
+		useable = false,
+		type = 'item',
+		image = 'fingerprint.png'
+	},
+
+	['fingerprinter'] = {
+		name = 'fingerprinter',
+		label = 'Fingerprint pillow',
+		weight = 300,
+		unique = false,
+		useable = false,
+		type = 'item',
+		image = 'fingerprinter.png'
+	},
+
+	['tracking_band'] = {
+		name = 'tracking_band',
+		label = 'GPS Band',
+		weight = 300,
+		unique = false,
+		useable = false,
+		type = 'item',
+		image = 'tracking_band.png',
+		close = false
+	},
+
+	['radio'] = {
+		name = 'radio',
+		label = 'Radio',
+		weight = 1000,
+		unique = false,
+		useable = false,
+		type = 'item',
+		image = 'radio.png',
+		allowArmed = true
+	},
+
+	['vest_normal'] = {
+		name = 'vest_normal',
+		label = 'Bulletproof Vest',
+		weight = 3000,
+		unique = false,
+		useable = true,
+		type = 'item',
+		image = 'vest_normal.png',
+		client = {
+			export = 'p_policejob.vest_normal'
+		}
+	},
+
+	['vest_strong'] = {
+		name = 'vest_strong',
+		label = 'Strong Bulletproof Vest',
+		weight = 3000,
+		unique = false,
+		useable = true,
+		type = 'item',
+		image = 'vest_strong.png',
+		client = {
+			export = 'p_policejob.vest_strong'
+		}
+	},
+
+	['body_cam'] = {
+		name = 'body_cam',
+		label = 'Police Bodycam',
+		weight = 200,
+		unique = false,
+		useable = true,
+		type = 'item',
+		image = 'body_cam.png',
+	},
+
+	['gps'] = {
+		name = 'gps',
+		label = 'GPS',
+		weight = 100,
+		unique = false,
+		useable = true,
+		type = 'item',
+		image = 'gps.png',
+		allowArmed = true,
+		client = {
+			export = 'p_policejob.gps',
+			remove = function(total)
+				if total < 1 then
+					local activeGPS = exports['p_policejob']:isGpsActive()
+					if activeGPS then
+						exports['p_policejob']:gps()
+					end
+				end
+			end
+		}
+	},
+
+	['camera'] = {
+		name = 'camera',
+		label = 'Camera',
+		weight = 1000,
+		unique = false,
+		useable = true,
+		type = 'item',
+		image = 'camera.png',
+		close = true,
+		client = {
+			export = 'p_policejob.camera'
+		}
+	},
+
+	['photo'] = {
+		name = 'photo',
+		label = 'Photo',
+		weight = 10,
+		unique = false,
+		useable = true,
+		type = 'item',
+		image = 'photo.png',
+		close = true,
+	},
+
+	['handcuffs'] = {
+		name = 'handcuffs',
+		label = 'Handcuffs',
+		weight = 100,
+		unique = false,
+		useable = true,
+		type = 'item',
+		image = 'handcuffs.png',
+		close = false,
+		client = {
+			export = 'p_policejob.handcuffs'
+		}
+	},
+
+	['rope'] = {
+		name = 'rope',
+		label = 'Rope',
+		weight = 100,
+		unique = false,
+		useable = false,
+		type = 'item',
+		image = 'rope.png',
+		close = false
+	},
+
+	['police_radar'] = {
+		name = 'police_radar',
+		label = 'Police Radar',
+		weight = 100,
+		unique = false,
+		useable = true,
+		type = 'item',
+		image = 'police_radar.png',
+		close = false,
+		client = {
+			export = 'p_policejob.police_radar'
+		}
+	},
+
+	['mouthtape'] = {
+		name = 'mouthtape',
+		label = 'Mouth Tape',
+		weight = 100,
+		unique = true,
+		close = false,
+		useable = false,
+		type = 'item',
+		image = 'mouthtape.png',
+	},
+
+    -- Jim-Mechanic --
+
+["mechanic_tools"]              = { name = "mechanic_tools", label = "Mechanic tools", weight = 0, type = "item", image = "mechanic_tools.png", unique = true, useable = true, shouldClose = true, description = "Needed for vehicle repairs"},
+["toolbox"]                     = { name = "toolbox", label = "Toolbox", weight = 0, type = "item", image = "toolbox.png", unique = true, useable = true, shouldClose = true, description = "Needed for Performance part removal"},
+{"ducttape"}                    = { name = "ducttape", label = "Duct Tape", weight = 0, type = "item", image = "bodyrepair.png", unique = true, useable = true, shouldClose = true, description = "Good for quick fixes"},
+{"mechboard"}                   = { name = "mechboard", label = "Mechanic Sheet", weight = 0, type = "item", image = "mechboard.png", unique = true, useable = true, shouldClose = true, description = ""},
+
+-- Nitrous/Nos
+["nos"]                         = { name = "nos", label = "NOS Bottle", weight = 0, type = "item", image = "nos.png", unique = true, useable = true, shouldClose = true, description = "A full bottle of NOS"},
+["noscan"]                      = { name = "noscan", label = "Empty NOS Bottle", weight = 0, type = "item", image = "noscan.png", unique = false, useable = true, shouldClose = true, description = "An Empty bottle of NOS"},
+["noscolour"]                   = { name = "noscolour", label = "NOS Colour Injector", weight = 0, type = "item", image = "noscolour.png", unique = false, useable = true, shouldClose = true, description = "Make that purge spray"},
+
+--Performance
+["turbo"]                       = { name = "turbo", label = "Supercharger Turbo",	weight = 0, type = "item", image = "turbo.png", unique = true, useable = true, shouldClose = true, description = ""},
+["car_armor"]                   = { name = "car_armor", label = "Vehicle Armor", weight = 0, type = "item", image = "car_armour.png", unique = true, useable = true, shouldClose = true, description = ""},
+
+["engine1"]                     = { name = "engine1", label = "Tier 1 Engine", weight = 0, type = "item", image = "engine1.png", unique = true, useable = true, shouldClose = true, description = ""},
+["engine2"]                     = { name = "engine2", label = "Tier 2 Engine", weight = 0, type = "item", image = "engine2.png", unique = true, useable = true, shouldClose = true, description = ""},
+["engine3"]                     = { name = "engine3", label = "Tier 3 Engine", weight = 0, type = "item", image = "engine3.png", unique = true, useable = true, shouldClose = true, description = ""},
+["engine4"]                     = { name = "engine4", label = "Tier 4 Engine", weight = 0, type = "item", image = "engine4.png", unique = true, useable = true, shouldClose = true, description = ""},
+["engine5"]                     = { name = "engine5", label = "Tier 5 Engine", weight = 0, type = "item", image = "engine5.png", unique = true, useable = true, shouldClose = true, description = ""},
+
+["transmission1"]               = { name = "transmission1", label = "Tier 1 Transmission", weight = 0, type = "item", image = "transmission1.png", unique = true, useable = true, shouldClose = true, description = ""},
+["transmission2"]               = { name = "transmission2", label = "Tier 2 Transmission", weight = 0, type = "item", image = "transmission2.png", unique = true, useable = true, shouldClose = true, description = ""},
+["transmission3"]               = { name = "transmission3", label = "Tier 3 Transmission", weight = 0, type = "item", image = "transmission3.png", unique = true, useable = true, shouldClose = true, description = ""},
+["transmission4"]               = { name = "transmission4", label = "Tier 4 Transmission", weight = 0, type = "item", image = "transmission4.png", unique = true, useable = true, shouldClose = true, description = ""},
+
+["brakes1"]                     = { name = "brakes1", label = "Tier 1 Brakes", weight = 0, type = "item", image = "brakes1.png", unique = true, useable = true, shouldClose = true, description = ""},
+["brakes2"]                     = { name = "brakes2", label = "Tier 2 Brakes", weight = 0, type = "item", image = "brakes2.png", unique = true, useable = true, shouldClose = true, description = ""},
+["brakes3"]                     = { name = "brakes3", label = "Tier 3 Brakes", weight = 0, type = "item", image = "brakes3.png", unique = true, useable = true, shouldClose = true, description = ""},
+
+["suspension1"]                 = { name = "suspension1", label = "Tier 1 Suspension", weight = 0, type = "item", image = "suspension1.png", unique = true, useable = true, shouldClose = true, description = ""},
+["suspension2"]                 = { name = "suspension2", label = "Tier 2 Suspension", weight = 0, type = "item", image = "suspension2.png", unique = true, useable = true, shouldClose = true, description = ""},
+["suspension3"]                 = { name = "suspension3", label = "Tier 3 Suspension", weight = 0, type = "item", image = "suspension3.png", unique = true, useable = true, shouldClose = true, description = ""},
+["suspension4"]                 = { name = "suspension4", label = "Tier 4 Suspension", weight = 0, type = "item", image = "suspension4.png", unique = true, useable = true, shouldClose = true, description = ""},
+["suspension5"]                 = { name = "suspension5", label = "Tier 5 Suspension", weight = 0, type = "item", image = "suspension5.png", unique = true, useable = true, shouldClose = true, description = ""},
+
+-- Tire Style Changers
+["bprooftires"]                 = { name = "bprooftires", label = "Bulletproof Tires", weight = 0, type = "item", image = "bprooftires.png", unique = true, useable = true, shouldClose = true, description = ""},
+["drifttires"]                  = { name = "drifttires", label = "Drift Tires", weight = 0, type = "item", image = "drifttires.png", unique = true, useable = true, shouldClose = true, description = ""},
+
+-- Vehicle Extra Damage Items
+["oilp1"]                       = { name = "oilp1", label = "Tier 1 Oil Pump", weight = 0, type = "item", image = "oilp1.png", unique = true, useable = true, shouldClose = true, description = ""},
+["oilp2"]                       = { name = "oilp2", label = "Tier 2 Oil Pump", weight = 0, type = "item", image = "oilp2.png", unique = true, useable = true, shouldClose = true, description = ""},
+["oilp3"]                       = { name = "oilp3", label = "Tier 3 Oil Pump", weight = 0, type = "item", image = "oilp3.png", unique = true, useable = true, shouldClose = true, description = ""},
+
+["drives1"]                     = { name = "drives1", label = "Tier 1 Drive Shaft", weight = 0, type = "item", image = "drives1.png", unique = true, useable = true, shouldClose = true, description = ""},
+["drives2"]                     = { name = "drives2", label = "Tier 2 Drive Shaft", weight = 0, type = "item", image = "drives2.png", unique = true, useable = true, shouldClose = true, description = ""},
+["drives3"]                     = { name = "drives3", label = "Tier 3 Drive Shaft", weight = 0, type = "item", image = "drives3.png", unique = true, useable = true, shouldClose = true, description = ""},
+
+["cylind1"]                     = { name = "cylind1", label = "Tier 1 Cylinder Head",	weight = 0, type = "item", image = "cylind1.png", unique = true, useable = true, shouldClose = true, description = ""},
+["cylind2"]                     = { name = "cylind2", label = "Tier 2 Cylinder Head",	weight = 0, type = "item", image = "cylind2.png", unique = true, useable = true, shouldClose = true, description = ""},
+["cylind3"]                     = { name = "cylind3", label = "Tier 3 Cylinder Head",	weight = 0, type = "item", image = "cylind3.png", unique = true, useable = true, shouldClose = true, description = ""},
+
+["cables1"]                     = { name = "cables1", label = "Tier 1 Battery Cables", weight = 0, type = "item", image = "cables1.png", unique = true, useable = true, shouldClose = true, description = ""},
+["cables2"]                     = { name = "cables2", label = "Tier 2 Battery Cables", weight = 0, type = "item", image = "cables2.png", unique = true, useable = true, shouldClose = true, description = ""},
+["cables3"]                     = { name = "cables3", label = "Tier 3 Battery Cables", weight = 0, type = "item", image = "cables3.png", unique = true, useable = true, shouldClose = true, description = ""},
+
+["fueltank1"]                   = { name = "fueltank1", label = "Tier 1 Fuel Tank", weight = 0, type = "item", image = "fueltank1.png", unique = true, useable = true, shouldClose = true, description = ""},
+["fueltank2"]                   = { name = "fueltank2", label = "Tier 2 Fuel Tank", weight = 0, type = "item", image = "fueltank2.png", unique = true, useable = true, shouldClose = true, description = ""},
+["fueltank3"]                   = { name = "fueltank3", label = "Tier 3 Fuel Tank", weight = 0, type = "item", image = "fueltank3.png", unique = true, useable = true, shouldClose = true, description = ""},
+
+["antilag"]                     = { name = "antilag", label = "AntiLag", weight = 0, type = "item", image = "antiLag.png", unique = true, useable = true, shouldClose = true, description = ""},
+
+--Cosmetics
+["underglow_controller"]        = { name = "underglow_controller", label = "Neon Controller", weight = 0, type = "item", image = "underglow_controller.png", unique = false, useable = true, shouldClose = true, description = "RGB LED Vehicle Remote"},
+["headlights"]                  = { name = "headlights", label = "Xenon Headlights", weight = 0, type = "item", image = "headlights.png", unique = true, useable = true, shouldClose = true, description = ""},
+
+["tint_supplies"]               = { name = "tint_supplies", label = "Window Tint Kit", weight = 0, type = "item", image = "tint_supplies.png", unique = false, useable = true, shouldClose = true, description = "Supplies for window tinting"},
+
+["customplate"]                 = { name = "customplate", label = "Customized Plates", weight = 0, type = "item", image = "plate.png", unique = true, useable = true, shouldClose = true, description = ""},
+["hood"]                        = { name = "hood", label = "Vehicle Hood", weight = 0, type = "item", image = "hood.png", unique = true, useable = true, shouldClose = true, description = ""},
+["roof"]                        = { name = "roof", label = "Vehicle Roof", weight = 0, type = "item", image = "roof.png", unique = true, useable = true, shouldClose = true, description = ""},
+["spoiler"]                     = { name = "spoiler", label = "Vehicle Spoiler", weight = 0, type = "item", image = "spoiler.png", unique = true, useable = true, shouldClose = true, description = ""},
+["bumper"]                      = { name = "bumper", label = "Vehicle Bumper", weight = 0, type = "item", image = "bumper.png", unique = true, useable = true, shouldClose = true, description = ""},
+["skirts"]                      = { name = "skirts", label = "Vehicle Skirts", weight = 0, type = "item", image = "skirts.png", unique = true, useable = true, shouldClose = true, description = ""},
+["exhaust"]                     = { name = "exhaust", label = "Vehicle Exhaust", weight = 0, type = "item", image = "exhaust.png", unique = true, useable = true, shouldClose = true, description = ""},
+["seat"]                        = { name = "seat", label = "Seat Cosmetics", weight = 0, type = "item", image = "seat.png", unique = true, useable = true, shouldClose = true, description = ""},
+["rollcage"]                    = { name = "rollcage", label = "Roll Cage", weight = 0, type = "item", image = "rollcage.png", unique = true, useable = true, shouldClose = true, description = ""},
+
+["rims"]                        = { name = "rims", label = "Custom Wheel Rims", weight = 0, type = "item", image = "rims.png", unique = true, useable = true, shouldClose = true, description = ""},
+
+["livery"]                      = { name = "livery", label = "Livery Roll", weight = 0, type = "item", image = "livery.png", unique = true, useable = true, shouldClose = true, description = ""},
+["paintcan"]                    = { name = "paintcan", label = "Vehicle Spray Can", weight = 0, type = "item", image = "spraycan.png", unique = true, useable = true, shouldClose = true, description = ""},
+["tires"]                       = { name = "tires", label = "Drift Smoke Tires",	weight = 0, type = "item", image = "tires.png", unique = true, useable = true, shouldClose = true, description = ""},
+
+["horn"]                        = { name = "horn", label = "Custom Vehicle Horn",	weight = 0, type = "item", image = "horn.png", unique = true, useable = true, shouldClose = true, description = ""},
+
+["internals"]                   = { name = "internals", label = "Internal Cosmetics",	weight = 0, type = "item", image = "internals.png", unique = true, useable = true, shouldClose = true, description = ""},
+["externals"]                   = { name = "externals", label = "Exterior Cosmetics",	weight = 0, type = "item", image = "mirror.png", unique = true, useable = true, shouldClose = true, description = ""},
+
+--Repair Parts
+["newoil"]                      = { name = "newoil", label = "Car Oil", weight = 0, type = "item", image = "caroil.png", unique = false, useable = false, shouldClose = false, description = ""},
+["sparkplugs"]                  = { name = "sparkplugs", label = "Spark Plugs", weight = 0, type = "item", image = "sparkplugs.png", unique = false, useable = false, shouldClose = false, description = ""},
+["carbattery"]                  = { name = "carbattery", label = "Car Battery", weight = 0, type = "item", image = "carbattery.png", unique = false, useable = false, shouldClose = false, description = ""},
+["axleparts"]                   = { name = "axleparts", label = "Axle Parts", weight = 0, type = "item", image = "axleparts.png", unique = false, useable = false, shouldClose = false, description = ""},
+["sparetire"]                   = { name = "sparetire", label = "Spare Tire", weight = 0, type = "item", image = "sparetire.png", unique = true, useable = false, shouldClose = false, description = ""},
+
+["manual"]                      = { name = 'manual', label = 'Manual Transmission', weight = 0, type = 'item', image = 'manual.png', unique = true, useable = true, shouldClose = true, combinable = nil, description = 'Manual Transmission change for vehicles' },
+["underglow"]                   = { name = 'underglow', label = 'Underglow LEDS', weight = 0, type = 'item', image = 'underglow.png', unique = true, useable = true, shouldClose = true, combinable = nil, description = 'Underglow addition for vehicles' },
+
+["stancerkit"]                  = { name = 'stancerkit', label = 'Stancer Kit', weight = 0, type = 'item', image = 'stancerkit.png', unique = true, useable = true, shouldClose = true, combinable = nil, description = 'Stancer Kit for vehicles' },
+["newplate"]                    = { name = 'newplate', label = 'New Plate', weight = 250, type = 'item', image = 'newplate.png', unique = true, useable = true, shouldClose = true, combinable = nil, description = 'A Customizable licence plate' },
 }

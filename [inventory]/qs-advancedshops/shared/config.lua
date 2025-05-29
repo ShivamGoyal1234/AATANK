@@ -59,7 +59,7 @@ Locales = Locales or {}
 
 Config.Language = 'en'
 
-Config.UseTarget = true                                    -- Set to true to enable targeting with either 'qb-target' or 'ox_target', or false to disable entirely.
+Config.UseTarget = false                                    -- Set to true to enable targeting with either 'qb-target' or 'ox_target', or false to disable entirely.
 Config.InventoryFolder = 'nui://qs-inventory/html/images/' -- Images will be taken from the inventory.
 
 --[[
@@ -492,69 +492,69 @@ Config.Shops = {
         }
     },
     -- Job Stores
-    {
-        name = 'Job Market',
-        label = '[E] - LSPD Ammunation',
-        blip = false,
-        -- requiredLicense = 'police_license',
-        jobs = { 'police' },
-        -- grades = { 2, 3, 4 },
-        categories = {
-            [1] = {
-                name = 'General',
-                description = 'Random items',
-                icon = 'fa-solid fa-gun',
-                items = {
-                    { name = 'handcuffs',       label = 'Handcuffs', perPrice = 150, description = 'PD Items' },
-                    { name = 'police_stormram', label = 'Storm Arm', perPrice = 150, description = 'PD Items' },
-                    { name = 'armor',           label = 'Armor',     perPrice = 150, description = 'PD Items' },
-                    { name = 'radio',           label = 'Radio',     perPrice = 150, description = 'PD Items' },
-                    { name = 'bandage',         label = 'Bandage',   perPrice = 150, description = 'PD Items' }
-                }
-            },
-            [2] = {
-                name = 'Weapons',
-                description = 'Bullets and others',
-                icon = 'fa-solid fa-list',
-                items = {
-                    { name = 'pistol_ammo',       label = 'Pistol Ammo', perPrice = 150, description = 'PD Items' },
-                    { name = 'smg_ammo',          label = 'SMG Ammo',    perPrice = 150, description = 'PD Items' },
-                    { name = 'rifle_ammo',        label = 'Rifle Ammo',  perPrice = 150, description = 'PD Items' },
-                    { name = 'weapon_stungun',    label = 'Stun Gun',    perPrice = 150, description = 'PD Items' },
-                    { name = 'weapon_pistol_mk2', label = 'PD Glock',    perPrice = 150, description = 'PD Items' },
-                    { name = 'weapon_nightstick', label = 'Nightstick',  perPrice = 150, description = 'PD Items' },
-                    { name = 'weapon_flashlight', label = 'FlashLight',  perPrice = 150, description = 'PD Items' },
-                    {
-                        name = 'weapon_pistol',
-                        label = 'Pistol',
-                        perPrice = 2500,
-                        description = 'General',
-                        -- Check qs-inventory/config/weapons.lua Config.WeaponAttachments for attachments
-                        attachments = {
-                            'extendedclip',
-                            'flashlight',
-                            'suppressor'
-                        },
-                        tint = 2 -- Make sure this tint id exists in the Config.WeaponAttachmentItems in qs-inventory/config/weapons.lua
-                    },
-                    {
-                        name = 'weapon_snspistol',
-                        label = 'SNS Pistol',
-                        perPrice = 1500,
-                        description = 'General',
-                        attachments = {
-                            'extendedclip',
-                        }
-                    },
-                }
-            }
-        },
-        pedHash = 'mp_m_securoguard_01',
-        scenario = 'WORLD_HUMAN_COP_IDLES',
-        coords = {
-            { ped = nil, coords = vector4(454.035156, -980.043945, 30.678345, 82.204727) }
-        }
-    }
+    -- {
+    --     name = 'Job Market',
+    --     label = '[E] - LSPD Ammunation',
+    --     blip = false,
+    --     -- requiredLicense = 'police_license',
+    --     jobs = { 'police' },
+    --     -- grades = { 2, 3, 4 },
+    --     categories = {
+    --         [1] = {
+    --             name = 'General',
+    --             description = 'Random items',
+    --             icon = 'fa-solid fa-gun',
+    --             items = {
+    --                 { name = 'handcuffs',       label = 'Handcuffs', perPrice = 150, description = 'PD Items' },
+    --                 { name = 'police_stormram', label = 'Storm Arm', perPrice = 150, description = 'PD Items' },
+    --                 { name = 'armor',           label = 'Armor',     perPrice = 150, description = 'PD Items' },
+    --                 { name = 'radio',           label = 'Radio',     perPrice = 150, description = 'PD Items' },
+    --                 { name = 'bandage',         label = 'Bandage',   perPrice = 150, description = 'PD Items' }
+    --             }
+    --         },
+    --         [2] = {
+    --             name = 'Weapons',
+    --             description = 'Bullets and others',
+    --             icon = 'fa-solid fa-list',
+    --             items = {
+    --                 { name = 'pistol_ammo',       label = 'Pistol Ammo', perPrice = 150, description = 'PD Items' },
+    --                 { name = 'smg_ammo',          label = 'SMG Ammo',    perPrice = 150, description = 'PD Items' },
+    --                 { name = 'rifle_ammo',        label = 'Rifle Ammo',  perPrice = 150, description = 'PD Items' },
+    --                 { name = 'weapon_stungun',    label = 'Stun Gun',    perPrice = 150, description = 'PD Items' },
+    --                 { name = 'weapon_pistol_mk2', label = 'PD Glock',    perPrice = 150, description = 'PD Items' },
+    --                 { name = 'weapon_nightstick', label = 'Nightstick',  perPrice = 150, description = 'PD Items' },
+    --                 { name = 'weapon_flashlight', label = 'FlashLight',  perPrice = 150, description = 'PD Items' },
+    --                 {
+    --                     name = 'weapon_pistol',
+    --                     label = 'Pistol',
+    --                     perPrice = 2500,
+    --                     description = 'General',
+    --                     -- Check qs-inventory/config/weapons.lua Config.WeaponAttachments for attachments
+    --                     attachments = {
+    --                         'extendedclip',
+    --                         'flashlight',
+    --                         'suppressor'
+    --                     },
+    --                     tint = 2 -- Make sure this tint id exists in the Config.WeaponAttachmentItems in qs-inventory/config/weapons.lua
+    --                 },
+    --                 {
+    --                     name = 'weapon_snspistol',
+    --                     label = 'SNS Pistol',
+    --                     perPrice = 1500,
+    --                     description = 'General',
+    --                     attachments = {
+    --                         'extendedclip',
+    --                     }
+    --                 },
+    --             }
+    --         }
+    --     },
+    --     pedHash = 'mp_m_securoguard_01',
+    --     scenario = 'WORLD_HUMAN_COP_IDLES',
+    --     coords = {
+    --         { ped = nil, coords = vector4(454.035156, -980.043945, 30.678345, 82.204727) }
+    --     }
+    -- }
 }
 
 --[[

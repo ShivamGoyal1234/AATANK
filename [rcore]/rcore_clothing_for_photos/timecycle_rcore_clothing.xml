@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<timecycle_modifier_data version="1.000000">
+    <modifier name="rcore_clothing_tc" numMods="18" userFlags="0">
+        <light_dir_col_r>0.890 1.000</light_dir_col_r>
+        <light_dir_col_g>0.675 1.000</light_dir_col_g>
+        <light_dir_col_b>0.392 1.000</light_dir_col_b>
+        <light_dir_mult>14.750 1.000</light_dir_mult>
+        <light_directional_amb_intensity_mult>1.000 0.000</light_directional_amb_intensity_mult>
+        <light_directional_amb_bounce_enabled>1.000 0.000</light_directional_amb_bounce_enabled>
+        <light_natural_amb_down_col_r>0.541 1.000</light_natural_amb_down_col_r>
+        <light_natural_amb_down_col_g>0.650 1.000</light_natural_amb_down_col_g>
+        <light_natural_amb_down_col_b>1.000 1.000</light_natural_amb_down_col_b>
+        <light_natural_amb_down_intensity>6.250 0.000</light_natural_amb_down_intensity>
+        <light_natural_amb_up_col_r>1.000 1.000</light_natural_amb_up_col_r>
+        <light_natural_amb_up_col_g>0.847 1.000</light_natural_amb_up_col_g>
+        <light_natural_amb_up_col_b>0.459 1.000</light_natural_amb_up_col_b>
+        <light_natural_amb_up_intensity>4.000 0.000</light_natural_amb_up_intensity>
+        <light_artificial_int_up_intensity>0.000 0.000</light_artificial_int_up_intensity>
+        <postfx_bright_pass_thresh>1.000 0.000</postfx_bright_pass_thresh>
+        <postfx_intensity_bloom>0.000 0.000</postfx_intensity_bloom>
+        <artificial_int_ambient_multiplier>-1.000 0.000</artificial_int_ambient_multiplier>
+    </modifier>
+</timecycle_modifier_data>

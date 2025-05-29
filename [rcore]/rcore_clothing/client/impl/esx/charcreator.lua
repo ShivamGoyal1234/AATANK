@@ -1,0 +1,6 @@
+AddEventHandler('rcore_clothing:esx:charcreator', function()
+    Wait(1000)
+    LoadAndSetModel(GetPlayerStartingModel())
+    CustomSetDefaultVariations(PlayerPedId())
+    TriggerEvent('rcore_clothing:openCharCreator')
+end)
