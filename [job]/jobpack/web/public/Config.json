@@ -1,0 +1,9 @@
+{
+    "languages": {
+        "electrician": {
+            "important_work": "Important Work",
+            "danger": "Attention Electricial Danger!",
+            "danger_desc": "Electricity is dangerous and deadly! Be careful when working with it."
+        }
+    }
+}

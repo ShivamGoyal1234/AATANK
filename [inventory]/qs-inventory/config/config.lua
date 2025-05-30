@@ -184,10 +184,10 @@ Config.notStoredItems = {
 
 -- Anything you disable from here, the code is completely deprecated and the ui cannot be edited.
 Config.Pages = {
-    ['clothing'] = false,
+    ['clothing'] = true,
     ['pause_menu'] = true,
-    ['quest'] = true,
-    ['skill'] = true
+    ['quest'] = false,
+    ['skill'] = false
 }
 
 -- Enables or disables clothing system integration. Refer to the documentation for your framework setup:

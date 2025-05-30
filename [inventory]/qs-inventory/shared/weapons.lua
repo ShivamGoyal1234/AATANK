@@ -913,5 +913,11 @@ WeaponList = {
         weapontype = 'Animals',
         ammotype = nil,
         damagereason = 'Mauled'
-    }
+    },
+    ['WEAPON_ACIDPACKAGE'] = {
+		label = 'News papaer',
+		weight = 2500,
+		durability = 0.05,
+		ammoname = 'ammo-acid'
+	},
 }
