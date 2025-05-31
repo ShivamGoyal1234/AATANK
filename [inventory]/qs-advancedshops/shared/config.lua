@@ -125,34 +125,35 @@ Config.Shops = {
                 items = {
                     { name = 'water_bottle',  label = 'Water',         perPrice = 150, description = 'Refreshment' },
                     { name = 'sandwich',      label = 'Sandwich',      perPrice = 150, description = 'Quick Meal' },
-                    { name = 'snikkel_candy', label = 'Snikkel Candy', perPrice = 150, description = 'Sweet Snack' },
-                    { name = 'tosti',         label = 'Tosti',         perPrice = 150, description = 'Toasted Snack' },
-                    { name = 'whiskey',       label = 'Whiskey',       perPrice = 150, description = 'Alcohol' },
-                    { name = 'lighter',       label = 'Lighter',       perPrice = 200, description = 'For Lighting' },
-                    { name = 'beer',          label = 'Beer',          perPrice = 150, description = 'Alcohol' },
+                    -- { name = 'snikkel_candy', label = 'Snikkel Candy', perPrice = 150, description = 'Sweet Snack' },
+                    -- { name = 'tosti',         label = 'Tosti',         perPrice = 150, description = 'Toasted Snack' },
+                    -- { name = 'whiskey',       label = 'Whiskey',       perPrice = 150, description = 'Alcohol' },
+                    -- { name = 'lighter',       label = 'Lighter',       perPrice = 200, description = 'For Lighting' },
+                    -- { name = 'beer',          label = 'Beer',          perPrice = 150, description = 'Alcohol' },
                     { name = 'cola',          label = 'Cola',          perPrice = 150, description = 'Soft Drink' },
-                    { name = 'twerks_candy',  label = 'Twerks Candy',  perPrice = 150, description = 'Sweet Snack' }
+                    -- { name = 'twerks_candy',  label = 'Twerks Candy',  perPrice = 150, description = 'Sweet Snack' }
                 }
+
             },
+            -- [2] = {
+            --     name = 'Medical',
+            --     description = 'Health Supplies',
+            --     icon = 'fa-solid fa-notes-medical',
+            --     items = {
+            --         { name = 'bandage', label = 'Bandage', perPrice = 100, description = 'First Aid' }
+            --     }
+            -- },
+            -- [3] = {
+            --     name = 'Alcohol',
+            --     description = 'Alcoholic Beverages',
+            --     icon = 'fa-solid fa-wine-bottle',
+            --     items = {
+            --         { name = 'vodka',   label = 'Vodka',   perPrice = 150, description = 'Spirits' },
+            --         { name = 'whiskey', label = 'Whiskey', perPrice = 150, description = 'Spirits' },
+            --         { name = 'beer',    label = 'Beer',    perPrice = 150, description = 'Beer' }
+            --     }
+            -- },
             [2] = {
-                name = 'Medical',
-                description = 'Health Supplies',
-                icon = 'fa-solid fa-notes-medical',
-                items = {
-                    { name = 'bandage', label = 'Bandage', perPrice = 100, description = 'First Aid' }
-                }
-            },
-            [3] = {
-                name = 'Alcohol',
-                description = 'Alcoholic Beverages',
-                icon = 'fa-solid fa-wine-bottle',
-                items = {
-                    { name = 'vodka',   label = 'Vodka',   perPrice = 150, description = 'Spirits' },
-                    { name = 'whiskey', label = 'Whiskey', perPrice = 150, description = 'Spirits' },
-                    { name = 'beer',    label = 'Beer',    perPrice = 150, description = 'Beer' }
-                }
-            },
-            [4] = {
                 name = 'Snacks',
                 description = 'Snacks & Sweets',
                 icon = 'fa-solid fa-cookie-bite',
@@ -162,6 +163,7 @@ Config.Shops = {
                     { name = 'twerks_candy',  label = 'Twerks Candy',  perPrice = 150, description = 'Sweet Snack' }
                 }
             }
+
         },
         pedHash = 'mp_m_shopkeep_01',
         scenario = 'WORLD_HUMAN_STAND_MOBILE',
@@ -195,34 +197,16 @@ Config.Shops = {
                 items = {
                     { name = 'water_bottle',  label = 'Water',         perPrice = 150, description = 'Refreshment' },
                     { name = 'sandwich',      label = 'Sandwich',      perPrice = 150, description = 'Quick Meal' },
-                    { name = 'snikkel_candy', label = 'Snikkel Candy', perPrice = 150, description = 'Sweet Snack' },
-                    { name = 'tosti',         label = 'Tosti',         perPrice = 150, description = 'Toasted Snack' },
-                    { name = 'whiskey',       label = 'Whiskey',       perPrice = 150, description = 'Alcohol' },
-                    { name = 'lighter',       label = 'Lighter',       perPrice = 200, description = 'For Lighting' },
-                    { name = 'beer',          label = 'Beer',          perPrice = 150, description = 'Alcohol' },
+                    -- { name = 'snikkel_candy', label = 'Snikkel Candy', perPrice = 150, description = 'Sweet Snack' },
+                    -- { name = 'tosti',         label = 'Tosti',         perPrice = 150, description = 'Toasted Snack' },
+                    -- { name = 'whiskey',       label = 'Whiskey',       perPrice = 150, description = 'Alcohol' },
+                    -- { name = 'lighter',       label = 'Lighter',       perPrice = 200, description = 'For Lighting' },
+                    -- { name = 'beer',          label = 'Beer',          perPrice = 150, description = 'Alcohol' },
                     { name = 'cola',          label = 'Cola',          perPrice = 150, description = 'Soft Drink' },
-                    { name = 'twerks_candy',  label = 'Twerks Candy',  perPrice = 150, description = 'Sweet Snack' }
+                    -- { name = 'twerks_candy',  label = 'Twerks Candy',  perPrice = 150, description = 'Sweet Snack' }
                 }
             },
             [2] = {
-                name = 'Medical',
-                description = 'Health Supplies',
-                icon = 'fa-solid fa-notes-medical',
-                items = {
-                    { name = 'bandage', label = 'Bandage', perPrice = 100, description = 'First Aid' }
-                }
-            },
-            [3] = {
-                name = 'Alcohol',
-                description = 'Alcoholic Beverages',
-                icon = 'fa-solid fa-wine-bottle',
-                items = {
-                    { name = 'vodka',   label = 'Vodka',   perPrice = 150, description = 'Spirits' },
-                    { name = 'whiskey', label = 'Whiskey', perPrice = 150, description = 'Spirits' },
-                    { name = 'beer',    label = 'Beer',    perPrice = 150, description = 'Beer' }
-                }
-            },
-            [4] = {
                 name = 'Snacks',
                 description = 'Snacks & Sweets',
                 icon = 'fa-solid fa-cookie-bite',
@@ -232,6 +216,26 @@ Config.Shops = {
                     { name = 'twerks_candy',  label = 'Twerks Candy',  perPrice = 150, description = 'Sweet Snack' }
                 }
             }
+            -- [3] = {
+            --     name = 'Alcohol',
+            --     description = 'Alcoholic Beverages',
+            --     icon = 'fa-solid fa-wine-bottle',
+            --     items = {
+            --         { name = 'vodka',   label = 'Vodka',   perPrice = 150, description = 'Spirits' },
+            --         { name = 'whiskey', label = 'Whiskey', perPrice = 150, description = 'Spirits' },
+            --         { name = 'beer',    label = 'Beer',    perPrice = 150, description = 'Beer' }
+            --     }
+            -- },
+            -- [4] = {
+            --     name = 'Snacks',
+            --     description = 'Snacks & Sweets',
+            --     icon = 'fa-solid fa-cookie-bite',
+            --     items = {
+            --         { name = 'tosti',         label = 'Tosti',         perPrice = 150, description = 'Toasted Snack' },
+            --         { name = 'snikkel_candy', label = 'Snikkel Candy', perPrice = 150, description = 'Sweet Snack' },
+            --         { name = 'twerks_candy',  label = 'Twerks Candy',  perPrice = 150, description = 'Sweet Snack' }
+            --     }
+            -- }
         },
         pedHash = 'mp_m_shopkeep_01',
         scenario = 'WORLD_HUMAN_STAND_MOBILE',
@@ -255,30 +259,30 @@ Config.Shops = {
         -- grades = { 2, 3, 4 },
         categories = {
             [1] = {
-                name = 'General',
+                name = 'Liquor Store',
                 description = '24/7',
                 icon = 'fa-solid fa-wine-bottle',
                 items = {
                     { name = 'water_bottle',  label = 'Water',         perPrice = 150, description = 'Drinks' },
-                    { name = 'sandwich',      label = 'Sandwich',      perPrice = 150, description = 'Food' },
-                    { name = 'snikkel_candy', label = 'Snikkel Candy', perPrice = 150, description = 'General' },
-                    { name = 'tosti',         label = 'Tosti',         perPrice = 150, description = 'General' },
+                    -- { name = 'sandwich',      label = 'Sandwich',      perPrice = 150, description = 'Food' },
+                    -- { name = 'snikkel_candy', label = 'Snikkel Candy', perPrice = 150, description = 'General' },
+                    -- { name = 'tosti',         label = 'Tosti',         perPrice = 150, description = 'General' },
                     { name = 'beer',          label = 'Beer',          perPrice = 150, description = 'Alcohol' },
                     { name = 'cola',          label = 'Cola',          perPrice = 150, description = 'Drinks' },
-                    { name = 'twerks_candy',  label = 'Twerks Candy',  perPrice = 150, description = 'Candy' },
+                    -- { name = 'twerks_candy',  label = 'Twerks Candy',  perPrice = 150, description = 'Candy' },
                     { name = 'whiskey',       label = 'Whiskey',       perPrice = 150, description = 'Alcohol' }
                 }
             },
-            [2] = {
-                name = 'Snacks',
-                description = 'Snacks & Sweets',
-                icon = 'fa-solid fa-cookie-bite',
-                items = {
-                    { name = 'tosti',         label = 'Tosti',         perPrice = 150, description = 'Snacks' },
-                    { name = 'snikkel_candy', label = 'Snikkel Candy', perPrice = 150, description = 'Candy' },
-                    { name = 'twerks_candy',  label = 'Twerks Candy',  perPrice = 150, description = 'Candy' }
-                }
-            }
+            -- [2] = {  --- optional
+            --     name = 'Chakna',
+            --     description = 'Snacks & Sweets',
+            --     icon = 'fa-solid fa-cookie-bite',
+            --     items = {
+            --         { name = 'tosti',         label = 'Tosti',         perPrice = 150, description = 'Snacks' },
+            --         { name = 'snikkel_candy', label = 'Snikkel Candy', perPrice = 150, description = 'Candy' },
+            --         { name = 'twerks_candy',  label = 'Twerks Candy',  perPrice = 150, description = 'Candy' }
+            --     }
+            -- }
         },
         pedHash = 'mp_m_shopkeep_01',
         scenario = 'WORLD_HUMAN_STAND_MOBILE',
@@ -306,24 +310,25 @@ Config.Shops = {
                 description = 'Hardware Tools',
                 icon = 'fa-solid fa-wallet',
                 items = {
-                    { name = 'lockpick',       label = 'Lockpick',        perPrice = 200, description = 'Tools' },
+                    -- { name = 'lockpick',       label = 'Lockpick',        perPrice = 2000, description = 'Tools' },
                     { name = 'weapon_wrench',  label = 'Wrench',          perPrice = 250, description = 'Tools' },
                     { name = 'weapon_hammer',  label = 'Hammer',          perPrice = 250, description = 'Tools' },
                     { name = 'screwdriverset', label = 'Screwdriver Set', perPrice = 350, description = 'Tools' },
-                    { name = 'cleaningkit',    label = 'Cleaning Kit',    perPrice = 150, description = 'Tools' }
+                    { name = 'cleaningkit',    label = 'Cleaning Kit',    perPrice = 150, description = 'Tools' },
+
                 }
             },
-            [2] = {
-                name = 'Electronics',
-                description = 'Electronic Devices',
-                icon = 'fa-solid fa-bolt',
-                items = {
-                    { name = 'phone',      label = 'Phone',      perPrice = 850, description = 'Electronics' },
-                    { name = 'radio',      label = 'Radio',      perPrice = 250, description = 'Electronics' },
-                    { name = 'binoculars', label = 'Binoculars', perPrice = 50,  description = 'Electronics' },
-                    { name = 'fitbit',     label = 'Fitbit',     perPrice = 400, description = 'Electronics' }
-                }
-            },
+            -- [2] = {
+            --     name = 'Electronics',
+            --     description = 'Electronic Devices',
+            --     icon = 'fa-solid fa-bolt',
+            --     items = {
+            --         { name = 'phone',      label = 'Phone',      perPrice = 850, description = 'Electronics' },
+            --         { name = 'radio',      label = 'Radio',      perPrice = 250, description = 'Electronics' },
+            --         { name = 'binoculars', label = 'Binoculars', perPrice = 50,  description = 'Electronics' },
+            --         { name = 'fitbit',     label = 'Fitbit',     perPrice = 400, description = 'Electronics' }
+            --     }
+            -- },
             [3] = {
                 name = 'Fireworks',
                 description = 'Fireworks for Fun',
@@ -340,7 +345,7 @@ Config.Shops = {
                 description = 'Repair and Maintenance',
                 icon = 'fa-solid fa-toolbox',
                 items = {
-                    { name = 'repairkit', label = 'Repair Kit', perPrice = 250, description = 'Maintenance' }
+                    { name = 'repairkit', label = 'Repair Kit', perPrice = 5000, description = 'Maintenance' }
                 }
             }
         },
@@ -371,26 +376,26 @@ Config.Shops = {
                     { name = 'weapon_knife',         label = 'Knife',          perPrice = 150,  description = 'General' },
                     { name = 'weapon_bat',           label = 'Bat',            perPrice = 150,  description = 'General' },
                     { name = 'weapon_hatchet',       label = 'Hatchet',        perPrice = 150,  description = 'General' },
-                    { name = 'weapon_knife',         label = 'Knife',          perPrice = 150,  description = 'General' },
-                    { name = 'weapon_bat',           label = 'Bat',            perPrice = 150,  description = 'General' },
-                    { name = 'weapon_hatchet',       label = 'Hatchet',        perPrice = 150,  description = 'General' },
-                    { name = 'weapon_pistol',        label = 'Pistol',         perPrice = 2500, description = 'General' },
-                    { name = 'weapon_snspistol',     label = 'SNS Pistol',     perPrice = 1500, description = 'General' },
-                    { name = 'weapon_vintagepistol', label = 'Vintage Pistol', perPrice = 4000, description = 'General' }
+                    -- { name = 'weapon_knife',         label = 'Knife',          perPrice = 150,  description = 'General' },
+                    -- { name = 'weapon_bat',           label = 'Bat',            perPrice = 150,  description = 'General' },
+                    -- { name = 'weapon_hatchet',       label = 'Hatchet',        perPrice = 150,  description = 'General' },
+                    -- { name = 'weapon_pistol',        label = 'Pistol',         perPrice = 2500, description = 'General' },
+                    -- { name = 'weapon_snspistol',     label = 'SNS Pistol',     perPrice = 1500, description = 'General' },
+                    -- { name = 'weapon_vintagepistol', label = 'Vintage Pistol', perPrice = 4000, description = 'General' }
                 }
             },
-            [2] = {
-                name = 'Ammunition',
-                description = 'Ammunations for Weapons',
-                icon = 'fa-solid fa-list',
-                items = {
-                    { name = 'pistol_ammo',  label = 'Pistol Ammo',  perPrice = 250, description = 'Ammunition' },
-                    { name = 'rifle_ammo',   label = 'Rifle Ammo',   perPrice = 350, description = 'Ammunition' },
-                    { name = 'smg_ammo',     label = 'SMG Ammo',     perPrice = 300, description = 'Ammunition' },
-                    { name = 'shotgun_ammo', label = 'Shotgun Ammo', perPrice = 400, description = 'Ammunition' },
-                    { name = 'mg_ammo',      label = 'MG Ammo',      perPrice = 450, description = 'Ammunition' }
-                }
-            }
+            -- [2] = {
+            --     name = 'Ammunition',
+            --     description = 'Ammunations for Weapons',
+            --     icon = 'fa-solid fa-list',
+            --     items = {
+            --         { name = 'pistol_ammo',  label = 'Pistol Ammo',  perPrice = 250, description = 'Ammunition' },
+            --         { name = 'rifle_ammo',   label = 'Rifle Ammo',   perPrice = 350, description = 'Ammunition' },
+            --         { name = 'smg_ammo',     label = 'SMG Ammo',     perPrice = 300, description = 'Ammunition' },
+            --         { name = 'shotgun_ammo', label = 'Shotgun Ammo', perPrice = 400, description = 'Ammunition' },
+            --         { name = 'mg_ammo',      label = 'MG Ammo',      perPrice = 450, description = 'Ammunition' }
+            --     }
+            -- }
         },
         -- pedHash = 's_m_y_ammucity_01',
         scenario = 'WORLD_HUMAN_COP_IDLES',
@@ -424,9 +429,9 @@ Config.Shops = {
                 description = 'Ammunations',
                 icon = 'fa-solid fa-cannabis',
                 items = {
-                    { name = 'weapon_knife',   label = 'Knife',          perPrice = 150, description = 'General' },
+                    -- { name = 'weapon_knife',   label = 'Knife',          perPrice = 150, description = 'General' },
                     { name = 'joint',          label = 'Joint',          perPrice = 10,  description = 'Weed' },
-                    { name = 'weapon_poolcue', label = 'Pool Cue',       perPrice = 100, description = 'Weed Accessories' },
+                    -- { name = 'weapon_poolcue', label = 'Pool Cue',       perPrice = 100, description = 'Weed Accessories' },
                     { name = 'weed_nutrition', label = 'Weed Nutrition', perPrice = 20,  description = 'Weed Accessories' },
                     { name = 'empty_weed_bag', label = 'Empty Weed Bag', perPrice = 2,   description = 'Weed Packaging' },
                     { name = 'rolling_paper',  label = 'Rolling Paper',  perPrice = 2,   description = 'Weed Accessories' }
@@ -452,36 +457,37 @@ Config.Shops = {
                 description = '24/7 Access',
                 icon = 'fa-solid fa-clipboard',
                 items = {
-                    { name = 'pistol_ammo',   label = 'Pistol Ammo',    perPrice = 150,  description = 'PD Items' },
-                    {
-                        name = 'security_card_01',
-                        label = 'Security Card 01',
-                        perPrice = 5000,
-                        description = 'Access Card'
-                    },
-                    {
-                        name = 'security_card_02',
-                        label = 'Security Card 02',
-                        perPrice = 5000,
-                        description = 'Access Card'
-                    },
+                    -- { name = 'pistol_ammo',   label = 'Pistol Ammo',    perPrice = 150,  description = 'PD Items' },
+                    -- {
+                    --     name = 'security_card_01',
+                    --     label = 'Security Card 01',
+                    --     perPrice = 5000,
+                    --     description = 'Access Card'
+                    -- },
+                    -- {
+                    --     name = 'security_card_02',
+                    --     label = 'Security Card 02',
+                    --     perPrice = 5000,
+                    --     description = 'Access Card'
+                    -- },
+                    { name = 'lockpick',       label = 'Lockpick',        perPrice = 500, description = 'Tools' },
                     { name = 'electronickit', label = 'Electronic Kit', perPrice = 5000, description = 'Hacking Tools' },
                     { name = 'thermite',      label = 'Thermite',       perPrice = 5000, description = 'Explosive' },
                     { name = 'drill',         label = 'Drill',          perPrice = 5000, description = 'Drilling Tool' },
                     { name = 'radioscanner',  label = 'Radio Scanner',  perPrice = 5000, description = 'Listening Device' },
                     { name = 'cryptostick',   label = 'Crypto Stick',   perPrice = 5000, description = 'Cryptographic Tool' },
                     { name = 'joint',         label = 'Joint',          perPrice = 5000, description = 'Weed Product' },
-                    { name = 'crack_baggy',   label = 'Crack Baggy',    perPrice = 5000, description = 'Crack Product' },
-                    { name = 'coke_brick',    label = 'Coke Brick',     perPrice = 5000, description = 'Coke Product' },
-                    { name = 'weed_brick',    label = 'Weed Brick',     perPrice = 5000, description = 'Weed Product' },
-                    {
-                        name = 'coke_small_brick',
-                        label = 'Coke Small Brick',
-                        perPrice = 5000,
-                        description = 'Coke Product'
-                    },
-                    { name = 'oxy',  label = 'Oxy',  perPrice = 5000, description = 'Oxy Product' },
-                    { name = 'meth', label = 'Meth', perPrice = 5000, description = 'Meth Product' },
+                    -- { name = 'crack_baggy',   label = 'Crack Baggy',    perPrice = 5000, description = 'Crack Product' },
+                    -- { name = 'coke_brick',    label = 'Coke Brick',     perPrice = 5000, description = 'Coke Product' },
+                    -- { name = 'weed_brick',    label = 'Weed Brick',     perPrice = 5000, description = 'Weed Product' },
+                    -- {
+                    --     name = 'coke_small_brick',
+                    --     label = 'Coke Small Brick',
+                    --     perPrice = 5000,
+                    --     description = 'Coke Product'
+                    -- },
+                    -- { name = 'oxy',  label = 'Oxy',  perPrice = 5000, description = 'Oxy Product' },
+                    -- { name = 'meth', label = 'Meth', perPrice = 5000, description = 'Meth Product' },
                     
                 }
             }
@@ -490,6 +496,51 @@ Config.Shops = {
         scenario = 'WORLD_HUMAN_AA_SMOKE',
         coords = {
             { ped = nil, coords = vector4(-594.7032, -1616.3647, 33.0105, 170.6846) }
+        }
+    },
+    {
+        name = 'Pharmacy',
+        label = '[E] - Pills & Potions',
+        blip = false,
+        categories = {
+            [1] = {
+                name = 'Pills',
+                description = '24/7 Access',
+                icon = 'fa-solid fa-clipboard',
+                items = {
+                    { name = 'bandage',       label = 'Bandage',        perPrice = 50, description = 'Heal Wounds' },
+                    { name = 'painkillers',   label = 'Pain Killer',    perPrice = 1500, description = 'Pain Relief' },
+                    { name = 'firstaid',      label = 'Firstaid',       perPrice = 5000, description = 'Antibiotics' },
+                }
+            }
+        },
+        pedHash = 'a_m_y_smartcaspat_01',
+        scenario = 'WORLD_HUMAN_AA_SMOKE',
+        coords = {
+            { ped = nil, coords = vector4(-1253.76, -1436.90, 4.37, 124.27) }
+        }
+    },
+    {
+        name = 'Digital Den',
+        label = '[E] - Phones and Gadgets',
+        blip = false,
+        categories = {
+            [1] = {
+                name = 'Electronics',
+                description = '24/7 Access',
+                icon = 'fa-solid fa-clipboard',
+                items = {
+                    { name = 'phone',       label = 'Phone',        perPrice = 1500,   description = 'Phone' },
+                    { name = 'radio',       label = 'Radio',        perPrice = 1500, description = 'Radio' },
+                    { name = 'ys_sim_card', label = 'Sim card',     perPrice = 5000, description = 'Sim Card' },
+                    { name = 'boombox',     label = 'Boom Box',     perPrice = 5000, description = 'Music Box' },
+                }
+            }
+        },
+        pedHash = 'a_m_y_smartcaspat_01',
+        scenario = 'WORLD_HUMAN_AA_SMOKE',
+        coords = {
+            { ped = nil, coords = vector4(-1232.23, -1439.81, 4.37, 231.27) }
         }
     },
     -- Job Stores

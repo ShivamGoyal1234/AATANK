@@ -10,7 +10,7 @@ Config.WebHook = "" -- Discord WebHook for admin commands logs.
 -- Then restart the server.
 
 Config.FuelDependency = "cdn-fuel" -- Options: none, cdn-fuel, ox-fuel, LegacyFuel, qs-fuel, rcore-fuel, codem-xfuel, lc_fuel
-Config.KeysDependency = "qb-vehiclekeys" -- Options: none, brutal_keys, qs-keys, qb-keys, qbx_vehiclekeys, wasabi_carlock, sna-vehiclekeys, dusa_vehiclekeys, Renewed-Vehiclekeys, tgiann-keys, ak47_vehiclekeys, ak47_qb_vehiclekeys, MrNewbVehicleKeys, p_carkeys
+Config.KeysDependency = "fast-vehiclekeys" -- Options: none, brutal_keys, qs-keys, qb-keys, qbx_vehiclekeys, wasabi_carlock, sna-vehiclekeys, dusa_vehiclekeys, Renewed-Vehiclekeys, tgiann-keys, ak47_vehiclekeys, ak47_qb_vehiclekeys, MrNewbVehicleKeys, p_carkeys
 Config.TextUI = "ox_lib" -- Options: none, ox_lib, jg-textui, qs-textui, okokTextUI, brutal_textui, 0r-textui
 
 ----------------------------------------------------------------------------

@@ -18,13 +18,13 @@
       - text: Sets the main text color for all standard display elements.
 */
 
-const defaultPrimaryColor = "#00A3FF";          // Primary color for main UI backgrounds and components
+const defaultPrimaryColor = "#ff0000";          // Primary color for main UI backgrounds and components
 const defaultPrimaryOpacity = "1";            // Opacity for primary color (range: 0.0 to 1.0)
-const defaultSecondaryColor = "#28343C";        // Secondary color for complementary elements
+const defaultSecondaryColor = "#0d0d0d";        // Secondary color for complementary elements
 const defaultSecondaryOpacity = "0.8";          // Full opacity for secondary elements, preserving visibility
-const defaultBorderColor = "#0190e1";           // Border color across the UI, emphasizing interactive areas
-const defaultBorderOpacity = "1";             // Sets semi-transparency for borders
-const defaultBorderRadius = "1px";              // Defines corner rounding for UI elements
+const defaultBorderColor = "#ff0000";           // Border color across the UI, emphasizing interactive areas
+const defaultBorderOpacity = "0.5";             // Sets semi-transparency for borders
+const defaultBorderRadius = "0.7px";              // Defines corner rounding for UI elements
 const defaultTextColor = "#FFFFFF";             // Standard text color, ensuring readability on dark backgrounds
 
 const backgrounds = [
@@ -43,7 +43,7 @@ const backgrounds = [
   { model: 'qs_gradient_013', image: '13.webp' },
   { model: 'qs_gradient_014', image: '14.webp' },
   { model: 'qs_gradient_015', image: '15.webp' },
-  { model: 'qs_gradient_016', image: '16.webp' },
+  { model: 'qs_gradient_016', image: '16.webp', default: true }, // Default background
   { model: 'qs_gradient_017', image: '17.webp' },
   { model: 'qs_gradient_018', image: '18.webp' },
   { model: 'qs_gradient_019', image: '19.webp' },
@@ -51,7 +51,7 @@ const backgrounds = [
   { model: 'qs_gradient_021', image: '21.webp' },
   { model: 'qs_gradient_022', image: '22.webp' },
   { model: 'qs_gradient_023', image: '23.webp' },
-  { model: 'qs_gradient_024', image: '24.webp', default: true  },
+  { model: 'qs_gradient_024', image: '24.webp' },
   { model: 'qs_gradient_025', image: '25.webp' },
   { model: 'qs_gradient_026', image: '26.webp' },
   { model: 'qs_gradient_027', image: '27.webp' },

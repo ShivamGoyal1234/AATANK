@@ -124,7 +124,7 @@ Config.Speech = {
     -- exp: 오늘 기분이 너무 안 좋아, [name] 넌 어때?
     Texts = {
         "Hello [name], how are you today?",
-        "I love you [name], maybe you've never heard that before"
+        -- "I love you [name], maybe you've never heard that before"
     }
 }
 

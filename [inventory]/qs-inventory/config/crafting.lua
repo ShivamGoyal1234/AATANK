@@ -126,130 +126,130 @@ end
 ]]
 
 Config.CraftingTables = {
-    [1] = {
-        name = 'Police Crafting',
-        isjob = 'police',
-        grades = 'all',
-        text = '[E] - Police Craft',
-        blip = {
-            enabled = true,
-            title = 'Police Crafting',
-            scale = 1.0,
-            display = 4,
-            colour = 0,
-            id = 365
-        },
-        location = vec3(459.771423, -989.050537, 24.898926),
-        items = {
-            [1] = {
-                name = 'weapon_pistol',
-                amount = 50,
-                info = {},
-                costs = {
-                    ['iron'] = 80,
-                    ['metalscrap'] = 70,
-                    ['rubber'] = 8,
-                    ['steel'] = 60,
-                    ['lockpick'] = 5,
-                },
-                type = 'weapon',
-                slot = 1,
-                rep = 'attachmentcraftingrep',
-                points = 1,
-                threshold = 0,
-                time = 5500,
-                chance = 100
-            },
-            [2] = {
-                name = 'weapon_smg',
-                amount = 1,
-                info = {},
-                costs = {
-                    ['iron'] = 80,
-                    ['metalscrap'] = 120,
-                    ['rubber'] = 10,
-                    ['steel'] = 65,
-                    ['lockpick'] = 10,
-                },
-                type = 'weapon',
-                slot = 2,
-                rep = 'attachmentcraftingrep',
-                points = 1,
-                threshold = 0,
-                time = 8500,
-                chance = 100
-            },
-            [3] = {
-                name = 'weapon_carbinerifle',
-                amount = 1,
-                info = {},
-                costs = {
-                    ['iron'] = 120,
-                    ['metalscrap'] = 120,
-                    ['rubber'] = 20,
-                    ['steel'] = 90,
-                    ['lockpick'] = 14,
-                },
-                type = 'weapon',
-                slot = 3,
-                rep = 'craftingrep',
-                points = 2,
-                threshold = 0,
-                time = 12000,
-                chance = 100
-            }
-        }
-    },
-    [2] = {
-        name = 'Attachment Crafting',
-        isjob = false,
-        grades = 'all',
-        text = '[E] - Craft Attachment',
-        blip = {
-            enabled = true,
-            title = 'Attachment Crafting',
-            scale = 1.0,
-            display = 4,
-            colour = 0,
-            id = 365
-        },
-        location = vec3(90.303299, 3745.503418, 39.771484),
-        items = {
-            [1] = {
-                name = 'pistol_extendedclip',
-                amount = 50,
-                info = {},
-                costs = {
-                    ['metalscrap'] = 140,
-                    ['steel'] = 250,
-                    ['rubber'] = 60,
-                },
-                type = 'item',
-                slot = 1,
-                rep = 'attachmentcraftingrep',
-                points = 1,
-                threshold = 0,
-                time = 8000,
-                chance = 90
-            },
-            [2] = {
-                name = 'pistol_suppressor',
-                amount = 50,
-                info = {},
-                costs = {
-                    ['metalscrap'] = 165,
-                    ['steel'] = 285,
-                    ['rubber'] = 75,
-                },
-                type = 'item',
-                slot = 2,
-                rep = 'attachmentcraftingrep',
-                points = 1,
-                threshold = 0,
-                time = 8000,
-                chance = 90
-            },
-        }
-    },
+    -- [1] = {
+    --     name = 'Police Crafting',
+    --     isjob = 'police',
+    --     grades = 'all',
+    --     text = '[E] - Police Craft',
+    --     blip = {
+    --         enabled = true,
+    --         title = 'Police Crafting',
+    --         scale = 1.0,
+    --         display = 4,
+    --         colour = 0,
+    --         id = 365
+    --     },
+    --     location = vec3(459.771423, -989.050537, 24.898926),
+    --     items = {
+    --         [1] = {
+    --             name = 'weapon_pistol',
+    --             amount = 50,
+    --             info = {},
+    --             costs = {
+    --                 ['iron'] = 80,
+    --                 ['metalscrap'] = 70,
+    --                 ['rubber'] = 8,
+    --                 ['steel'] = 60,
+    --                 ['lockpick'] = 5,
+    --             },
+    --             type = 'weapon',
+    --             slot = 1,
+    --             rep = 'attachmentcraftingrep',
+    --             points = 1,
+    --             threshold = 0,
+    --             time = 5500,
+    --             chance = 100
+    --         },
+    --         [2] = {
+    --             name = 'weapon_smg',
+    --             amount = 1,
+    --             info = {},
+    --             costs = {
+    --                 ['iron'] = 80,
+    --                 ['metalscrap'] = 120,
+    --                 ['rubber'] = 10,
+    --                 ['steel'] = 65,
+    --                 ['lockpick'] = 10,
+    --             },
+    --             type = 'weapon',
+    --             slot = 2,
+    --             rep = 'attachmentcraftingrep',
+    --             points = 1,
+    --             threshold = 0,
+    --             time = 8500,
+    --             chance = 100
+    --         },
+    --         [3] = {
+    --             name = 'weapon_carbinerifle',
+    --             amount = 1,
+    --             info = {},
+    --             costs = {
+    --                 ['iron'] = 120,
+    --                 ['metalscrap'] = 120,
+    --                 ['rubber'] = 20,
+    --                 ['steel'] = 90,
+    --                 ['lockpick'] = 14,
+    --             },
+    --             type = 'weapon',
+    --             slot = 3,
+    --             rep = 'craftingrep',
+    --             points = 2,
+    --             threshold = 0,
+    --             time = 12000,
+    --             chance = 100
+    --         }
+    --     }
+    -- },
+    -- [2] = {
+    --     name = 'Attachment Crafting',
+    --     isjob = false,
+    --     grades = 'all',
+    --     text = '[E] - Craft Attachment',
+    --     blip = {
+    --         enabled = true,
+    --         title = 'Attachment Crafting',
+    --         scale = 1.0,
+    --         display = 4,
+    --         colour = 0,
+    --         id = 365
+    --     },
+    --     location = vec3(90.303299, 3745.503418, 39.771484),
+    --     items = {
+    --         [1] = {
+    --             name = 'pistol_extendedclip',
+    --             amount = 50,
+    --             info = {},
+    --             costs = {
+    --                 ['metalscrap'] = 140,
+    --                 ['steel'] = 250,
+    --                 ['rubber'] = 60,
+    --             },
+    --             type = 'item',
+    --             slot = 1,
+    --             rep = 'attachmentcraftingrep',
+    --             points = 1,
+    --             threshold = 0,
+    --             time = 8000,
+    --             chance = 90
+    --         },
+    --         [2] = {
+    --             name = 'pistol_suppressor',
+    --             amount = 50,
+    --             info = {},
+    --             costs = {
+    --                 ['metalscrap'] = 165,
+    --                 ['steel'] = 285,
+    --                 ['rubber'] = 75,
+    --             },
+    --             type = 'item',
+    --             slot = 2,
+    --             rep = 'attachmentcraftingrep',
+    --             points = 1,
+    --             threshold = 0,
+    --             time = 8000,
+    --             chance = 90
+    --         },
+    --     }
+    -- },
     -- Continue with the same structure for the other Crafting Tables...
 }

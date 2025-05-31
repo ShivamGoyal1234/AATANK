@@ -172,9 +172,9 @@ Config.OnePerItem = {
 
 Config.notStolenItems = {
     -- Defines items that cannot be stolen from other players. Helps protect specific personal or essential items.
-    ['id_card'] = true,      -- ID cards cannot be stolen.
-    ['water_bottle'] = true, -- Water bottles are non-stealable.
-    ['tosti'] = true         -- Additional protected item (example).
+    ['id_card'] = false,      -- ID cards cannot be stolen.
+    ['water_bottle'] = false, -- Water bottles are non-stealable.
+    ['tosti'] = false         -- Additional protected item (example).
 }
 
 Config.notStoredItems = {
